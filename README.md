@@ -3,6 +3,11 @@
 ![GreenLoop Banner](https://img.shields.io/badge/CIRDAP-Innovation%20Challenge%202026-green)
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
 ![Express](https://img.shields.io/badge/Express-5.x-blue)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)
+
+## 🌿 Live Demo
+
+**Static Portal (GitHub Pages):** [https://moniruzjaman.github.io/cirdap-greenloop3.0](https://moniruzjaman.github.io/cirdap-greenloop3.0)
 
 ## Overview
 
@@ -14,7 +19,41 @@
 ### Tagline
 *"Healing the Earth, Securing the Smile"*
 
-## Features
+## 🎯 Project Structure
+
+This repository contains two versions of the project:
+
+### 1. Static Portal (`/docs`) - GitHub Pages Ready
+A beautiful multimedia showcase portal for competition juries.
+
+```
+docs/
+├── index.html          # Main static portal
+├── assets/
+│   ├── css/
+│   │   └── style.css   # Professional styling
+│   ├── js/
+│   │   └── main.js     # Interactive features
+│   └── media/
+│       ├── greenloop_video.mp4       # Project video
+│       ├── CIRDAP_Proposal.pdf       # Proposal document
+│       ├── GreenLoop_Presentation.pptx # Slide deck
+│       └── greenloop_banner.png      # Project banner
+```
+
+### 2. Full Web Application (Root) - Dynamic Server
+Complete Express.js application with admin panel and API.
+
+```
+├── server.js           # Main Express server
+├── package.json        # Project dependencies
+├── public/             # Static assets
+├── views/              # HTML templates
+├── uploads/            # File uploads directory
+└── data.json           # Resource database
+```
+
+## 🚀 Features
 
 - **Physical Circular Farming (Layer A)**
   - 12-Parameter Soil Sensor for precision agriculture
@@ -31,41 +70,12 @@
   - 3,500 kg CO2 Offset per Unit
   - 100% Circular Bio-Ecosystem
 
-## Tech Stack
+## 📦 Installation
 
-- **Backend:** Node.js, Express.js 5.x
-- **File Handling:** Multer
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Data Storage:** JSON file-based (upgradable to PostgreSQL)
-- **External Libraries:** Font Awesome, Google Fonts
+### Static Portal (No installation required)
+Simply open `docs/index.html` in a browser or deploy to GitHub Pages.
 
-## Project Structure
-
-```
-greenloop-cirdap/
-├── server.js           # Main Express server
-├── package.json        # Project dependencies
-├── public/
-│   ├── css/
-│   │   └── style.css   # Main stylesheet
-│   └── js/
-│       └── main.js     # Frontend JavaScript
-├── views/
-│   ├── index.html      # Homepage
-│   ├── proposal.html   # Project proposal details
-│   ├── resources.html  # Resource gallery
-│   └── admin.html      # Admin dashboard
-├── uploads/            # File uploads directory (auto-created)
-└── data.json           # Resource database (auto-created)
-```
-
-## Installation
-
-### Prerequisites
-- Node.js 18 or higher
-- npm or yarn
-
-### Setup
+### Full Web Application
 
 1. **Clone the repository**
    ```bash
@@ -86,7 +96,27 @@ greenloop-cirdap/
 4. **Access the application**
    Open your browser and navigate to: `http://localhost:3000`
 
-## API Endpoints
+## 🌐 Deployment
+
+### GitHub Pages (Static Portal)
+
+1. Go to repository **Settings** → **Pages**
+2. Under "Source", select **Deploy from a branch**
+3. Select **main** branch and **/docs** folder
+4. Click **Save**
+
+Your site will be live at: `https://[username].github.io/cirdap-greenloop3.0`
+
+### Other Platforms
+
+| Platform | Build Command | Start Command |
+|----------|---------------|---------------|
+| Heroku | `npm install` | `node server.js` |
+| Render | `npm install` | `node server.js` |
+| Vercel | `npm install` | `node server.js` |
+| Railway | `npm install` | `node server.js` |
+
+## 📋 API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -97,67 +127,28 @@ greenloop-cirdap/
 | GET | `/api/resources` | Get all resources (JSON) |
 | POST | `/api/upload` | Upload a new resource |
 
-## Deployment
+## 🎬 Multimedia Resources
 
-### Heroku Deployment
+| Resource | Description | Format |
+|----------|-------------|--------|
+| Project Video | Full presentation video | MP4 |
+| Proposal Document | Complete CIRDAP proposal | PDF |
+| Presentation Slides | Blockchain & Circular Agriculture deck | PPTX |
+| Project Banner | High-resolution banner image | PNG |
 
-1. Create a `Procfile` in the root directory:
-   ```
-   web: node server.js
-   ```
+## 🛠 Tech Stack
 
-2. Deploy to Heroku:
-   ```bash
-   heroku create your-app-name
-   git push heroku main
-   ```
+- **Backend:** Node.js, Express.js 5.x
+- **File Handling:** Multer
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **Data Storage:** JSON file-based (upgradable to PostgreSQL)
+- **External Libraries:** Font Awesome, Google Fonts
 
-### Render.com Deployment
-
-1. Connect your GitHub repository to Render
-2. Set build command: `npm install`
-3. Set start command: `node server.js`
-
-### Vercel Deployment
-
-This project can be deployed to Vercel with minimal configuration:
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel`
-
-### Railway Deployment
-
-1. Connect your GitHub repository to Railway
-2. Railway will auto-detect Node.js and deploy
-
-### Environment Variables (Optional)
-
-Create a `.env` file for custom configuration:
-```env
-PORT=3000
-NODE_ENV=production
-```
-
-## Admin Features
-
-The admin panel (`/admin`) allows you to:
-- Upload new resources (PDFs, images)
-- Categorize resources by type
-- Manage project documentation
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## License
+## 📄 License
 
 This project is licensed under the ISC License.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - **CIRDAP** - Centre on Integrated Rural Development for Asia and the Pacific
 - **REEDS** - Rural Development Innovation Challenge Program
