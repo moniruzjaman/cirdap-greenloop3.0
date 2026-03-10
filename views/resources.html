@@ -35,37 +35,16 @@
                 <p>Download official documents, slide decks, and technical diagrams.</p>
             </div>
 
-            <div id="resourceGrid" class="resource-grid">
-                <!-- Populated by JavaScript -->
+            <div id="homepageResourceGrid" class="resource-grid">
+                <!-- Reusing the same grid ID for consistency with main.js loader -->
                 <div class="loader">Loading resources...</div>
             </div>
         </div>
     </main>
 
+    <script src="/js/main.js"></script>
     <script>
-        async function loadResources() {
-            const grid = document.getElementById('resourceGrid');
-            try {
-                const response = await fetch('/api/resources');
-                const resources = await response.json();
-
-                grid.innerHTML = resources.map(res => `
-                    <div class="resource-card">
-                        <div class="card-icon">
-                            <i class="${res.type === 'pdf' ? 'fas fa-file-pdf' : res.type === 'image' ? 'fas fa-image' : 'fas fa-file'}"></i>
-                        </div>
-                        <div class="card-body">
-                            <h3>${res.title}</h3>
-                            <span class="category">${res.category}</span>
-                            <a href="${res.url}" target="_blank" class="btn-download">Download</a>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (error) {
-                grid.innerHTML = '<p>Error loading resources.</p>';
-            }
-        }
-        loadResources();
+        document.addEventListener('DOMContentLoaded', loadHomepageResources);
     </script>
 </body>
 

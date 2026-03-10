@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenLoop 3.0 | CIRDAP 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="top-nav">
@@ -24,40 +28,74 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Video Concept -->
     <header class="hero-section bd-green-bg">
-        <div class="overlay"></div>
         <div class="container hero-content">
             <span class="badge">Innovation Challenge 2026 Finalist</span>
             <h1>GreenLoop 3.0</h1>
-            <h2>Healing the Earth, Securing the Smile</h2>
-            <p class="tagline">One Innovation. Endless Change. Countless Smiles.</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <h3>$220 Bn</h3>
-                    <p>Savings via Nano-Urea</p>
-                </div>
-                <div class="stat-item">
-                    <h3>3,500 kg</h3>
-                    <p>CO2 Reduced/Unit</p>
-                </div>
-                <div class="stat-item">
-                    <h3>8 Districts</h3>
-                    <p>Pilot Coverage</p>
+            <h2>Efficiency-by-Design for a Circular Future</h2>
+            <p class="tagline">Healing the Earth, Securing the Smile.</p>
+
+            <!-- Featured Video Player -->
+            <div class="featured-video-container">
+                <video id="mainVideo" controls poster="/uploads/greenloop_info.png.png">
+                    <source src="/uploads/greenloop_vedio.mp4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay-actions">
+                    <button onclick="readAloud('GreenLoop 3.0 Project Video: Healing the Earth, Securing the Smile')"
+                        class="btn-video-action" title="Read Description">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button onclick="shareResource('GreenLoop 3.0 Video', '/uploads/greenloop_vedio.mp4.mp4')"
+                        class="btn-video-action" title="Share Video">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
                 </div>
             </div>
-            <a href="/proposal" class="btn-primary">Read Full Proposal <i class="fas fa-arrow-right"></i></a>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3 data-target="220">$220 Bn</h3>
+                    <p>Annual Savings Potential</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="3500">3,500 kg</h3>
+                    <p>CO2 Offset per Unit</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-target="100">100%</h3>
+                    <p>Circular Bio-Ecosystem</p>
+                </div>
+            </div>
         </div>
     </header>
+
+    <!-- Strategic Multimedia Hub -->
+    <section class="resource-hub-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Project Artifacts</h2>
+                <p>Explore the technical and strategic foundation of GreenLoop 3.0.</p>
+            </div>
+
+            <div id="homepageResourceGrid" class="homepage-resource-grid">
+                <!-- Populated by JS to match the professional design -->
+                <div class="loader">Synchronizing resources...</div>
+            </div>
+        </div>
+    </section>
 
     <!-- Strategic Context -->
     <section class="context-section">
         <div class="container">
             <h2 class="section-title">The Strategic Context</h2>
             <p class="intro-text">
-                With Bangladesh's LDC graduation in 2026, GreenLoop 3.0 proposes a paradigm shift to address the 4.0% GDP loss from agricultural inefficiencies and "Inorganic Value Leaks". It aligns CIRDAP's thematic priorities with the "Efficiency-by-design" philosophy.
+                With Bangladesh's LDC graduation in 2026, GreenLoop 3.0 proposes a paradigm shift to address the 4.0%
+                GDP loss from agricultural inefficiencies and "Inorganic Value Leaks". It aligns CIRDAP's thematic
+                priorities with the "Efficiency-by-design" philosophy.
             </p>
-            
+
             <div class="alignment-grid">
                 <div class="align-card">
                     <div class="icon-circle pink"><i class="fas fa-venus-mars"></i></div>
@@ -85,7 +123,26 @@
 
     <!-- Footer -->
     <footer>
-        <p>CIRDAP-REEDS Rural Development Innovation Challenge 2026</p>
+        <div class="container">
+            <p>CIRDAP-REEDS Rural Development Innovation Challenge 2026</p>
+            <div class="footer-links">
+                <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                <a href="/admin"><i class="fas fa-lock"></i> Admin</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // Inline setup for homepage specific logic if needed, 
+        // but core functions are in main.js
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof loadHomepageResources === 'function') {
+                loadHomepageResources();
+            }
+        });
+    </script>
 </body>
+
 </html>
