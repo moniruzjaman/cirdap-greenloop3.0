@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | GreenLoop 3.0</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="admin-body">
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li class="active">Upload Files</li>
+                <li><a href="/" style="color: white; text-decoration: none;">View Site</a></li>
+            </ul>
+        </div>
+        <div class="admin-main">
+            <h1>Upload New Resource</h1>
+            <form id="uploadForm" class="upload-form">
+                <div class="form-group">
+                    <label>Resource Title</label>
+                    <input type="text" name="title" placeholder="e.g., Financial Report 2026" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="category">
+                        <option value="Proposal">Proposal</option>
+                        <option value="Slide Deck">Slide Deck</option>
+                        <option value="Infographic">Infographic</option>
+                        <option value="Video">Video Link</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>File Type</label>
+                    <select name="type">
+                        <option value="pdf">PDF</option>
+                        <option value="image">Image (PNG/JPG)</option>
+                    </select>
+                </div>
+
+                <div class="form-group file-upload-area">
+                    <input type="file" name="file" id="fileInput" required>
+                    <label for="fileInput" class="file-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Click to select file</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Upload to Server</button>
+            </form>
+
+            <div id="statusMsg" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const statusMsg = document.getElementById('statusMsg');
+            const formData = new FormData(e.target);
+
+            statusMsg.innerHTML = 'Uploading...';
+
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    statusMsg.innerHTML = '<span style="color:green">File uploaded successfully!</span>';
+                    e.target.reset();
+                } else {
+                    throw new Error('Upload failed');
+                }
+            } catch (err) {
+                statusMsg.innerHTML = '<span style="color:red">Error uploading file.</span>';
+            }
+        });
+    </script>
+</body>
+
+</html>

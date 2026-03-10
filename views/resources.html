@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | GreenLoop 3.0</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="top-nav">
+        <div class="container nav-content">
+            <div class="logo-area">
+                <span class="logo-bd">BD</span>
+                <span class="logo-cirdap">CIRDAP</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/proposal">Proposal</a>
+                <a href="/resources" class="active">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="gallery-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Submission Resources</h1>
+                <p>Download official documents, slide decks, and technical diagrams.</p>
+            </div>
+
+            <div id="resourceGrid" class="resource-grid">
+                <!-- Populated by JavaScript -->
+                <div class="loader">Loading resources...</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        async function loadResources() {
+            const grid = document.getElementById('resourceGrid');
+            try {
+                const response = await fetch('/api/resources');
+                const resources = await response.json();
+
+                grid.innerHTML = resources.map(res => `
+                    <div class="resource-card">
+                        <div class="card-icon">
+                            <i class="${res.type === 'pdf' ? 'fas fa-file-pdf' : res.type === 'image' ? 'fas fa-image' : 'fas fa-file'}"></i>
+                        </div>
+                        <div class="card-body">
+                            <h3>${res.title}</h3>
+                            <span class="category">${res.category}</span>
+                            <a href="${res.url}" target="_blank" class="btn-download">Download</a>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                grid.innerHTML = '<p>Error loading resources.</p>';
+            }
+        }
+        loadResources();
+    </script>
+</body>
+
+</html>
