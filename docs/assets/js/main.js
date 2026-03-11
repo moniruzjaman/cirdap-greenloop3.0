@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initParticles();
     initSmoothScroll();
+    initProgressTracker();
+    initKnowledgeMap();
 });
 
 // =============================================
@@ -82,7 +84,7 @@ function initNavigation() {
 function initVideoPlayer() {
     const video = document.getElementById('projectVideo');
     const playBtn = document.getElementById('playBtn');
-    const overlay = document.querySelector('.video-overlay');
+    const overlay = document.getElementById('videoOverlay');
     
     if (playBtn && video && overlay) {
         playBtn.addEventListener('click', function() {
@@ -209,6 +211,205 @@ function initSmoothScroll() {
         });
     });
 }
+
+// =============================================
+// Progress Tracker (Gamified)
+// =============================================
+function initProgressTracker() {
+    const progressFill = document.getElementById('progressFill');
+    const progressPercent = document.getElementById('progressPercent');
+    const checkpoints = document.querySelectorAll('.checkpoint');
+    
+    if (!progressFill || !progressPercent) return;
+    
+    const sections = ['home', 'knowledge-map', 'video', 'proposal', 'presentation', 'resources'];
+    const visitedSections = new Set(['home']); // Home is visited by default
+    
+    // Update progress bar on scroll
+    window.addEventListener('scroll', function() {
+        // Calculate scroll progress
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrolled = window.scrollY;
+        const progress = Math.min((scrolled / documentHeight) * 100, 100);
+        
+        progressFill.style.width = `${progress}%`;
+        progressPercent.textContent = `${Math.round(progress)}%`;
+        
+        // Check which sections are visible
+        sections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.5) {
+                    visitedSections.add(sectionId);
+                    
+                    // Update checkpoint states
+                    checkpoints.forEach(checkpoint => {
+                        const checkpointSection = checkpoint.dataset.section;
+                        if (visitedSections.has(checkpointSection)) {
+                            checkpoint.classList.add('completed');
+                        }
+                        if (checkpointSection === sectionId) {
+                            checkpoint.classList.add('active');
+                        } else {
+                            checkpoint.classList.remove('active');
+                        }
+                    });
+                }
+            }
+        });
+    });
+    
+    // Click on checkpoint to scroll to section
+    checkpoints.forEach(checkpoint => {
+        checkpoint.addEventListener('click', function() {
+            const sectionId = this.dataset.section;
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const offset = 150; // Account for navbar and progress tracker
+                const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// =============================================
+// Knowledge Map - Interactive Nodes
+// =============================================
+function initKnowledgeMap() {
+    // Node data
+    const nodeData = {
+        'central': {
+            icon: 'fa-seedling',
+            title: 'GreenLoop 3.0 - গ্রীনলুপ',
+            body: `<p>GreenLoop 3.0 is a revolutionary <strong>Efficiency-by-Design</strong> system combining physical circular farming with blockchain governance.</p>
+                   <p>It addresses Bangladesh's critical agricultural challenges: <strong>arsenic contamination</strong>, <strong>post-harvest losses</strong>, and <strong>soil degradation</strong>.</p>`,
+            stats: [
+                { value: '$220B', label: 'Annual Savings' },
+                { value: '100%', label: 'Circular' }
+            ]
+        },
+        'sensor': {
+            icon: 'fa-microchip',
+            title: '12-Parameter Soil Sensor',
+            body: `<p>A handheld device measuring <strong>NPK, SOM/SOC, pH, EC, moisture</strong> and micronutrients using ML estimation.</p>
+                   <p>Farmers can make data-driven decisions without expensive lab tests.</p>`,
+            stats: [
+                { value: '+32%', label: 'Yield Increase' },
+                { value: '-30%', label: 'Fertilizer Use' }
+            ]
+        },
+        'arsenic': {
+            icon: 'fa-water',
+            title: 'Arsenic Shield (3F4D+MD)',
+            body: `<p>Advanced protocol immobilizing arsenic through <strong>Iron Oxide re-precipitation</strong> in 61 affected districts.</p>
+                   <p>Protects groundwater and ensures safe crop production.</p>`,
+            stats: [
+                { value: '-21%', label: 'Arsenic Level' },
+                { value: '-57%', label: 'Water Usage' }
+            ]
+        },
+        'solar': {
+            icon: 'fa-solar-panel',
+            title: 'Solar Cold Chain',
+            body: `<p>10-ton hybrid mini cold storage with <strong>70% reduced operating costs</strong>.</p>
+                   <p>Prevents post-harvest losses for fruits, vegetables, and dairy products.</p>`,
+            stats: [
+                { value: 'BCR 3.0', label: 'Benefit-Cost' },
+                { value: '14.47%', label: 'IRR' }
+            ]
+        },
+        'blockchain': {
+            icon: 'fa-link',
+            title: 'Hyperledger Blockchain',
+            body: `<p>Immutable ledger ensuring <strong>data sovereignty</strong> and transparent supply chain tracking.</p>
+                   <p>SHA-256 integrity linking between off-chain (PostgreSQL) and on-chain systems.</p>`,
+            stats: [
+                { value: '100%', label: 'Transparent' },
+                { value: 'SHA-256', label: 'Security' }
+            ]
+        },
+        'farmer': {
+            icon: 'fa-users',
+            title: 'কৃষক কার্ড (Farmer Card)',
+            body: `<p>Digital identity card empowering <strong>10 million farmers</strong> with access to credit, inputs, and market information.</p>
+                   <p>Special provisions for women farmers ensuring financial inclusion.</p>`,
+            stats: [
+                { value: '10M', label: 'Farmers' },
+                { value: '50%', label: 'Women' }
+            ]
+        },
+        'youth': {
+            icon: 'fa-user-graduate',
+            title: 'Youth Employment',
+            body: `<p>Creating <strong>50,000 jobs</strong> for NEET youth as Digital Facilitators in Agro-Service Centres.</p>
+                   <p>Skill development in IoT, blockchain, and sustainable agriculture.</p>`,
+            stats: [
+                { value: '50K', label: 'Jobs' },
+                { value: '61', label: 'Districts' }
+            ]
+        }
+    };
+    
+    // Store for global access
+    window.knowledgeMapData = nodeData;
+}
+
+// Show node detail popup
+function showNodeDetail(nodeId) {
+    const popup = document.getElementById('nodeDetailPopup');
+    const popupIcon = document.getElementById('popupIcon');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupBody = document.getElementById('popupBody');
+    const popupStats = document.getElementById('popupStats');
+    
+    const data = window.knowledgeMapData[nodeId];
+    
+    if (data) {
+        popupIcon.innerHTML = `<i class="fas ${data.icon}"></i>`;
+        popupTitle.textContent = data.title;
+        popupBody.innerHTML = data.body;
+        
+        // Build stats
+        popupStats.innerHTML = data.stats.map(stat => `
+            <div class="popup-stat">
+                <div class="stat-value">${stat.value}</div>
+                <div class="stat-label">${stat.label}</div>
+            </div>
+        `).join('');
+        
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// Close node detail popup
+function closeNodeDetail() {
+    const popup = document.getElementById('nodeDetailPopup');
+    popup.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close popup on backdrop click
+document.addEventListener('click', function(e) {
+    const popup = document.getElementById('nodeDetailPopup');
+    if (e.target === popup) {
+        closeNodeDetail();
+    }
+});
+
+// Close popup on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeNodeDetail();
+    }
+});
 
 // =============================================
 // Share Functions

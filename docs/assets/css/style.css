@@ -1754,6 +1754,468 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, #2b579a, #4472c4);
 }
 
+/* =============================================
+   Progress Tracker (Gamified)
+   ============================================= */
+.progress-tracker {
+    position: sticky;
+    top: 70px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.progress-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-green-light));
+    border-radius: 3px;
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+.progress-checkpoints {
+    display: flex;
+    gap: 8px;
+}
+
+.checkpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-gray);
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.checkpoint i {
+    font-size: 1.1rem;
+}
+
+.checkpoint span {
+    font-weight: 500;
+}
+
+.checkpoint.active {
+    background: rgba(0, 106, 78, 0.1);
+    color: var(--primary-green);
+}
+
+.checkpoint.completed {
+    color: var(--primary-green);
+}
+
+.checkpoint:hover {
+    background: rgba(0, 106, 78, 0.05);
+}
+
+.progress-reward {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--accent-gold), #ffed4a);
+    border-radius: var(--radius-xl);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.progress-reward i {
+    color: #c49000;
+}
+
+/* =============================================
+   Knowledge Map Section
+   ============================================= */
+.knowledge-map-section {
+    background: linear-gradient(135deg, #f8faf9 0%, #e8f5e9 100%);
+    min-height: 600px;
+}
+
+.knowledge-map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 40px auto;
+}
+
+.map-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.map-line {
+    stroke: var(--primary-green);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+    opacity: 0.5;
+    animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+    to { stroke-dashoffset: -100; }
+}
+
+.map-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.map-node:hover {
+    transform: scale(1.1);
+}
+
+.map-node.central {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.map-node.central:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.node-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+    box-shadow: 0 4px 20px rgba(0, 106, 78, 0.3);
+    position: relative;
+}
+
+.map-node.central .node-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-green), #00a676);
+    box-shadow: 0 8px 30px rgba(0, 106, 78, 0.4);
+}
+
+.node-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-green);
+    opacity: 0.3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    100% { transform: scale(1.8); opacity: 0; }
+}
+
+.node-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: white;
+    padding: 4px 12px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+/* Node Type Colors */
+.map-node.layer-a .node-icon { background: linear-gradient(135deg, #4caf50, #81c784); }
+.map-node.layer-b .node-icon { background: linear-gradient(135deg, #2196f3, #64b5f6); }
+.map-node.impact .node-icon { background: linear-gradient(135deg, #ff9800, #ffb74d); }
+
+.map-node.layer-a .node-icon.sensor { background: linear-gradient(135deg, #00695c, #4db6ac); }
+.map-node.layer-a .node-icon.arsenic { background: linear-gradient(135deg, #0277bd, #4fc3f7); }
+.map-node.layer-a .node-icon.solar { background: linear-gradient(135deg, #f57c00, #ffb74d); }
+.map-node.layer-b .node-icon.blockchain { background: linear-gradient(135deg, #1565c0, #64b5f6); }
+.map-node.impact .node-icon.farmer { background: linear-gradient(135deg, #2e7d32, #81c784); }
+.map-node.impact .node-icon.youth { background: linear-gradient(135deg, #7b1fa2, #ba68c8); }
+
+/* Node Detail Popup */
+.node-detail-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.node-detail-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: white;
+    border-radius: var(--radius-lg);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    transition: var(--transition);
+}
+
+.node-detail-popup.active .popup-content {
+    transform: scale(1);
+}
+
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: var(--bg-light);
+    border-bottom: 1px solid #eee;
+}
+
+.popup-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    background: var(--primary-green);
+}
+
+.popup-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+
+.popup-body {
+    padding: 24px;
+}
+
+.popup-body p {
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.popup-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 24px 24px;
+}
+
+.popup-stat {
+    background: var(--bg-light);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.popup-stat .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.popup-stat .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+/* Map Legend */
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.legend-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.legend-dot.layer-a { background: linear-gradient(135deg, #4caf50, #81c784); }
+.legend-dot.layer-b { background: linear-gradient(135deg, #2196f3, #64b5f6); }
+.legend-dot.impact { background: linear-gradient(135deg, #ff9800, #ffb74d); }
+
+/* =============================================
+   Story Timeline (Digital Storytelling)
+   ============================================= */
+.story-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+}
+
+.story-section .section-title {
+    color: white;
+}
+
+.story-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.story-section .section-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.story-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-chapter {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInStory 0.8s ease forwards;
+}
+
+.story-chapter:nth-child(1) { animation-delay: 0.2s; }
+.story-chapter:nth-child(2) { animation-delay: 0.4s; }
+.story-chapter:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInStory {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.chapter-marker {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.chapter-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.chapter-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+}
+
+.chapter-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--accent-gold);
+}
+
+.chapter-content p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.chapter-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px;
+    background: rgba(0, 106, 78, 0.2);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--primary-green);
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
 /* Responsive for document viewers */
 @media (max-width: 768px) {
     .video-info-bar {

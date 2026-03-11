@@ -110,6 +110,215 @@
         </div>
     </section>
 
+    <!-- Progress Tracker (Gamified) -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-checkpoints">
+                <div class="checkpoint active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="checkpoint" data-section="knowledge-map">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Map</span>
+                </div>
+                <div class="checkpoint" data-section="video">
+                    <i class="fas fa-video"></i>
+                    <span>Video</span>
+                </div>
+                <div class="checkpoint" data-section="proposal">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Proposal</span>
+                </div>
+                <div class="checkpoint" data-section="presentation">
+                    <i class="fas fa-presentation"></i>
+                    <span>Slides</span>
+                </div>
+                <div class="checkpoint" data-section="resources">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </div>
+            </div>
+            <div class="progress-reward">
+                <i class="fas fa-trophy"></i>
+                <span id="progressPercent">0%</span> Explored
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Knowledge Map Section -->
+    <section id="knowledge-map" class="section knowledge-map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-sitemap"></i> Interactive Knowledge Map</span>
+                <h2 class="section-title">GreenLoop 3.0 ইকোসিস্টেম</h2>
+                <p class="section-subtitle">ক্লিক করে বিস্তারিত জানুন - Click on any node to explore details</p>
+            </div>
+            
+            <div class="knowledge-map-container">
+                <!-- Central Node -->
+                <div class="map-node central" onclick="showNodeDetail('central')">
+                    <div class="node-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="node-label">GreenLoop 3.0</div>
+                    <div class="node-pulse"></div>
+                </div>
+                
+                <!-- Connecting Lines (SVG) -->
+                <svg class="map-lines" viewBox="0 0 800 500">
+                    <!-- Lines from center to outer nodes -->
+                    <line x1="400" y1="250" x2="200" y2="100" class="map-line" />
+                    <line x1="400" y1="250" x2="600" y2="100" class="map-line" />
+                    <line x1="400" y1="250" x2="100" y2="300" class="map-line" />
+                    <line x1="400" y1="250" x2="700" y2="300" class="map-line" />
+                    <line x1="400" y1="250" x2="200" y2="450" class="map-line" />
+                    <line x1="400" y1="250" x2="600" y2="450" class="map-line" />
+                </svg>
+                
+                <!-- Layer A Nodes -->
+                <div class="map-node layer-a" style="top: 15%; left: 20%;" onclick="showNodeDetail('sensor')">
+                    <div class="node-icon sensor">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="node-label">Soil Sensor</div>
+                </div>
+                
+                <div class="map-node layer-a" style="top: 15%; right: 20%;" onclick="showNodeDetail('arsenic')">
+                    <div class="node-icon arsenic">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="node-label">Arsenic Shield</div>
+                </div>
+                
+                <div class="map-node layer-a" style="top: 55%; left: 5%;" onclick="showNodeDetail('solar')">
+                    <div class="node-icon solar">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="node-label">Solar Cold Chain</div>
+                </div>
+                
+                <!-- Layer B Nodes -->
+                <div class="map-node layer-b" style="top: 55%; right: 5%;" onclick="showNodeDetail('blockchain')">
+                    <div class="node-icon blockchain">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="node-label">Blockchain</div>
+                </div>
+                
+                <!-- Impact Nodes -->
+                <div class="map-node impact" style="bottom: 5%; left: 20%;" onclick="showNodeDetail('farmer')">
+                    <div class="node-icon farmer">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="node-label">কৃষক কার্ড</div>
+                </div>
+                
+                <div class="map-node impact" style="bottom: 5%; right: 20%;" onclick="showNodeDetail('youth')">
+                    <div class="node-icon youth">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="node-label">Youth Employment</div>
+                </div>
+            </div>
+            
+            <!-- Node Detail Popup -->
+            <div class="node-detail-popup" id="nodeDetailPopup">
+                <div class="popup-content">
+                    <button class="popup-close" onclick="closeNodeDetail()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="popup-header" id="popupHeader">
+                        <div class="popup-icon" id="popupIcon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 id="popupTitle">Title</h3>
+                    </div>
+                    <div class="popup-body" id="popupBody">
+                        <p>Content goes here...</p>
+                    </div>
+                    <div class="popup-stats" id="popupStats">
+                        <!-- Stats will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Legend -->
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-dot layer-a"></span>
+                    <span>Layer A: Physical</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot layer-b"></span>
+                    <span>Layer B: Digital</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot impact"></span>
+                    <span>Impact Areas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Storytelling Section -->
+    <section class="section story-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-book-open"></i> আমাদের গল্প</span>
+                <h2 class="section-title">The GreenLoop Story</h2>
+                <p class="section-subtitle">How we're transforming Bangladesh's agricultural future</p>
+            </div>
+            
+            <div class="story-timeline">
+                <div class="story-chapter" data-chapter="1">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০১</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>সমস্যা: The Challenge</h3>
+                        <p>Bangladesh loses <strong>4.0% of GDP</strong> annually from agricultural inefficiencies. With <strong>LDC graduation in 2026</strong>, we face a critical need for transformation.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">$220 Billion</span>
+                            <span class="stat-label">Annual economic opportunity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-chapter" data-chapter="2">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০২</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>সমাধান: Our Solution</h3>
+                        <p>GreenLoop 3.0 introduces <strong>Efficiency-by-Design</strong> - a dual-layer system combining physical circular farming with blockchain governance.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Circular Bio-Ecosystem</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-chapter" data-chapter="3">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০৩</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>প্রভাব: The Impact</h3>
+                        <p>Empowering <strong>10 million farmers</strong> with technology, creating <strong>50,000 youth jobs</strong>, and achieving <strong>climate resilience</strong> for 61 arsenic-affected districts.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">3,500 kg</span>
+                            <span class="stat-label">CO2 offset per unit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Video Section -->
     <section id="video" class="section video-section">
         <div class="container">
