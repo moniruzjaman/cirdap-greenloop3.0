@@ -329,105 +329,104 @@
                 <p class="section-subtitle">Videos, Audio, Documents, and Presentations</p>
             </div>
 
-            <!-- ========== VIDEO GALLERY ========== -->
-            <div class="media-category" id="video-gallery">
+            <!-- ========== FEATURED VIDEO (Focus) ========== -->
+            <div class="media-category featured-video-section" id="video-gallery">
                 <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-video"></i></div>
-                    <h3>Video Gallery</h3>
-                    <span class="category-count"><span id="video-count">0</span> videos</span>
+                    <div class="category-icon focus"><i class="fas fa-star"></i></div>
+                    <h3>Featured Video - গ্রীনলুপ ৩.০</h3>
+                    <span class="category-count">Focus Presentation</span>
                 </div>
                 
-                <div class="video-grid">
-                    <!-- ===== VIDEO SLOT 1 (Featured) ===== -->
-                    <div class="video-card featured" data-video-id="1">
-                        <div class="video-embed-container">
-                            <!-- YOUTUBE CONFIG: Replace VIDEO_ID_1 with your YouTube video ID -->
+                <!-- FEATURED VIDEO: Bengali Video -->
+                <div class="featured-video-container">
+                    <div class="video-player-main">
+                        <!-- Local Video Player -->
+                        <video id="featuredVideo" controls poster="assets/media/greenloop_banner.png">
+                            <source src="assets/media/greenloop_video_bn.mp4" type="video/mp4">
+                            <source src="assets/media/greenloop_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- YouTube Fallback - Configure when uploaded -->
+                        <div class="youtube-fallback" style="display:none;">
                             <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1"
-                                title="Video 1"
+                                src="https://www.youtube.com/embed/YOUTUBE_BN_VIDEO_ID?rel=0&modestbranding=1"
+                                title="GreenLoop 3.0 - Bengali"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
-                            <div class="video-placeholder">
-                                <i class="fab fa-youtube"></i>
-                                <h4>Video 1 - Featured</h4>
-                                <p>Replace VIDEO_ID_1 with your YouTube video ID</p>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info-bar featured">
+                        <div class="video-title-info">
+                            <h3>গ্রীনলুপ ৩.০ - GreenLoop 3.0</h3>
+                            <p>Complete project presentation for CIRDAP Innovation Challenge 2026</p>
+                        </div>
+                        <div class="video-meta-tags">
+                            <span class="tag featured-tag"><i class="fas fa-star"></i> Featured</span>
+                            <span><i class="fas fa-language"></i> বাংলা (Bengali)</span>
+                            <span><i class="fas fa-hd"></i> HD</span>
+                        </div>
+                        <div class="video-actions-bar">
+                            <a href="assets/media/greenloop_video_bn.mp4" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Videos Grid -->
+                <div class="video-grid-small">
+                    <!-- Video Slot 2 - English Version -->
+                    <div class="video-card-small" data-video-id="2">
+                        <div class="video-embed-container">
+                            <video controls poster="assets/media/greenloop_banner.png">
+                                <source src="assets/media/greenloop_video.mp4" type="video/mp4">
+                            </video>
                         </div>
                         <div class="video-info">
-                            <h4>Video Title 1</h4>
-                            <p>Video description goes here</p>
-                            <div class="video-tags">
-                                <span class="tag">Featured</span>
-                                <span class="tag">Bengali</span>
-                            </div>
+                            <h4>English Version</h4>
+                            <span class="tag">English</span>
                         </div>
                     </div>
 
-                    <!-- ===== VIDEO SLOT 2 ===== -->
-                    <div class="video-card" data-video-id="2">
+                    <!-- Video Slot 3 - YouTube Placeholder -->
+                    <div class="video-card-small" data-video-id="3">
                         <div class="video-embed-container">
                             <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1"
-                                title="Video 2"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                            <div class="video-placeholder">
-                                <i class="fab fa-youtube"></i>
-                                <h4>Video 2</h4>
-                                <p>Replace VIDEO_ID_2</p>
-                            </div>
-                        </div>
-                        <div class="video-info">
-                            <h4>Video Title 2</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-
-                    <!-- ===== VIDEO SLOT 3 ===== -->
-                    <div class="video-card" data-video-id="3">
-                        <div class="video-embed-container">
-                            <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0&modestbranding=1"
+                                src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3?rel=0"
                                 title="Video 3"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
                             <div class="video-placeholder">
                                 <i class="fab fa-youtube"></i>
-                                <h4>Video 3</h4>
-                                <p>Replace VIDEO_ID_3</p>
+                                <span>Add YouTube Video</span>
                             </div>
                         </div>
                         <div class="video-info">
-                            <h4>Video Title 3</h4>
-                            <p>Description</p>
+                            <h4>Additional Video</h4>
+                            <span class="tag">YouTube</span>
                         </div>
                     </div>
 
-                    <!-- ===== VIDEO SLOT 4 ===== -->
-                    <div class="video-card" data-video-id="4">
+                    <!-- Video Slot 4 - YouTube Placeholder -->
+                    <div class="video-card-small" data-video-id="4">
                         <div class="video-embed-container">
                             <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_4?rel=0&modestbranding=1"
+                                src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_4?rel=0"
                                 title="Video 4"
                                 frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
                             <div class="video-placeholder">
                                 <i class="fab fa-youtube"></i>
-                                <h4>Video 4</h4>
-                                <p>Replace VIDEO_ID_4</p>
+                                <span>Add YouTube Video</span>
                             </div>
                         </div>
                         <div class="video-info">
-                            <h4>Video Title 4</h4>
-                            <p>Description</p>
+                            <h4>Pitch Video</h4>
+                            <span class="tag">YouTube</span>
                         </div>
                     </div>
                 </div>
@@ -438,30 +437,24 @@
                 <div class="category-header">
                     <div class="category-icon"><i class="fas fa-headphones"></i></div>
                     <h3>Audio Gallery</h3>
-                    <span class="category-count"><span id="audio-count">0</span> audio files</span>
+                    <span class="category-count"><span id="audio-count">3</span> audio files</span>
                 </div>
                 
                 <div class="audio-grid">
-                    <!-- ===== AUDIO SLOT 1 ===== -->
+                    <!-- AUDIO SLOT 1 -->
                     <div class="audio-card" data-audio-id="1">
                         <div class="audio-icon"><i class="fas fa-music"></i></div>
                         <div class="audio-info">
                             <h4>Audio Title 1</h4>
                             <p>Audio description</p>
                         </div>
-                        <!-- AUDIO CONFIG: Replace with your audio URL (YouTube, SoundCloud, or direct MP3) -->
                         <div class="audio-player">
-                            <!-- Option 1: YouTube Audio (replace VIDEO_ID) -->
                             <iframe 
                                 src="https://www.youtube.com/embed/AUDIO_VIDEO_ID_1"
                                 title="Audio 1"
                                 frameborder="0"
                                 allow="encrypted-media">
                             </iframe>
-                            <!-- Option 2: SoundCloud (uncomment and replace TRACK_ID) -->
-                            <!-- <iframe src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/TRACK_ID_1"></iframe> -->
-                            <!-- Option 3: Direct MP3 (uncomment) -->
-                            <!-- <audio controls src="assets/media/audio_file_1.mp3"></audio> -->
                         </div>
                         <div class="audio-placeholder">
                             <i class="fas fa-volume-up"></i>
@@ -469,7 +462,7 @@
                         </div>
                     </div>
 
-                    <!-- ===== AUDIO SLOT 2 ===== -->
+                    <!-- AUDIO SLOT 2 -->
                     <div class="audio-card" data-audio-id="2">
                         <div class="audio-icon"><i class="fas fa-music"></i></div>
                         <div class="audio-info">
@@ -490,7 +483,7 @@
                         </div>
                     </div>
 
-                    <!-- ===== AUDIO SLOT 3 ===== -->
+                    <!-- AUDIO SLOT 3 -->
                     <div class="audio-card" data-audio-id="3">
                         <div class="audio-icon"><i class="fas fa-music"></i></div>
                         <div class="audio-info">
@@ -518,208 +511,205 @@
                 <div class="category-header">
                     <div class="category-icon"><i class="fas fa-file-alt"></i></div>
                     <h3>Document Gallery</h3>
-                    <span class="category-count"><span id="doc-count">0</span> documents</span>
+                    <span class="category-count"><span id="doc-count">5</span> documents</span>
                 </div>
                 
                 <div class="document-grid">
+                    <!-- ===== PDF SLOT 1 - Proposal PDF (PRIORITY) ===== -->
+                    <div class="doc-card priority" data-doc-id="1">
+                        <div class="doc-badge priority"><i class="fas fa-star"></i> Priority</div>
+                        <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <h4>CIRDAP Proposal (PDF)</h4>
+                            <p>Official competition submission proposal</p>
+                        </div>
+                        <div class="doc-viewer">
+                            <iframe src="https://drive.google.com/file/d/PDF_PROPOSAL_ID/preview"></iframe>
+                        </div>
+                        <div class="doc-actions">
+                            <a href="assets/media/greenloop_cirdap_proposal.pdf" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fas fa-external-link-alt"></i> View PDF
+                            </a>
+                            <a href="assets/media/greenloop_cirdap_proposal.pdf" download class="btn btn-sm btn-outline">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ===== INFOGRAPHIC SLOT (PRIORITY) ===== -->
+                    <div class="doc-card priority infographic-card" data-doc-id="2">
+                        <div class="doc-badge priority"><i class="fas fa-star"></i> Priority</div>
+                        <div class="doc-icon infographic"><i class="fas fa-image"></i></div>
+                        <div class="doc-info">
+                            <h4>GreenLoop 3.0 Infographic</h4>
+                            <p>Visual overview of the ecosystem</p>
+                        </div>
+                        <div class="infographic-preview">
+                            <img src="assets/media/greenloop_infographic.png" alt="GreenLoop 3.0 Infographic" onclick="openImageModal(this.src)">
+                        </div>
+                        <div class="doc-actions">
+                            <a href="assets/media/greenloop_infographic.png" target="_blank" class="btn btn-sm btn-primary">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                            <a href="assets/media/greenloop_infographic.png" download class="btn btn-sm btn-outline">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- ===== DOCX SLOT 1 ===== -->
-                    <div class="doc-card" data-doc-id="1">
+                    <div class="doc-card" data-doc-id="3">
                         <div class="doc-icon docx"><i class="fas fa-file-word"></i></div>
                         <div class="doc-info">
                             <h4>Main Proposal (DOCX)</h4>
-                            <p>GreenLoop 3.0 complete proposal document</p>
+                            <p>Complete proposal document</p>
                         </div>
-                        <!-- GOOGLE DRIVE CONFIG: Replace DOCX_FILE_ID_1 -->
                         <div class="doc-viewer">
                             <iframe src="https://drive.google.com/file/d/DOCX_FILE_ID_1/preview"></iframe>
                         </div>
                         <div class="doc-actions">
-                            <a href="https://drive.google.com/file/d/DOCX_FILE_ID_1/view" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> View
-                            </a>
-                            <a href="https://drive.google.com/uc?export=download&id=DOCX_FILE_ID_1" class="btn btn-sm btn-outline">
+                            <a href="assets/media/GreenLoop_Proposal.docx" class="btn btn-sm btn-primary">
                                 <i class="fas fa-download"></i> Download
                             </a>
                         </div>
-                        <div class="doc-placeholder">
-                            <span>Replace DOCX_FILE_ID_1 with Google Drive file ID</span>
-                        </div>
                     </div>
 
-                    <!-- ===== DOCX SLOT 2 ===== -->
-                    <div class="doc-card" data-doc-id="2">
-                        <div class="doc-icon docx"><i class="fas fa-file-word"></i></div>
-                        <div class="doc-info">
-                            <h4>Document Title 2 (DOCX)</h4>
-                            <p>Description</p>
-                        </div>
-                        <div class="doc-viewer">
-                            <iframe src="https://drive.google.com/file/d/DOCX_FILE_ID_2/preview"></iframe>
-                        </div>
-                        <div class="doc-actions">
-                            <a href="https://drive.google.com/file/d/DOCX_FILE_ID_2/view" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> View
-                            </a>
-                            <a href="https://drive.google.com/uc?export=download&id=DOCX_FILE_ID_2" class="btn btn-sm btn-outline">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                        <div class="doc-placeholder">
-                            <span>Replace DOCX_FILE_ID_2</span>
-                        </div>
-                    </div>
-
-                    <!-- ===== PDF SLOT 1 ===== -->
-                    <div class="doc-card" data-doc-id="3">
-                        <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
-                        <div class="doc-info">
-                            <h4>CIRDAP Form (PDF)</h4>
-                            <p>Official competition submission form</p>
-                        </div>
-                        <!-- GOOGLE DRIVE CONFIG: Replace PDF_FILE_ID_1 -->
-                        <div class="doc-viewer">
-                            <iframe src="https://drive.google.com/file/d/PDF_FILE_ID_1/preview"></iframe>
-                        </div>
-                        <div class="doc-actions">
-                            <a href="https://drive.google.com/file/d/PDF_FILE_ID_1/view" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> View
-                            </a>
-                            <a href="https://drive.google.com/uc?export=download&id=PDF_FILE_ID_1" class="btn btn-sm btn-outline">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                        <div class="doc-placeholder">
-                            <span>Replace PDF_FILE_ID_1 with Google Drive file ID</span>
-                        </div>
-                    </div>
-
-                    <!-- ===== PDF SLOT 2 ===== -->
+                    <!-- ===== PDF SLOT 2 - AI Agriculture ===== -->
                     <div class="doc-card" data-doc-id="4">
                         <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
                         <div class="doc-info">
-                            <h4>PDF Document 2</h4>
-                            <p>Description</p>
+                            <h4>AI Agriculture PDF</h4>
+                            <p>AI-enabled agriculture documentation</p>
                         </div>
                         <div class="doc-viewer">
-                            <iframe src="https://drive.google.com/file/d/PDF_FILE_ID_2/preview"></iframe>
+                            <iframe src="https://drive.google.com/file/d/PDF_AI_ID/preview"></iframe>
                         </div>
                         <div class="doc-actions">
-                            <a href="https://drive.google.com/file/d/PDF_FILE_ID_2/view" target="_blank" class="btn btn-sm btn-primary">
+                            <a href="#" class="btn btn-sm btn-primary">
                                 <i class="fas fa-external-link-alt"></i> View
                             </a>
-                            <a href="https://drive.google.com/uc?export=download&id=PDF_FILE_ID_2" class="btn btn-sm btn-outline">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                        </div>
-                        <div class="doc-placeholder">
-                            <span>Replace PDF_FILE_ID_2</span>
                         </div>
                     </div>
 
-                    <!-- ===== PDF SLOT 3 ===== -->
+                    <!-- ===== PDF SLOT 3 - CIRDAP Form ===== -->
                     <div class="doc-card" data-doc-id="5">
                         <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
                         <div class="doc-info">
-                            <h4>PDF Document 3</h4>
-                            <p>Description</p>
+                            <h4>CIRDAP Competition Form</h4>
+                            <p>Official entry form</p>
                         </div>
                         <div class="doc-viewer">
-                            <iframe src="https://drive.google.com/file/d/PDF_FILE_ID_3/preview"></iframe>
+                            <iframe src="assets/media/CIRDAP_Proposal.pdf"></iframe>
                         </div>
                         <div class="doc-actions">
-                            <a href="https://drive.google.com/file/d/PDF_FILE_ID_3/view" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> View
-                            </a>
-                            <a href="https://drive.google.com/uc?export=download&id=PDF_FILE_ID_3" class="btn btn-sm btn-outline">
+                            <a href="assets/media/CIRDAP_Proposal.pdf" class="btn btn-sm btn-primary">
                                 <i class="fas fa-download"></i> Download
                             </a>
-                        </div>
-                        <div class="doc-placeholder">
-                            <span>Replace PDF_FILE_ID_3</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ========== PRESENTATION GALLERY ========== -->
-            <div class="media-category" id="presentation-gallery">
+            <!-- ========== PITCH DECK PRESENTATION ========== -->
+            <div class="media-category pitch-deck-section" id="presentation-gallery">
                 <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-presentation"></i></div>
-                    <h3>Presentation Gallery</h3>
-                    <span class="category-count"><span id="ppt-count">0</span> presentations</span>
+                    <div class="category-icon pitch"><i class="fas fa-presentation"></i></div>
+                    <h3>Pitch Deck Presentation</h3>
+                    <span class="category-count"><span id="ppt-count">3</span> presentations</span>
                 </div>
                 
-                <div class="presentation-grid">
-                    <!-- ===== SLIDES SLOT 1 ===== -->
-                    <div class="ppt-card featured" data-ppt-id="1">
-                        <div class="ppt-header">
-                            <div class="ppt-icon"><i class="fas fa-file-powerpoint"></i></div>
-                            <div class="ppt-info">
-                                <h4>GreenLoop 3.0 Presentation</h4>
-                                <p>Blockchain & Circular Agriculture slide deck</p>
-                            </div>
+                <!-- FEATURED PITCH DECK -->
+                <div class="pitch-deck-main">
+                    <div class="pitch-deck-header">
+                        <div class="pitch-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="pitch-info">
+                            <h3>GreenLoop 3.0 - Circular Agriculture Pitch Deck</h3>
+                            <p>Complete investor & jury presentation with technology architecture, impact metrics, and implementation roadmap</p>
                         </div>
-                        <!-- GOOGLE SLIDES CONFIG: Replace SLIDES_ID_1 -->
-                        <div class="ppt-viewer">
-                            <iframe src="https://docs.google.com/presentation/d/SLIDES_ID_1/embed?start=false&loop=false&delayms=3000"></iframe>
-                        </div>
-                        <div class="ppt-actions">
-                            <a href="https://docs.google.com/presentation/d/SLIDES_ID_1/edit" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Open in Google Slides
-                            </a>
-                            <a href="https://docs.google.com/presentation/d/SLIDES_ID_1/export/pdf" class="btn btn-sm btn-outline">
-                                <i class="fas fa-file-pdf"></i> Export PDF
+                        <div class="pitch-actions">
+                            <a href="assets/media/GreenLoop_3.0_Circular_Agriculture.pptx" download class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download PPTX (30MB)
                             </a>
                         </div>
-                        <div class="ppt-placeholder">
-                            <i class="fas fa-file-powerpoint"></i>
-                            <span>Replace SLIDES_ID_1 with your Google Slides ID</span>
+                    </div>
+                    
+                    <!-- Pitch Deck Features -->
+                    <div class="pitch-features">
+                        <div class="pitch-feature">
+                            <i class="fas fa-cubes"></i>
+                            <span>3-Layer Architecture</span>
+                        </div>
+                        <div class="pitch-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Impact Metrics</span>
+                        </div>
+                        <div class="pitch-feature">
+                            <i class="fas fa-users"></i>
+                            <span>Stakeholder Map</span>
+                        </div>
+                        <div class="pitch-feature">
+                            <i class="fas fa-route"></i>
+                            <span>Roadmap</span>
+                        </div>
+                        <div class="pitch-feature">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Budget</span>
                         </div>
                     </div>
 
-                    <!-- ===== SLIDES SLOT 2 ===== -->
-                    <div class="ppt-card" data-ppt-id="2">
+                    <!-- Google Slides Embed -->
+                    <div class="pitch-deck-viewer">
+                        <iframe 
+                            src="https://docs.google.com/presentation/d/SLIDES_ID_PITCH/embed?start=false&loop=false&delayms=3000"
+                            title="GreenLoop 3.0 Pitch Deck">
+                        </iframe>
+                        <div class="pitch-placeholder">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <h4>Pitch Deck Viewer</h4>
+                            <p>Upload to Google Slides and replace SLIDES_ID_PITCH with your presentation ID</p>
+                            <div class="placeholder-instructions">
+                                <code>https://docs.google.com/presentation/d/<strong>YOUR_SLIDES_ID</strong>/embed</code>
+                            </div>
+                            <a href="assets/media/GreenLoop_3.0_Circular_Agriculture.pptx" class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download to View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Presentations -->
+                <div class="presentation-grid-small">
+                    <!-- Slides Slot 2 -->
+                    <div class="ppt-card-small" data-ppt-id="2">
                         <div class="ppt-header">
                             <div class="ppt-icon"><i class="fas fa-file-powerpoint"></i></div>
                             <div class="ppt-info">
-                                <h4>Presentation Title 2</h4>
-                                <p>Description</p>
+                                <h4>Ecosystem Presentation</h4>
                             </div>
                         </div>
                         <div class="ppt-viewer">
-                            <iframe src="https://docs.google.com/presentation/d/SLIDES_ID_2/embed?start=false&loop=false&delayms=3000"></iframe>
-                        </div>
-                        <div class="ppt-actions">
-                            <a href="https://docs.google.com/presentation/d/SLIDES_ID_2/edit" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Open
-                            </a>
+                            <iframe src="https://docs.google.com/presentation/d/SLIDES_ID_2/embed?start=false"></iframe>
                         </div>
                         <div class="ppt-placeholder">
                             <i class="fas fa-file-powerpoint"></i>
-                            <span>Replace SLIDES_ID_2</span>
+                            <span>Add Presentation</span>
                         </div>
                     </div>
 
-                    <!-- ===== SLIDES SLOT 3 ===== -->
-                    <div class="ppt-card" data-ppt-id="3">
+                    <!-- Slides Slot 3 -->
+                    <div class="ppt-card-small" data-ppt-id="3">
                         <div class="ppt-header">
                             <div class="ppt-icon"><i class="fas fa-file-powerpoint"></i></div>
                             <div class="ppt-info">
-                                <h4>Presentation Title 3</h4>
-                                <p>Description</p>
+                                <h4>Blockchain Presentation</h4>
                             </div>
                         </div>
                         <div class="ppt-viewer">
-                            <iframe src="https://docs.google.com/presentation/d/SLIDES_ID_3/embed?start=false&loop=false&delayms=3000"></iframe>
-                        </div>
-                        <div class="ppt-actions">
-                            <a href="https://docs.google.com/presentation/d/SLIDES_ID_3/edit" target="_blank" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Open
-                            </a>
+                            <iframe src="https://docs.google.com/presentation/d/SLIDES_ID_3/embed?start=false"></iframe>
                         </div>
                         <div class="ppt-placeholder">
                             <i class="fas fa-file-powerpoint"></i>
-                            <span>Replace SLIDES_ID_3</span>
+                            <span>Add Presentation</span>
                         </div>
                     </div>
                 </div>
@@ -798,15 +788,16 @@
             <div class="section-header">
                 <span class="section-badge"><i class="fas fa-cogs"></i> Technology</span>
                 <h2 class="section-title">Solution Architecture</h2>
-                <p class="section-subtitle">A Dual-Layer System: Physical Circularity & Digital Governance</p>
+                <p class="section-subtitle">A Tri-Layer System: Physical → Digital → Community</p>
             </div>
             
-            <div class="tech-architecture">
-                <!-- Layer A -->
-                <div class="tech-layer">
+            <div class="tech-architecture three-layer">
+                <!-- Layer A - Physical -->
+                <div class="tech-layer layer-a">
                     <div class="layer-header">
                         <span class="layer-badge green">Layer A</span>
                         <h3>Physical Circular Farming</h3>
+                        <span class="layer-subtitle">Hardware & IoT Infrastructure</span>
                     </div>
                     <div class="tech-cards">
                         <div class="tech-card">
@@ -839,29 +830,102 @@
                     </div>
                 </div>
                 
-                <!-- Layer B -->
-                <div class="tech-layer">
+                <!-- Layer B - Digital -->
+                <div class="tech-layer layer-b">
                     <div class="layer-header">
                         <span class="layer-badge blue">Layer B</span>
-                        <h3>Blockchain Governance</h3>
+                        <h3>Digital Platform & Blockchain</h3>
+                        <span class="layer-subtitle">Governance & Transparency Layer</span>
                     </div>
-                    <div class="blockchain-diagram">
-                        <div class="block-item">
-                            <div class="block-icon"><i class="fas fa-database"></i></div>
-                            <strong>Off-Chain (PostgreSQL)</strong>
-                            <span>Source of Truth for Details</span>
+                    <div class="tech-cards">
+                        <div class="tech-card">
+                            <div class="tech-icon blockchain"><i class="fas fa-link"></i></div>
+                            <h4>Hyperledger Blockchain</h4>
+                            <p>Immutable on-chain records for data integrity and transparency</p>
+                            <div class="tech-impact">
+                                <span>SHA-256</span>
+                                <span>Immutable</span>
+                            </div>
                         </div>
-                        <div class="connector">
-                            <i class="fas fa-exchange-alt"></i>
-                            <span>SHA-256</span>
+                        <div class="tech-card">
+                            <div class="tech-icon database"><i class="fas fa-database"></i></div>
+                            <h4>e-Bill System</h4>
+                            <p>Digital transaction records with farmer credit tracking</p>
+                            <div class="tech-impact">
+                                <span>Off-Chain</span>
+                                <span>PostgreSQL</span>
+                            </div>
                         </div>
-                        <div class="block-item">
-                            <div class="block-icon"><i class="fas fa-link"></i></div>
-                            <strong>On-Chain (Hyperledger)</strong>
-                            <span>Source of Truth for Integrity</span>
+                        <div class="tech-card">
+                            <div class="tech-icon ai"><i class="fas fa-brain"></i></div>
+                            <h4>AI-Powered Analytics</h4>
+                            <p>Machine learning for crop prediction and resource optimization</p>
+                            <div class="tech-impact">
+                                <span>Predictive</span>
+                                <span>Real-time</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Layer C - Community -->
+                <div class="tech-layer layer-c">
+                    <div class="layer-header">
+                        <span class="layer-badge gold">Layer C</span>
+                        <h3>Community & Impact</h3>
+                        <span class="layer-subtitle">Social Transformation Layer</span>
+                    </div>
+                    <div class="tech-cards">
+                        <div class="tech-card">
+                            <div class="tech-icon farmer"><i class="fas fa-users"></i></div>
+                            <h4>কৃষক কার্ড (Farmer Card)</h4>
+                            <p>Digital identity with credit history, land records, and entitlements</p>
+                            <div class="tech-impact">
+                                <span>10M+ Farmers</span>
+                                <span>Financial Inclusion</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon youth"><i class="fas fa-user-graduate"></i></div>
+                            <h4>Youth Digital Facilitators</h4>
+                            <p>NEET youth trained as Agro-Service Centre operators</p>
+                            <div class="tech-impact">
+                                <span>50,000 Jobs</span>
+                                <span>Skill Development</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon women"><i class="fas fa-venus"></i></div>
+                            <h4>Women Empowerment</h4>
+                            <p>Family Cards with women as primary financial decision-makers</p>
+                            <div class="tech-impact">
+                                <span>Gender-Responsive</span>
+                                <span>Nutritional Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Layer Connection Diagram -->
+            <div class="layer-connection-diagram">
+                <div class="connection-flow">
+                    <div class="flow-item layer-a-flow">
+                        <i class="fas fa-microchip"></i>
+                        <span>IoT Data</span>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-item layer-b-flow">
+                        <i class="fas fa-link"></i>
+                        <span>Blockchain</span>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-item layer-c-flow">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </div>
+                </div>
+                <p class="flow-description">Data flows from physical sensors → blockchain verification → community impact</p>
             </div>
         </div>
     </section>
@@ -1128,6 +1192,41 @@
                 video.msRequestFullscreen();
             }
         }
+        
+        // Image Modal for Infographic
+        function openImageModal(src) {
+            // Create modal if doesn't exist
+            let modal = document.getElementById('imageModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'imageModal';
+                modal.className = 'image-modal';
+                modal.innerHTML = `
+                    <span class="close-modal" onclick="closeImageModal()">&times;</span>
+                    <img src="" alt="Full size image">
+                `;
+                document.body.appendChild(modal);
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) closeImageModal();
+                });
+            }
+            modal.querySelector('img').src = src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeImageModal();
+        });
     </script>
 </body>
 </html>
