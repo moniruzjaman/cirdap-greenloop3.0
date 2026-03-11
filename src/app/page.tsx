@@ -167,9 +167,10 @@ const translations = {
       subtitle: 'Watch our comprehensive video explaining the GreenLoop 3.0 solution',
       videoTitle: 'GreenLoop 3.0 - Complete Presentation',
       videoDesc: 'Complete project presentation for CIRDAP Innovation Challenge 2026',
+      videoFile: '/media/greenloop_video_en.mp4',
       tags: {
         duration: 'Full Presentation',
-        language: 'Bengali',
+        language: 'English',
         quality: 'HD'
       }
     },
@@ -184,6 +185,8 @@ const translations = {
           title: 'Main Proposal (DOCX)',
           description: 'GreenLoop 3.0 - Healing the Earth, Securing the Smile - A Blockchain-Driven Circular Ecosystem',
           file: '/media/GreenLoop_Proposal.docx',
+          fileEn: '/media/GreenLoop_Proposal_en.docx',
+          fileBn: '/media/GreenLoop_Proposal_bn.docx',
           color: 'blue',
           size: 'Word Document'
         },
@@ -200,6 +203,8 @@ const translations = {
           title: 'Presentation (PPTX)',
           description: 'Blockchain & Circular Agriculture presentation for stakeholders',
           file: '/media/GreenLoop_Presentation.pptx',
+          fileEn: '/media/GreenLoop_Presentation_en.pptx',
+          fileBn: '/media/GreenLoop_Presentation_bn.pptx',
           color: 'orange',
           size: 'PowerPoint'
         },
@@ -215,7 +220,9 @@ const translations = {
           icon: '🖼️',
           title: 'Infographic (PNG)',
           description: 'Visual summary of GreenLoop 3.0 ecosystem',
-          file: '/media/greenloop_infographic.png',
+          file: '/media/greenloop_infographic_en.png',
+          fileEn: '/media/greenloop_infographic_en.png',
+          fileBn: '/media/greenloop_infographic_bn.png',
           color: 'green',
           size: 'Image'
         }
@@ -447,6 +454,7 @@ const translations = {
       subtitle: 'GreenLoop 3.0 সমাধান ব্যাখ্যাকারী আমাদের বিস্তৃত ভিডিও দেখুন',
       videoTitle: 'গ্রীনলুপ ৩.০ - GreenLoop 3.0',
       videoDesc: 'CIRDAP ইনোভেশন চ্যালেঞ্জ ২০২৬ এর জন্য সম্পূর্ণ প্রজেক্ট প্রেজেন্টেশন',
+      videoFile: '/media/greenloop_video_bn.mp4',
       tags: {
         duration: 'সম্পূর্ণ প্রেজেন্টেশন',
         language: 'বাংলা',
@@ -464,6 +472,8 @@ const translations = {
           title: 'মূল প্রপোজাল (DOCX)',
           description: 'GreenLoop 3.0 - পৃথিবীকে সুস্থ করুন, হাসি নিশ্চিত করুন - একটি ব্লকচেইন-চালিত সার্কুলার ইকোসিস্টেম',
           file: '/media/GreenLoop_Proposal.docx',
+          fileEn: '/media/GreenLoop_Proposal_en.docx',
+          fileBn: '/media/GreenLoop_Proposal_bn.docx',
           color: 'blue',
           size: 'Word ডকুমেন্ট'
         },
@@ -480,6 +490,8 @@ const translations = {
           title: 'প্রেজেন্টেশন (PPTX)',
           description: 'স্টেকহোল্ডারদের জন্য ব্লকচেইন ও সার্কুলার কৃষি প্রেজেন্টেশন',
           file: '/media/GreenLoop_Presentation.pptx',
+          fileEn: '/media/GreenLoop_Presentation_en.pptx',
+          fileBn: '/media/GreenLoop_Presentation_bn.pptx',
           color: 'orange',
           size: 'PowerPoint'
         },
@@ -495,7 +507,9 @@ const translations = {
           icon: '🖼️',
           title: 'ইনফোগ্রাফিক (PNG)',
           description: 'GreenLoop 3.0 ইকোসিস্টেমের ভিজ্যুয়াল সারাংশ',
-          file: '/media/greenloop_infographic.png',
+          file: '/media/greenloop_infographic_bn.png',
+          fileEn: '/media/greenloop_infographic_en.png',
+          fileBn: '/media/greenloop_infographic_bn.png',
           color: 'green',
           size: 'ছবি'
         }
@@ -1097,11 +1111,12 @@ export default function Home() {
             <div className="relative aspect-video">
               <video
                 ref={videoRef}
+                key={t.video.videoFile}
                 className="w-full h-full object-cover"
                 poster="/media/greenloop_banner.png"
                 controls
               >
-                <source src="/media/greenloop_video.mp4" type="video/mp4" />
+                <source src={t.video.videoFile} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

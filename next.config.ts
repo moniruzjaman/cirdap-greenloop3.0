@@ -1,12 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  /* config options here */
+  // Static export for GitHub Pages
+  output: "export",
+  
+  // Base path for GitHub Pages (repository name)
+  basePath: "/cirdap-greenloop3.0",
+  
+  // Trailing slash for proper routing on static hosts
+  trailingSlash: true,
+  
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+  },
+  
+  // TypeScript config
   typescript: {
     ignoreBuildErrors: true,
   },
+  
   reactStrictMode: false,
+  
+  // Ensure static files are copied correctly
+  assetPrefix: "/cirdap-greenloop3.0/",
 };
 
 export default nextConfig;
