@@ -85,7 +85,7 @@
                     <i class="fas fa-play-circle"></i> Watch Video
                 </a>
                 <a href="#proposal" class="btn btn-secondary">
-                    <i class="fas fa-file-pdf"></i> View Proposal
+                    <i class="fas fa-file-word"></i> View Proposal
                 </a>
             </div>
         </div>
@@ -119,32 +119,39 @@
                 <p class="section-subtitle">Watch our comprehensive video explaining the GreenLoop 3.0 solution</p>
             </div>
             
-            <div class="video-container">
-                <div class="video-wrapper">
+            <div class="video-container-full">
+                <div class="video-player-wrapper">
                     <video id="projectVideo" controls poster="assets/media/greenloop_banner.png">
                         <source src="assets/media/greenloop_video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-overlay">
-                        <button class="play-btn" id="playBtn">
+                    <div class="video-overlay" id="videoOverlay">
+                        <button class="play-btn-large" id="playBtn">
                             <i class="fas fa-play"></i>
+                            <span>Play Video</span>
                         </button>
                     </div>
                 </div>
-                <div class="video-info">
-                    <h3>গ্রীনলুপ ৩.০ - GreenLoop 3.0</h3>
-                    <p>A comprehensive overview of our circular economy solution for sustainable agriculture in Bangladesh.</p>
-                    <div class="video-meta">
-                        <span><i class="fas fa-clock"></i> Full Presentation</span>
-                        <span><i class="fas fa-language"></i> Bengali & English</span>
-                        <span><i class="fas fa-hd"></i> HD Quality</span>
+                
+                <div class="video-info-bar">
+                    <div class="video-title-info">
+                        <h3>গ্রীনলুপ ৩.০ - GreenLoop 3.0</h3>
+                        <p>Complete project presentation for CIRDAP Innovation Challenge 2026</p>
                     </div>
-                    <div class="video-actions">
-                        <a href="assets/media/greenloop_video.mp4" download class="btn btn-outline">
-                            <i class="fas fa-download"></i> Download Video
+                    <div class="video-meta-tags">
+                        <span><i class="fas fa-clock"></i> Full Presentation</span>
+                        <span><i class="fas fa-language"></i> Bengali</span>
+                        <span><i class="fas fa-hd"></i> HD</span>
+                    </div>
+                    <div class="video-actions-bar">
+                        <a href="assets/media/greenloop_video.mp4" download class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> Download
                         </a>
-                        <button class="btn btn-outline" onclick="shareVideo()">
+                        <button class="btn btn-outline btn-sm" onclick="shareVideo()">
                             <i class="fas fa-share-alt"></i> Share
+                        </button>
+                        <button class="btn btn-outline btn-sm" onclick="toggleFullscreen('projectVideo')">
+                            <i class="fas fa-expand"></i> Fullscreen
                         </button>
                     </div>
                 </div>
@@ -152,56 +159,93 @@
         </div>
     </section>
 
-    <!-- Proposal Section -->
+    <!-- Proposal Section with Tabs -->
     <section id="proposal" class="section proposal-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge"><i class="fas fa-file-alt"></i> Documentation</span>
-                <h2 class="section-title">Project Proposal</h2>
-                <p class="section-subtitle">Comprehensive proposal document detailing the GreenLoop 3.0 framework</p>
+                <h2 class="section-title">Project Proposal Documents</h2>
+                <p class="section-subtitle">View and download comprehensive proposal documents</p>
             </div>
             
-            <div class="document-container">
-                <div class="document-preview">
-                    <div class="pdf-embed">
-                        <iframe src="assets/media/CIRDAP_Proposal.pdf" title="GreenLoop 3.0 Proposal"></iframe>
+            <!-- Document Tabs -->
+            <div class="document-tabs">
+                <button class="tab-btn active" onclick="switchTab('docx')">
+                    <i class="fas fa-file-word"></i> Main Proposal (DOCX)
+                </button>
+                <button class="tab-btn" onclick="switchTab('pdf')">
+                    <i class="fas fa-file-pdf"></i> CIRDAP Form (PDF)
+                </button>
+            </div>
+            
+            <!-- DOCX Tab Content -->
+            <div id="docx-tab" class="tab-content active">
+                <div class="document-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-title">
+                            <i class="fas fa-file-word docx-icon"></i>
+                            <div>
+                                <h3>GreenLoop 3.0 - Blockchain-Enabled Circular Agriculture for Rural Empowerment</h3>
+                                <p>Main proposal document (Word format)</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="assets/media/GreenLoop_Proposal.docx" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download DOCX
+                            </a>
+                        </div>
                     </div>
-                    <div class="document-overlay">
-                        <a href="assets/media/CIRDAP_Proposal.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-external-link-alt"></i> Open Full PDF
-                        </a>
+                    
+                    <!-- DOCX Viewer - Using Office Online -->
+                    <div class="document-embed">
+                        <iframe id="docxViewer" src="" title="GreenLoop Proposal Document"></iframe>
+                        <div class="viewer-placeholder" id="docxPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-file-word"></i>
+                                <h4>View Document</h4>
+                                <p>The document will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                                <div class="placeholder-actions">
+                                    <a href="assets/media/GreenLoop_Proposal.docx" class="btn btn-primary">
+                                        <i class="fas fa-download"></i> Download to View
+                                    </a>
+                                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank" class="btn btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="document-info">
-                    <h3><i class="fas fa-file-pdf"></i> Decoding the CIRDAP</h3>
-                    <p class="doc-description">Complete project proposal submitted to CIRDAP-REEDS Rural Development Innovation Challenge 2026.</p>
-                    
-                    <div class="doc-highlights">
-                        <h4>Key Highlights:</h4>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> 12-Parameter Soil Sensor Technology</li>
-                            <li><i class="fas fa-check-circle"></i> Arsenic Shield (3F4D+MD) Protocol</li>
-                            <li><i class="fas fa-check-circle"></i> Solar Cold Chain Infrastructure</li>
-                            <li><i class="fas fa-check-circle"></i> Hyperledger Blockchain Governance</li>
-                            <li><i class="fas fa-check-circle"></i> Budget Framework: $92,625 USD</li>
-                        </ul>
+            </div>
+            
+            <!-- PDF Tab Content -->
+            <div id="pdf-tab" class="tab-content">
+                <div class="document-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-title">
+                            <i class="fas fa-file-pdf pdf-icon"></i>
+                            <div>
+                                <h3>Decoding the CIRDAP - Competition Form</h3>
+                                <p>Official CIRDAP submission form</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="assets/media/CIRDAP_Proposal.pdf" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="doc-actions">
-                        <a href="assets/media/CIRDAP_Proposal.pdf" download class="btn btn-primary">
-                            <i class="fas fa-download"></i> Download PDF
-                        </a>
-                        <a href="assets/media/CIRDAP_Proposal.pdf" target="_blank" class="btn btn-outline">
-                            <i class="fas fa-eye"></i> View Fullscreen
-                        </a>
+                    <!-- PDF Viewer -->
+                    <div class="document-embed">
+                        <iframe src="assets/media/CIRDAP_Proposal.pdf" title="CIRDAP Proposal PDF"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Presentation Section -->
+    <!-- Presentation Section with Viewer -->
     <section id="presentation" class="section presentation-section">
         <div class="container">
             <div class="section-header">
@@ -210,18 +254,23 @@
                 <p class="section-subtitle">Blockchain & Circular Agriculture presentation for stakeholders</p>
             </div>
             
-            <div class="presentation-container">
-                <div class="ppt-preview">
-                    <div class="ppt-icon">
-                        <i class="fas fa-file-powerpoint"></i>
+            <div class="presentation-viewer-container">
+                <div class="viewer-header">
+                    <div class="viewer-title">
+                        <i class="fas fa-file-powerpoint ppt-icon"></i>
+                        <div>
+                            <h3>GreenLoop 3.0: Blockchain & Circular Agriculture</h3>
+                            <p>Comprehensive slide deck covering technology architecture, implementation strategy, and impact metrics</p>
+                        </div>
                     </div>
-                    <div class="ppt-info">
-                        <h3>GreenLoop 3.0: Blockchain & Circular Agriculture</h3>
-                        <p>Comprehensive slide deck covering technology architecture, implementation strategy, and impact metrics.</p>
+                    <div class="viewer-actions">
+                        <a href="assets/media/GreenLoop_Presentation.pptx" download class="btn btn-primary btn-sm">
+                            <i class="fas fa-download"></i> Download PPTX
+                        </a>
                     </div>
                 </div>
                 
-                <div class="presentation-features">
+                <div class="presentation-features-bar">
                     <div class="feature-item">
                         <i class="fas fa-cubes"></i>
                         <span>Blockchain Architecture</span>
@@ -240,10 +289,24 @@
                     </div>
                 </div>
                 
-                <div class="presentation-actions">
-                    <a href="assets/media/GreenLoop_Presentation.pptx" download class="btn btn-primary btn-lg">
-                        <i class="fas fa-download"></i> Download Presentation (PPTX)
-                    </a>
+                <!-- PPTX Viewer -->
+                <div class="document-embed ppt-embed">
+                    <iframe id="pptViewer" src="" title="GreenLoop Presentation"></iframe>
+                    <div class="viewer-placeholder" id="pptPlaceholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <h4>View Presentation</h4>
+                            <p>The presentation will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                            <div class="placeholder-actions">
+                                <a href="assets/media/GreenLoop_Presentation.pptx" class="btn btn-primary">
+                                    <i class="fas fa-download"></i> Download to View
+                                </a>
+                                <a href="assets/media/GreenLoop_Presentation.pptx" target="_blank" class="btn btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -266,7 +329,7 @@
                                 <span></span><span></span><span></span>
                             </div>
                             <div class="browser-url">
-                                <i class="fas fa-lock"></i> greenloop-cirdap.vercel.app
+                                <i class="fas fa-lock"></i> greenloop-cirdap.pages.dev
                             </div>
                         </div>
                         <div class="browser-content">
@@ -304,7 +367,7 @@
                         <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank" class="btn btn-primary">
                             <i class="fab fa-github"></i> View Source Code
                         </a>
-                        <a href="https://cirdap-greenloop3.0.vercel.app" target="_blank" class="btn btn-outline" id="liveDemoLink">
+                        <a href="https://moniruzjaman.github.io/cirdap-greenloop3.0" target="_blank" class="btn btn-outline">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                     </div>
@@ -517,11 +580,19 @@
                     </div>
                     <div class="resource-download"><i class="fas fa-download"></i></div>
                 </a>
+                <a href="assets/media/GreenLoop_Proposal.docx" download class="resource-card">
+                    <div class="resource-icon docx"><i class="fas fa-file-word"></i></div>
+                    <div class="resource-info">
+                        <h4>Main Proposal</h4>
+                        <p>DOCX • Complete Document</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
                 <a href="assets/media/CIRDAP_Proposal.pdf" download class="resource-card">
                     <div class="resource-icon pdf"><i class="fas fa-file-pdf"></i></div>
                     <div class="resource-info">
-                        <h4>Project Proposal</h4>
-                        <p>PDF • Complete Document</p>
+                        <h4>CIRDAP Form</h4>
+                        <p>PDF • Competition Form</p>
                     </div>
                     <div class="resource-download"><i class="fas fa-download"></i></div>
                 </a>
@@ -566,8 +637,8 @@
                 <div class="footer-links">
                     <h4>Resources</h4>
                     <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank">GitHub Repository</a>
-                    <a href="assets/media/CIRDAP_Proposal.pdf" target="_blank">Proposal PDF</a>
-                    <a href="assets/media/GreenLoop_Presentation.pptx" download>Presentation</a>
+                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank">Main Proposal (DOCX)</a>
+                    <a href="assets/media/GreenLoop_Presentation.pptx" download>Presentation (PPTX)</a>
                 </div>
                 <div class="footer-links">
                     <h4>Competition</h4>
@@ -584,5 +655,64 @@
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
+    <script>
+        // Base URL for the deployed site (will be set dynamically)
+        const BASE_URL = window.location.origin + window.location.pathname.replace(/\/$/, '');
+        
+        // Initialize viewers when deployed
+        document.addEventListener('DOMContentLoaded', function() {
+            initDocumentViewers();
+        });
+        
+        function initDocumentViewers() {
+            // Use Office Online viewer for DOCX
+            const docxUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Proposal.docx');
+            const docxViewer = document.getElementById('docxViewer');
+            const docxPlaceholder = document.getElementById('docxPlaceholder');
+            
+            // Use Office Online viewer for PPT
+            const pptUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Presentation.pptx');
+            const pptViewer = document.getElementById('pptViewer');
+            const pptPlaceholder = document.getElementById('pptPlaceholder');
+            
+            // Check if we're on a live site (not local file)
+            if (window.location.protocol !== 'file:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                // Set up Office Online viewers
+                docxViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${docxUrl}`;
+                pptViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${pptUrl}`;
+                
+                // Hide placeholders after load
+                docxViewer.onload = function() {
+                    setTimeout(() => { docxPlaceholder.style.display = 'none'; }, 2000);
+                };
+                pptViewer.onload = function() {
+                    setTimeout(() => { pptPlaceholder.style.display = 'none'; }, 2000);
+                };
+            }
+        }
+        
+        // Tab switching
+        function switchTab(tab) {
+            // Remove active from all tabs and contents
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active to selected
+            document.querySelector(`[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(`${tab}-tab`).classList.add('active');
+        }
+        
+        // Video fullscreen toggle
+        function toggleFullscreen(videoId) {
+            const video = document.getElementById(videoId);
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        }
+    </script>
 </body>
 </html>
