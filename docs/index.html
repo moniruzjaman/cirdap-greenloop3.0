@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLoop 3.0 | CIRDAP Innovation Challenge 2026</title>
+    <meta name="description" content="GreenLoop 3.0 - Efficiency-by-Design for a Circular Future. CIRDAP-REEDS Rural Development Innovation Challenge 2026 Finalist Project.">
+    <meta name="keywords" content="GreenLoop, CIRDAP, circular economy, blockchain, agriculture, Bangladesh, LDC graduation">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="GreenLoop 3.0 - CIRDAP Innovation Challenge 2026">
+    <meta property="og:description" content="Healing the Earth, Securing the Smile - A revolutionary circular economy solution for Bangladesh's LDC graduation.">
+    <meta property="og:image" content="assets/media/greenloop_banner.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/media/greenloop_banner.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">GreenLoop <span class="version">3.0</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#proposal">Proposal</a></li>
+                <li><a href="#presentation">Presentation</a></li>
+                <li><a href="#demo">Demo App</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="badge"><i class="fas fa-trophy"></i> CIRDAP Innovation Challenge 2026 Finalist</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">GreenLoop</span>
+                <span class="title-highlight">3.0</span>
+            </h1>
+            <p class="hero-subtitle">Efficiency-by-Design for a Circular Future</p>
+            <p class="hero-tagline">🌱 Healing the Earth, Securing the Smile 🌱</p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-value" data-target="220">$220B</div>
+                    <div class="stat-label">Annual Savings Potential</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="stat-value">3,500 kg</div>
+                    <div class="stat-label">CO2 Offset per Unit</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-recycle"></i></div>
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Circular Bio-Ecosystem</div>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#video" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </a>
+                <a href="#proposal" class="btn btn-secondary">
+                    <i class="fas fa-file-word"></i> View Proposal
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Theme Banner -->
+    <section class="theme-banner">
+        <div class="container">
+            <div class="theme-content">
+                <div class="theme-badge">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="theme-text">
+                    <h3>Competition Theme</h3>
+                    <p><strong>LDC Graduation & Circular Economy</strong> - Addressing the 4.0% GDP loss from agricultural inefficiencies</p>
+                </div>
+                <div class="theme-year">2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker (Gamified) -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-checkpoints">
+                <div class="checkpoint active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="checkpoint" data-section="knowledge-map">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Map</span>
+                </div>
+                <div class="checkpoint" data-section="video">
+                    <i class="fas fa-video"></i>
+                    <span>Video</span>
+                </div>
+                <div class="checkpoint" data-section="proposal">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Proposal</span>
+                </div>
+                <div class="checkpoint" data-section="presentation">
+                    <i class="fas fa-presentation"></i>
+                    <span>Slides</span>
+                </div>
+                <div class="checkpoint" data-section="resources">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </div>
+            </div>
+            <div class="progress-reward">
+                <i class="fas fa-trophy"></i>
+                <span id="progressPercent">0%</span> Explored
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Knowledge Map Section -->
+    <section id="knowledge-map" class="section knowledge-map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-sitemap"></i> Interactive Knowledge Map</span>
+                <h2 class="section-title">GreenLoop 3.0 ইকোসিস্টেম</h2>
+                <p class="section-subtitle">ক্লিক করে বিস্তারিত জানুন - Click on any node to explore details</p>
+            </div>
+            
+            <div class="knowledge-map-container">
+                <!-- Central Node -->
+                <div class="map-node central" onclick="showNodeDetail('central')">
+                    <div class="node-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="node-label">GreenLoop 3.0</div>
+                    <div class="node-pulse"></div>
+                </div>
+                
+                <!-- Connecting Lines (SVG) -->
+                <svg class="map-lines" viewBox="0 0 800 500">
+                    <!-- Lines from center to outer nodes -->
+                    <line x1="400" y1="250" x2="200" y2="100" class="map-line" />
+                    <line x1="400" y1="250" x2="600" y2="100" class="map-line" />
+                    <line x1="400" y1="250" x2="100" y2="300" class="map-line" />
+                    <line x1="400" y1="250" x2="700" y2="300" class="map-line" />
+                    <line x1="400" y1="250" x2="200" y2="450" class="map-line" />
+                    <line x1="400" y1="250" x2="600" y2="450" class="map-line" />
+                </svg>
+                
+                <!-- Layer A Nodes -->
+                <div class="map-node layer-a" style="top: 15%; left: 20%;" onclick="showNodeDetail('sensor')">
+                    <div class="node-icon sensor">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="node-label">Soil Sensor</div>
+                </div>
+                
+                <div class="map-node layer-a" style="top: 15%; right: 20%;" onclick="showNodeDetail('arsenic')">
+                    <div class="node-icon arsenic">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="node-label">Arsenic Shield</div>
+                </div>
+                
+                <div class="map-node layer-a" style="top: 55%; left: 5%;" onclick="showNodeDetail('solar')">
+                    <div class="node-icon solar">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="node-label">Solar Cold Chain</div>
+                </div>
+                
+                <!-- Layer B Nodes -->
+                <div class="map-node layer-b" style="top: 55%; right: 5%;" onclick="showNodeDetail('blockchain')">
+                    <div class="node-icon blockchain">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="node-label">Blockchain</div>
+                </div>
+                
+                <!-- Impact Nodes -->
+                <div class="map-node impact" style="bottom: 5%; left: 20%;" onclick="showNodeDetail('farmer')">
+                    <div class="node-icon farmer">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="node-label">কৃষক কার্ড</div>
+                </div>
+                
+                <div class="map-node impact" style="bottom: 5%; right: 20%;" onclick="showNodeDetail('youth')">
+                    <div class="node-icon youth">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="node-label">Youth Employment</div>
+                </div>
+            </div>
+            
+            <!-- Node Detail Popup -->
+            <div class="node-detail-popup" id="nodeDetailPopup">
+                <div class="popup-content">
+                    <button class="popup-close" onclick="closeNodeDetail()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="popup-header" id="popupHeader">
+                        <div class="popup-icon" id="popupIcon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 id="popupTitle">Title</h3>
+                    </div>
+                    <div class="popup-body" id="popupBody">
+                        <p>Content goes here...</p>
+                    </div>
+                    <div class="popup-stats" id="popupStats">
+                        <!-- Stats will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Legend -->
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-dot layer-a"></span>
+                    <span>Layer A: Physical</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot layer-b"></span>
+                    <span>Layer B: Digital</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot impact"></span>
+                    <span>Impact Areas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Storytelling Section -->
+    <section class="section story-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-book-open"></i> আমাদের গল্প</span>
+                <h2 class="section-title">The GreenLoop Story</h2>
+                <p class="section-subtitle">How we're transforming Bangladesh's agricultural future</p>
+            </div>
+            
+            <div class="story-timeline">
+                <div class="story-chapter" data-chapter="1">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০১</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>সমস্যা: The Challenge</h3>
+                        <p>Bangladesh loses <strong>4.0% of GDP</strong> annually from agricultural inefficiencies. With <strong>LDC graduation in 2026</strong>, we face a critical need for transformation.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">$220 Billion</span>
+                            <span class="stat-label">Annual economic opportunity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-chapter" data-chapter="2">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০২</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>সমাধান: Our Solution</h3>
+                        <p>GreenLoop 3.0 introduces <strong>Efficiency-by-Design</strong> - a dual-layer system combining physical circular farming with blockchain governance.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Circular Bio-Ecosystem</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-chapter" data-chapter="3">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০৩</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>প্রভাব: The Impact</h3>
+                        <p>Empowering <strong>10 million farmers</strong> with technology, creating <strong>50,000 youth jobs</strong>, and achieving <strong>climate resilience</strong> for 61 arsenic-affected districts.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">3,500 kg</span>
+                            <span class="stat-label">CO2 offset per unit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="section video-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-video"></i> Multimedia</span>
+                <h2 class="section-title">Project Video Presentation</h2>
+                <p class="section-subtitle">Watch our comprehensive video explaining the GreenLoop 3.0 solution</p>
+            </div>
+            
+            <div class="video-container-full">
+                <div class="video-player-wrapper">
+                    <video id="projectVideo" controls poster="assets/media/greenloop_banner.png">
+                        <source src="assets/media/greenloop_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" id="videoOverlay">
+                        <button class="play-btn-large" id="playBtn">
+                            <i class="fas fa-play"></i>
+                            <span>Play Video</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="video-info-bar">
+                    <div class="video-title-info">
+                        <h3>গ্রীনলুপ ৩.০ - GreenLoop 3.0</h3>
+                        <p>Complete project presentation for CIRDAP Innovation Challenge 2026</p>
+                    </div>
+                    <div class="video-meta-tags">
+                        <span><i class="fas fa-clock"></i> Full Presentation</span>
+                        <span><i class="fas fa-language"></i> Bengali</span>
+                        <span><i class="fas fa-hd"></i> HD</span>
+                    </div>
+                    <div class="video-actions-bar">
+                        <a href="assets/media/greenloop_video.mp4" download class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <button class="btn btn-outline btn-sm" onclick="shareVideo()">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                        <button class="btn btn-outline btn-sm" onclick="toggleFullscreen('projectVideo')">
+                            <i class="fas fa-expand"></i> Fullscreen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proposal Section with Tabs -->
+    <section id="proposal" class="section proposal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-file-alt"></i> Documentation</span>
+                <h2 class="section-title">Project Proposal Documents</h2>
+                <p class="section-subtitle">View and download comprehensive proposal documents</p>
+            </div>
+            
+            <!-- Document Tabs -->
+            <div class="document-tabs">
+                <button class="tab-btn active" onclick="switchTab('docx')">
+                    <i class="fas fa-file-word"></i> Main Proposal (DOCX)
+                </button>
+                <button class="tab-btn" onclick="switchTab('pdf')">
+                    <i class="fas fa-file-pdf"></i> CIRDAP Form (PDF)
+                </button>
+            </div>
+            
+            <!-- DOCX Tab Content -->
+            <div id="docx-tab" class="tab-content active">
+                <div class="document-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-title">
+                            <i class="fas fa-file-word docx-icon"></i>
+                            <div>
+                                <h3>GreenLoop 3.0 - Blockchain-Enabled Circular Agriculture for Rural Empowerment</h3>
+                                <p>Main proposal document (Word format)</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="assets/media/GreenLoop_Proposal.docx" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download DOCX
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- DOCX Viewer - Using Office Online -->
+                    <div class="document-embed">
+                        <iframe id="docxViewer" src="" title="GreenLoop Proposal Document"></iframe>
+                        <div class="viewer-placeholder" id="docxPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-file-word"></i>
+                                <h4>View Document</h4>
+                                <p>The document will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                                <div class="placeholder-actions">
+                                    <a href="assets/media/GreenLoop_Proposal.docx" class="btn btn-primary">
+                                        <i class="fas fa-download"></i> Download to View
+                                    </a>
+                                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank" class="btn btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF Tab Content -->
+            <div id="pdf-tab" class="tab-content">
+                <div class="document-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-title">
+                            <i class="fas fa-file-pdf pdf-icon"></i>
+                            <div>
+                                <h3>Decoding the CIRDAP - Competition Form</h3>
+                                <p>Official CIRDAP submission form</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="assets/media/CIRDAP_Proposal.pdf" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- PDF Viewer -->
+                    <div class="document-embed">
+                        <iframe src="assets/media/CIRDAP_Proposal.pdf" title="CIRDAP Proposal PDF"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Section with Viewer -->
+    <section id="presentation" class="section presentation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-presentation"></i> Slide Deck</span>
+                <h2 class="section-title">Presentation Slides</h2>
+                <p class="section-subtitle">Blockchain & Circular Agriculture presentation for stakeholders</p>
+            </div>
+            
+            <div class="presentation-viewer-container">
+                <div class="viewer-header">
+                    <div class="viewer-title">
+                        <i class="fas fa-file-powerpoint ppt-icon"></i>
+                        <div>
+                            <h3>GreenLoop 3.0: Blockchain & Circular Agriculture</h3>
+                            <p>Comprehensive slide deck covering technology architecture, implementation strategy, and impact metrics</p>
+                        </div>
+                    </div>
+                    <div class="viewer-actions">
+                        <a href="assets/media/GreenLoop_Presentation.pptx" download class="btn btn-primary btn-sm">
+                            <i class="fas fa-download"></i> Download PPTX
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="presentation-features-bar">
+                    <div class="feature-item">
+                        <i class="fas fa-cubes"></i>
+                        <span>Blockchain Architecture</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Impact Metrics</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>Stakeholder Map</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-route"></i>
+                        <span>Implementation Roadmap</span>
+                    </div>
+                </div>
+                
+                <!-- PPTX Viewer -->
+                <div class="document-embed ppt-embed">
+                    <iframe id="pptViewer" src="" title="GreenLoop Presentation"></iframe>
+                    <div class="viewer-placeholder" id="pptPlaceholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <h4>View Presentation</h4>
+                            <p>The presentation will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                            <div class="placeholder-actions">
+                                <a href="assets/media/GreenLoop_Presentation.pptx" class="btn btn-primary">
+                                    <i class="fas fa-download"></i> Download to View
+                                </a>
+                                <a href="assets/media/GreenLoop_Presentation.pptx" target="_blank" class="btn btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo App Section -->
+    <section id="demo" class="section demo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-laptop-code"></i> Interactive Demo</span>
+                <h2 class="section-title">Live Demo Application</h2>
+                <p class="section-subtitle">Experience the GreenLoop 3.0 platform in action</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-preview">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i> greenloop-cirdap.pages.dev
+                            </div>
+                        </div>
+                        <div class="browser-content">
+                            <img src="assets/media/greenloop_banner.png" alt="GreenLoop Demo Preview">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-features">
+                    <h3>Platform Features</h3>
+                    <div class="demo-grid">
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h4>Admin Dashboard</h4>
+                            <p>Resource management and file upload system</p>
+                        </div>
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-database"></i></div>
+                            <h4>Blockchain Ledger</h4>
+                            <p>Immutable transaction records with SHA-256</p>
+                        </div>
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h4>Analytics Panel</h4>
+                            <p>Real-time monitoring and reporting</p>
+                        </div>
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <h4>Mobile Ready</h4>
+                            <p>Responsive design for all devices</p>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-links">
+                        <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                        <a href="https://moniruzjaman.github.io/cirdap-greenloop3.0" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section tech-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-cogs"></i> Technology</span>
+                <h2 class="section-title">Solution Architecture</h2>
+                <p class="section-subtitle">A Dual-Layer System: Physical Circularity & Digital Governance</p>
+            </div>
+            
+            <div class="tech-architecture">
+                <!-- Layer A -->
+                <div class="tech-layer">
+                    <div class="layer-header">
+                        <span class="layer-badge green">Layer A</span>
+                        <h3>Physical Circular Farming</h3>
+                    </div>
+                    <div class="tech-cards">
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-microchip"></i></div>
+                            <h4>12-Parameter Soil Sensor</h4>
+                            <p>Handheld device measuring NPK, SOM/SOC, and micronutrients via ML estimation</p>
+                            <div class="tech-impact">
+                                <span><i class="fas fa-arrow-up"></i> 20-32% Yield</span>
+                                <span><i class="fas fa-arrow-down"></i> 30% Fertilizer</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-water"></i></div>
+                            <h4>Arsenic Shield (3F4D+MD)</h4>
+                            <p>Immobilizes arsenic via Iron Oxide re-precipitation in 61 affected districts</p>
+                            <div class="tech-impact">
+                                <span><i class="fas fa-arrow-down"></i> 9-21% Arsenic</span>
+                                <span><i class="fas fa-arrow-down"></i> 57% Water</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-solar-panel"></i></div>
+                            <h4>Solar Cold Chain</h4>
+                            <p>10-ton hybrid mini cold storage with 70% reduced operating costs</p>
+                            <div class="tech-impact">
+                                <span>BCR > 3.0</span>
+                                <span>IRR 14.47%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Layer B -->
+                <div class="tech-layer">
+                    <div class="layer-header">
+                        <span class="layer-badge blue">Layer B</span>
+                        <h3>Blockchain Governance</h3>
+                    </div>
+                    <div class="blockchain-diagram">
+                        <div class="block-item">
+                            <div class="block-icon"><i class="fas fa-database"></i></div>
+                            <strong>Off-Chain (PostgreSQL)</strong>
+                            <span>Source of Truth for Details</span>
+                        </div>
+                        <div class="connector">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>SHA-256</span>
+                        </div>
+                        <div class="block-item">
+                            <div class="block-icon"><i class="fas fa-link"></i></div>
+                            <strong>On-Chain (Hyperledger)</strong>
+                            <span>Source of Truth for Integrity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Section -->
+    <section class="section budget-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-calculator"></i> Financial</span>
+                <h2 class="section-title">Budget Framework</h2>
+                <p class="section-subtitle">Pilot Phase Investment Breakdown</p>
+            </div>
+            
+            <div class="budget-table-container">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Cost (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-microchip"></i> Hardware</td>
+                            <td>Soil Sensors & IoT Kits (100 Units)</td>
+                            <td>$17,500</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-code"></i> Software</td>
+                            <td>Blockchain & e-Bill System Development</td>
+                            <td>$25,000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-graduation-cap"></i> Training</td>
+                            <td>Digital Facilitators (Youth) & Farmers</td>
+                            <td>$15,000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-chart-pie"></i> MEL System</td>
+                            <td>Resilience Index Monitoring</td>
+                            <td>$15,000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-cog"></i> Operations</td>
+                            <td>Admin, Audit, Contingency</td>
+                            <td>$20,125</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2"><strong>Total Pilot Budget</strong></td>
+                            <td><strong>$92,625</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alignment Section -->
+    <section class="section alignment-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-bullseye"></i> Strategic Alignment</span>
+                <h2 class="section-title">CIRDAP Thematic Priorities</h2>
+                <p class="section-subtitle">How GreenLoop 3.0 aligns with development goals</p>
+            </div>
+            
+            <div class="alignment-grid">
+                <div class="align-card">
+                    <div class="align-icon pink"><i class="fas fa-venus-mars"></i></div>
+                    <h3>Gender-Responsive</h3>
+                    <p>Family Cards empower women with financial decision-making and nutritional security</p>
+                </div>
+                <div class="align-card">
+                    <div class="align-icon green"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Climate Resilience</h3>
+                    <p>3F4D+MD protocols and Solar Cold Chains combat climate risks</p>
+                </div>
+                <div class="align-card">
+                    <div class="align-icon blue"><i class="fas fa-link"></i></div>
+                    <h3>Digital Transformation</h3>
+                    <p>Hyperledger Blockchain ensures immutable data sovereignty</p>
+                </div>
+                <div class="align-card">
+                    <div class="align-icon orange"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Youth Employment</h3>
+                    <p>NEET youth engaged as "Digital Facilitators" in Agro-Service Centres</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-users"></i> Team</span>
+                <h2 class="section-title">Project Team</h2>
+                <p class="section-subtitle">Meet the innovators behind GreenLoop 3.0</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Moniruz Jaman</h3>
+                    <p class="team-role">Project Lead & Developer</p>
+                    <div class="team-links">
+                        <a href="https://github.com/moniruzjaman" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section resources-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-folder-open"></i> Downloads</span>
+                <h2 class="section-title">All Resources</h2>
+                <p class="section-subtitle">Download all project materials</p>
+            </div>
+            
+            <div class="resources-grid">
+                <a href="assets/media/greenloop_video.mp4" download class="resource-card">
+                    <div class="resource-icon video"><i class="fas fa-video"></i></div>
+                    <div class="resource-info">
+                        <h4>Project Video</h4>
+                        <p>MP4 • Full Presentation</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/GreenLoop_Proposal.docx" download class="resource-card">
+                    <div class="resource-icon docx"><i class="fas fa-file-word"></i></div>
+                    <div class="resource-info">
+                        <h4>Main Proposal</h4>
+                        <p>DOCX • Complete Document</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/CIRDAP_Proposal.pdf" download class="resource-card">
+                    <div class="resource-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                    <div class="resource-info">
+                        <h4>CIRDAP Form</h4>
+                        <p>PDF • Competition Form</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/GreenLoop_Presentation.pptx" download class="resource-card">
+                    <div class="resource-icon ppt"><i class="fas fa-file-powerpoint"></i></div>
+                    <div class="resource-info">
+                        <h4>Presentation Slides</h4>
+                        <p>PPTX • Slide Deck</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/greenloop_banner.png" download class="resource-card">
+                    <div class="resource-icon image"><i class="fas fa-image"></i></div>
+                    <div class="resource-info">
+                        <h4>Project Banner</h4>
+                        <p>PNG • High Resolution</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🌿</span>
+                        <span class="logo-text">GreenLoop <span class="version">3.0</span></span>
+                    </div>
+                    <p>Healing the Earth, Securing the Smile</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#video">Video</a>
+                    <a href="#proposal">Proposal</a>
+                    <a href="#presentation">Presentation</a>
+                    <a href="#demo">Demo App</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank">GitHub Repository</a>
+                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank">Main Proposal (DOCX)</a>
+                    <a href="assets/media/GreenLoop_Presentation.pptx" download>Presentation (PPTX)</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Competition</h4>
+                    <p>CIRDAP-REEDS Rural Development Innovation Challenge 2026</p>
+                    <p class="theme-label">Theme: LDC Graduation & Circular Economy</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GreenLoop 3.0 Team. All rights reserved.</p>
+                <p class="credits">Made with 💚 for CIRDAP Innovation Challenge</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Base URL for the deployed site (will be set dynamically)
+        const BASE_URL = window.location.origin + window.location.pathname.replace(/\/$/, '');
+        
+        // Initialize viewers when deployed
+        document.addEventListener('DOMContentLoaded', function() {
+            initDocumentViewers();
+        });
+        
+        function initDocumentViewers() {
+            // Use Office Online viewer for DOCX
+            const docxUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Proposal.docx');
+            const docxViewer = document.getElementById('docxViewer');
+            const docxPlaceholder = document.getElementById('docxPlaceholder');
+            
+            // Use Office Online viewer for PPT
+            const pptUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Presentation.pptx');
+            const pptViewer = document.getElementById('pptViewer');
+            const pptPlaceholder = document.getElementById('pptPlaceholder');
+            
+            // Check if we're on a live site (not local file)
+            if (window.location.protocol !== 'file:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                // Set up Office Online viewers
+                docxViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${docxUrl}`;
+                pptViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${pptUrl}`;
+                
+                // Hide placeholders after load
+                docxViewer.onload = function() {
+                    setTimeout(() => { docxPlaceholder.style.display = 'none'; }, 2000);
+                };
+                pptViewer.onload = function() {
+                    setTimeout(() => { pptPlaceholder.style.display = 'none'; }, 2000);
+                };
+            }
+        }
+        
+        // Tab switching
+        function switchTab(tab) {
+            // Remove active from all tabs and contents
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active to selected
+            document.querySelector(`[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(`${tab}-tab`).classList.add('active');
+        }
+        
+        // Video fullscreen toggle
+        function toggleFullscreen(videoId) {
+            const video = document.getElementById(videoId);
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
