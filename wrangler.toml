@@ -1,0 +1,6 @@
+# Cloudflare Pages Configuration
+# This file tells Cloudflare to deploy the 'docs' folder as a static site
+
+name = "cirdap-greenloop-3-0"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "docs"
