@@ -329,16 +329,36 @@
             </div>
             
             <div class="video-container-full">
-                <div class="video-player-wrapper">
-                    <video id="projectVideo" controls poster="assets/media/greenloop_banner.png">
-                        <source src="assets/media/greenloop_video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay" id="videoOverlay">
-                        <button class="play-btn-large" id="playBtn">
-                            <i class="fas fa-play"></i>
-                            <span>Play Video</span>
-                        </button>
+                <!-- YouTube Video Embed Placeholder -->
+                <!-- INSTRUCTIONS: Replace VIDEO_ID with your YouTube video ID -->
+                <!-- Example: https://www.youtube.com/watch?v=VIDEO_ID -->
+                <div class="video-player-wrapper youtube-wrapper">
+                    <!-- ===== YOUTUBE VIDEO CONFIGURATION ===== -->
+                    <!-- Replace 'YOUTUBE_VIDEO_ID_HERE' with your actual YouTube video ID -->
+                    <!-- Example: If your URL is https://www.youtube.com/watch?v=abc123, use 'abc123' -->
+                    <iframe 
+                        id="youtubePlayer"
+                        src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERE?rel=0&modestbranding=1"
+                        title="GreenLoop 3.0 Project Video"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <!-- Placeholder shown when no YouTube ID is configured -->
+                    <div class="viewer-placeholder youtube-placeholder" id="youtubePlaceholder">
+                        <div class="placeholder-content">
+                            <i class="fab fa-youtube"></i>
+                            <h4>YouTube Video Coming Soon</h4>
+                            <p>Video will be embedded here once uploaded to YouTube</p>
+                            <div class="placeholder-instructions">
+                                <code>&lt;iframe src="https://www.youtube.com/embed/<strong>YOUR_VIDEO_ID</strong>"&gt;</code>
+                            </div>
+                            <div class="placeholder-actions">
+                                <a href="#" class="btn btn-primary btn-disabled">
+                                    <i class="fab fa-youtube"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -353,14 +373,11 @@
                         <span><i class="fas fa-hd"></i> HD</span>
                     </div>
                     <div class="video-actions-bar">
-                        <a href="assets/media/greenloop_video.mp4" download class="btn btn-outline btn-sm">
-                            <i class="fas fa-download"></i> Download
+                        <a href="#YOUTUBE_VIDEO_URL" target="_blank" class="btn btn-outline btn-sm" id="youtubeWatchBtn">
+                            <i class="fab fa-youtube"></i> Watch on YouTube
                         </a>
                         <button class="btn btn-outline btn-sm" onclick="shareVideo()">
                             <i class="fas fa-share-alt"></i> Share
-                        </button>
-                        <button class="btn btn-outline btn-sm" onclick="toggleFullscreen('projectVideo')">
-                            <i class="fas fa-expand"></i> Fullscreen
                         </button>
                     </div>
                 </div>
@@ -399,26 +416,35 @@
                             </div>
                         </div>
                         <div class="viewer-actions">
-                            <a href="assets/media/GreenLoop_Proposal.docx" download class="btn btn-primary btn-sm">
+                            <a href="https://drive.google.com/file/d/GOOGLE_DRIVE_DOCX_FILE_ID/view" target="_blank" class="btn btn-primary btn-sm" id="docxDownloadBtn">
                                 <i class="fas fa-download"></i> Download DOCX
                             </a>
                         </div>
                     </div>
                     
-                    <!-- DOCX Viewer - Using Office Online -->
+                    <!-- Google Drive DOCX Viewer Placeholder -->
+                    <!-- INSTRUCTIONS: Replace GOOGLE_DRIVE_DOCX_FILE_ID with your Google Drive file ID -->
+                    <!-- Example: https://drive.google.com/file/d/1abc123xyz/view -->
                     <div class="document-embed">
-                        <iframe id="docxViewer" src="" title="GreenLoop Proposal Document"></iframe>
+                        <!-- ===== GOOGLE DRIVE DOCX CONFIGURATION ===== -->
+                        <!-- Replace 'GOOGLE_DRIVE_DOCX_FILE_ID' with your actual file ID -->
+                        <iframe 
+                            id="docxViewer"
+                            src="https://drive.google.com/file/d/GOOGLE_DRIVE_DOCX_FILE_ID/preview"
+                            title="GreenLoop Proposal Document">
+                        </iframe>
+                        <!-- Placeholder shown when no Google Drive ID is configured -->
                         <div class="viewer-placeholder" id="docxPlaceholder">
                             <div class="placeholder-content">
                                 <i class="fas fa-file-word"></i>
-                                <h4>View Document</h4>
-                                <p>The document will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                                <h4>Document Viewer</h4>
+                                <p>Document will be viewable here once uploaded to Google Drive</p>
+                                <div class="placeholder-instructions">
+                                    <code>&lt;iframe src="https://drive.google.com/file/d/<strong>YOUR_FILE_ID</strong>/preview"&gt;</code>
+                                </div>
                                 <div class="placeholder-actions">
                                     <a href="assets/media/GreenLoop_Proposal.docx" class="btn btn-primary">
                                         <i class="fas fa-download"></i> Download to View
-                                    </a>
-                                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank" class="btn btn-outline">
-                                        <i class="fas fa-external-link-alt"></i> Open in New Tab
                                     </a>
                                 </div>
                             </div>
@@ -439,15 +465,45 @@
                             </div>
                         </div>
                         <div class="viewer-actions">
-                            <a href="assets/media/CIRDAP_Proposal.pdf" download class="btn btn-primary btn-sm">
+                            <a href="https://drive.google.com/file/d/GOOGLE_DRIVE_PDF_FILE_ID/view" target="_blank" class="btn btn-primary btn-sm" id="pdfDownloadBtn">
                                 <i class="fas fa-download"></i> Download PDF
                             </a>
                         </div>
                     </div>
                     
-                    <!-- PDF Viewer -->
+                    <!-- Google Drive PDF Viewer Placeholder -->
+                    <!-- INSTRUCTIONS: Replace GOOGLE_DRIVE_PDF_FILE_ID with your Google Drive file ID -->
                     <div class="document-embed">
-                        <iframe src="assets/media/CIRDAP_Proposal.pdf" title="CIRDAP Proposal PDF"></iframe>
+                        <!-- ===== GOOGLE DRIVE PDF CONFIGURATION ===== -->
+                        <!-- Replace 'GOOGLE_DRIVE_PDF_FILE_ID' with your actual file ID -->
+                        <iframe 
+                            id="pdfViewer"
+                            src="https://drive.google.com/file/d/GOOGLE_DRIVE_PDF_FILE_ID/preview"
+                            title="CIRDAP Proposal PDF">
+                        </iframe>
+                        <!-- Fallback: Local PDF if available -->
+                        <iframe 
+                            id="pdfViewerLocal"
+                            src="assets/media/CIRDAP_Proposal.pdf" 
+                            title="CIRDAP Proposal PDF (Local)"
+                            style="display:none;">
+                        </iframe>
+                        <!-- Placeholder shown when no Google Drive ID is configured -->
+                        <div class="viewer-placeholder" id="pdfPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-file-pdf"></i>
+                                <h4>PDF Viewer</h4>
+                                <p>PDF will be viewable here once uploaded to Google Drive</p>
+                                <div class="placeholder-instructions">
+                                    <code>&lt;iframe src="https://drive.google.com/file/d/<strong>YOUR_FILE_ID</strong>/preview"&gt;</code>
+                                </div>
+                                <div class="placeholder-actions">
+                                    <a href="assets/media/CIRDAP_Proposal.pdf" class="btn btn-primary">
+                                        <i class="fas fa-download"></i> Download PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -498,20 +554,31 @@
                     </div>
                 </div>
                 
-                <!-- PPTX Viewer -->
+                <!-- Google Slides / PowerPoint Viewer Placeholder -->
                 <div class="document-embed ppt-embed">
-                    <iframe id="pptViewer" src="" title="GreenLoop Presentation"></iframe>
+                    <!-- ===== GOOGLE SLIDES CONFIGURATION ===== -->
+                    <!-- Option 1: Google Slides - Replace 'GOOGLE_SLIDES_ID' with your presentation ID -->
+                    <!-- Find it in URL: https://docs.google.com/presentation/d/GOOGLE_SLIDES_ID/edit -->
+                    <iframe 
+                        id="pptViewer"
+                        src="https://docs.google.com/presentation/d/GOOGLE_SLIDES_ID/embed?start=false&loop=false&delayms=3000"
+                        title="GreenLoop Presentation">
+                    </iframe>
+                    <!-- Option 2: Office Online Viewer (for OneDrive/SharePoint) -->
+                    <!-- <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=YOUR_PPTX_URL"></iframe> -->
+                    
+                    <!-- Placeholder shown when no presentation ID is configured -->
                     <div class="viewer-placeholder" id="pptPlaceholder">
                         <div class="placeholder-content">
                             <i class="fas fa-file-powerpoint"></i>
-                            <h4>View Presentation</h4>
-                            <p>The presentation will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                            <h4>Slide Deck Viewer</h4>
+                            <p>Presentation will be embedded here once uploaded to Google Slides or OneDrive</p>
+                            <div class="placeholder-instructions">
+                                <code>&lt;iframe src="https://docs.google.com/presentation/d/<strong>YOUR_SLIDES_ID</strong>/embed"&gt;</code>
+                            </div>
                             <div class="placeholder-actions">
-                                <a href="assets/media/GreenLoop_Presentation.pptx" class="btn btn-primary">
-                                    <i class="fas fa-download"></i> Download to View
-                                </a>
-                                <a href="assets/media/GreenLoop_Presentation.pptx" target="_blank" class="btn btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                <a href="#" class="btn btn-primary btn-disabled" id="pptViewBtn">
+                                    <i class="fas fa-external-link-alt"></i> View Slides
                                 </a>
                             </div>
                         </div>
