@@ -1,3 +1,6 @@
+# GreenLoop 3.0 - Cloudflare Pages Security Headers
+# Version: 2.2.1 - Cloudflare Pages Deployment
+
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
