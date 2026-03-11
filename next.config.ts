@@ -21,9 +21,6 @@ const nextConfig: NextConfig = {
   },
   
   reactStrictMode: false,
-  
-  // Ensure static files are copied correctly
-  assetPrefix: "/cirdap-greenloop3.0/",
 };
 
 export default nextConfig;
