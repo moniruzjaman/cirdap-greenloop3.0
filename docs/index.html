@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLoop 3.0 | CIRDAP Innovation Challenge 2026</title>
+    <meta name="description" content="GreenLoop 3.0 - Efficiency-by-Design for a Circular Future. CIRDAP-REEDS Rural Development Innovation Challenge 2026 Finalist Project.">
+    <meta name="keywords" content="GreenLoop, CIRDAP, circular economy, blockchain, agriculture, Bangladesh, LDC graduation">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="GreenLoop 3.0 - CIRDAP Innovation Challenge 2026">
+    <meta property="og:description" content="Healing the Earth, Securing the Smile - A revolutionary circular economy solution for Bangladesh's LDC graduation.">
+    <meta property="og:image" content="assets/media/greenloop_banner.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/media/greenloop_banner.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">GreenLoop <span class="version">3.0</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#media-gallery">Media Gallery</a></li>
+                <li><a href="#proposal">Proposal</a></li>
+                <li><a href="#presentation">Presentation</a></li>
+                <li><a href="#demo">Demo App</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="badge"><i class="fas fa-trophy"></i> CIRDAP Innovation Challenge 2026 Finalist</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">GreenLoop</span>
+                <span class="title-highlight">3.0</span>
+            </h1>
+            <p class="hero-subtitle">Efficiency-by-Design for a Circular Future</p>
+            <p class="hero-tagline">🌱 Healing the Earth, Securing the Smile 🌱</p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-value" data-target="220">$220B</div>
+                    <div class="stat-label">Annual Savings Potential</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="stat-value">3,500 kg</div>
+                    <div class="stat-label">CO2 Offset per Unit</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-recycle"></i></div>
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Circular Bio-Ecosystem</div>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#video" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </a>
+                <a href="#proposal" class="btn btn-secondary">
+                    <i class="fas fa-file-word"></i> View Proposal
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Theme Banner -->
+    <section class="theme-banner">
+        <div class="container">
+            <div class="theme-content">
+                <div class="theme-badge">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="theme-text">
+                    <h3>Competition Theme</h3>
+                    <p><strong>LDC Graduation & Circular Economy</strong> - Addressing the 4.0% GDP loss from agricultural inefficiencies</p>
+                </div>
+                <div class="theme-year">2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker (Gamified) -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-checkpoints">
+                <div class="checkpoint active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="checkpoint" data-section="knowledge-map">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Map</span>
+                </div>
+                <div class="checkpoint" data-section="media-gallery">
+                    <i class="fas fa-photo-video"></i>
+                    <span>Media</span>
+                </div>
+                <div class="checkpoint" data-section="proposal">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Proposal</span>
+                </div>
+                <div class="checkpoint" data-section="presentation">
+                    <i class="fas fa-presentation"></i>
+                    <span>Slides</span>
+                </div>
+                <div class="checkpoint" data-section="resources">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </div>
+            </div>
+            <div class="progress-reward">
+                <i class="fas fa-trophy"></i>
+                <span id="progressPercent">0%</span> Explored
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Knowledge Map Section -->
+    <section id="knowledge-map" class="section knowledge-map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-sitemap"></i> Interactive Knowledge Map</span>
+                <h2 class="section-title">GreenLoop 3.0 ইকোসিস্টেম</h2>
+                <p class="section-subtitle">ক্লিক করে বিস্তারিত জানুন - Click on any node to explore details</p>
+            </div>
+            
+            <div class="knowledge-map-container">
+                <!-- Central Node -->
+                <div class="map-node central" onclick="showNodeDetail('central')">
+                    <div class="node-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="node-label">GreenLoop 3.0</div>
+                    <div class="node-pulse"></div>
+                </div>
+                
+                <!-- Connecting Lines (SVG) -->
+                <svg class="map-lines" viewBox="0 0 800 500">
+                    <!-- Lines from center to outer nodes -->
+                    <line x1="400" y1="250" x2="200" y2="100" class="map-line" />
+                    <line x1="400" y1="250" x2="600" y2="100" class="map-line" />
+                    <line x1="400" y1="250" x2="100" y2="300" class="map-line" />
+                    <line x1="400" y1="250" x2="700" y2="300" class="map-line" />
+                    <line x1="400" y1="250" x2="200" y2="450" class="map-line" />
+                    <line x1="400" y1="250" x2="600" y2="450" class="map-line" />
+                </svg>
+                
+                <!-- Layer A Nodes -->
+                <div class="map-node layer-a" style="top: 15%; left: 20%;" onclick="showNodeDetail('sensor')">
+                    <div class="node-icon sensor">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="node-label">Soil Sensor</div>
+                </div>
+                
+                <div class="map-node layer-a" style="top: 15%; right: 20%;" onclick="showNodeDetail('arsenic')">
+                    <div class="node-icon arsenic">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="node-label">Arsenic Shield</div>
+                </div>
+                
+                <div class="map-node layer-a" style="top: 55%; left: 5%;" onclick="showNodeDetail('solar')">
+                    <div class="node-icon solar">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="node-label">Solar Cold Chain</div>
+                </div>
+                
+                <!-- Layer B Nodes -->
+                <div class="map-node layer-b" style="top: 55%; right: 5%;" onclick="showNodeDetail('blockchain')">
+                    <div class="node-icon blockchain">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="node-label">Blockchain</div>
+                </div>
+                
+                <!-- Impact Nodes -->
+                <div class="map-node impact" style="bottom: 5%; left: 20%;" onclick="showNodeDetail('farmer')">
+                    <div class="node-icon farmer">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="node-label">কৃষক কার্ড</div>
+                </div>
+                
+                <div class="map-node impact" style="bottom: 5%; right: 20%;" onclick="showNodeDetail('youth')">
+                    <div class="node-icon youth">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="node-label">Youth Employment</div>
+                </div>
+            </div>
+            
+            <!-- Node Detail Popup -->
+            <div class="node-detail-popup" id="nodeDetailPopup">
+                <div class="popup-content">
+                    <button class="popup-close" onclick="closeNodeDetail()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="popup-header" id="popupHeader">
+                        <div class="popup-icon" id="popupIcon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 id="popupTitle">Title</h3>
+                    </div>
+                    <div class="popup-body" id="popupBody">
+                        <p>Content goes here...</p>
+                    </div>
+                    <div class="popup-stats" id="popupStats">
+                        <!-- Stats will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Legend -->
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-dot layer-a"></span>
+                    <span>Layer A: Physical</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot layer-b"></span>
+                    <span>Layer B: Digital</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot impact"></span>
+                    <span>Impact Areas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Storytelling Section -->
+    <section class="section story-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-book-open"></i> আমাদের গল্প</span>
+                <h2 class="section-title">The GreenLoop Story</h2>
+                <p class="section-subtitle">How we're transforming Bangladesh's agricultural future</p>
+            </div>
+            
+            <div class="story-timeline">
+                <div class="story-chapter" data-chapter="1">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০১</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>সমস্যা: The Challenge</h3>
+                        <p>Bangladesh loses <strong>4.0% of GDP</strong> annually from agricultural inefficiencies. With <strong>LDC graduation in 2026</strong>, we face a critical need for transformation.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">$220 Billion</span>
+                            <span class="stat-label">Annual economic opportunity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-chapter" data-chapter="2">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০২</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>সমাধান: Our Solution</h3>
+                        <p>GreenLoop 3.0 introduces <strong>Efficiency-by-Design</strong> - a dual-layer system combining physical circular farming with blockchain governance.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Circular Bio-Ecosystem</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-chapter" data-chapter="3">
+                    <div class="chapter-marker">
+                        <span class="chapter-number">০৩</span>
+                    </div>
+                    <div class="chapter-content">
+                        <h3>প্রভাব: The Impact</h3>
+                        <p>Empowering <strong>10 million farmers</strong> with technology, creating <strong>50,000 youth jobs</strong>, and achieving <strong>climate resilience</strong> for 61 arsenic-affected districts.</p>
+                        <div class="chapter-stat">
+                            <span class="stat-number">3,500 kg</span>
+                            <span class="stat-label">CO2 offset per unit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery Section -->
+    <section id="media-gallery" class="section media-gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-photo-video"></i> Media Gallery</span>
+                <h2 class="section-title">Multimedia Resources</h2>
+                <p class="section-subtitle">Explore videos, presentations, documents and images about GreenLoop 3.0</p>
+            </div>
+            
+            <!-- Media Filter Tabs -->
+            <div class="media-filter-tabs">
+                <button class="filter-btn active" onclick="filterMedia('all')">
+                    <i class="fas fa-th-large"></i> All
+                </button>
+                <button class="filter-btn" onclick="filterMedia('video')">
+                    <i class="fas fa-video"></i> Videos
+                </button>
+                <button class="filter-btn" onclick="filterMedia('presentation')">
+                    <i class="fas fa-presentation"></i> Presentations
+                </button>
+                <button class="filter-btn" onclick="filterMedia('document')">
+                    <i class="fas fa-file-alt"></i> Documents
+                </button>
+                <button class="filter-btn" onclick="filterMedia('image')">
+                    <i class="fas fa-image"></i> Images
+                </button>
+            </div>
+            
+            <!-- YouTube Videos Grid -->
+            <div class="media-category" data-category="video">
+                <h3 class="category-title"><i class="fas fa-video"></i> Video Presentations</h3>
+                <div class="videos-grid">
+                    <!-- Video 1: Circular Economy -->
+                    <div class="video-card" data-type="video">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/Zwh3vCOz5iU" title="Circular Economy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-card-info">
+                            <h4>Circular Economy</h4>
+                            <p>Understanding the circular economy principles that drive GreenLoop 3.0</p>
+                            <div class="video-card-meta">
+                                <span><i class="fab fa-youtube"></i> YouTube</span>
+                                <a href="https://youtu.be/Zwh3vCOz5iU" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2: One Innovation Endless Change -->
+                    <div class="video-card" data-type="video">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/x5ychc6UOEA" title="One Innovation Endless Change" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-card-info">
+                            <h4>One Innovation, Endless Change, Countless Smiles</h4>
+                            <p>The story of how one innovation can transform countless lives</p>
+                            <div class="video-card-meta">
+                                <span><i class="fab fa-youtube"></i> YouTube</span>
+                                <a href="https://youtu.be/x5ychc6UOEA" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3: Blockchain Fertilizer -->
+                    <div class="video-card" data-type="video">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bCl6XNeTWeo" title="Blockchain Fertilizer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-card-info">
+                            <h4>Blockchain Fertilizer</h4>
+                            <p>How blockchain technology revolutionizes fertilizer management</p>
+                            <div class="video-card-meta">
+                                <span><i class="fab fa-youtube"></i> YouTube</span>
+                                <a href="https://youtu.be/bCl6XNeTWeo" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 4: Agriculture with AI Technology -->
+                    <div class="video-card" data-type="video">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/32383_SHL1k" title="Agriculture with AI Technology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-card-info">
+                            <h4>Agriculture with AI Technology</h4>
+                            <p>AI-powered solutions transforming modern agriculture</p>
+                            <div class="video-card-meta">
+                                <span><i class="fab fa-youtube"></i> YouTube</span>
+                                <a href="https://youtu.be/32383_SHL1k" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Google Slides Presentations -->
+            <div class="media-category" data-category="presentation">
+                <h3 class="category-title"><i class="fas fa-presentation"></i> Google Slides Presentations</h3>
+                <div class="presentations-grid">
+                    <!-- Presentation 1: Greenloop 3 Ecosystem -->
+                    <div class="presentation-card" data-type="presentation">
+                        <div class="presentation-embed-wrapper">
+                            <iframe src="https://docs.google.com/presentation/d/1ozWnReNMl7zpQbUMpadVsDZORa12Ahpz/embed?start=false&loop=false&delayms=3000" title="Greenloop 3 Ecosystem" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                        <div class="presentation-card-info">
+                            <h4>Greenloop 3 Ecosystem</h4>
+                            <p>Comprehensive overview of the GreenLoop 3.0 ecosystem architecture</p>
+                            <div class="presentation-card-meta">
+                                <span><i class="fab fa-google-drive"></i> Google Slides</span>
+                                <a href="https://docs.google.com/presentation/d/1ozWnReNMl7zpQbUMpadVsDZORa12Ahpz/edit?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Open in Google Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Presentation 2: Greenloop Circular Agriculture -->
+                    <div class="presentation-card" data-type="presentation">
+                        <div class="presentation-embed-wrapper">
+                            <iframe src="https://docs.google.com/presentation/d/1zM_-9Lp5Vy2mIIHD0_uMebwUjp1uVnPy/embed?start=false&loop=false&delayms=3000" title="Greenloop Circular Agriculture" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                        <div class="presentation-card-info">
+                            <h4>Greenloop Circular Agriculture</h4>
+                            <p>Circular agriculture practices and sustainable farming methods</p>
+                            <div class="presentation-card-meta">
+                                <span><i class="fab fa-google-drive"></i> Google Slides</span>
+                                <a href="https://docs.google.com/presentation/d/1zM_-9Lp5Vy2mIIHD0_uMebwUjp1uVnPy/edit?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Open in Google Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF Documents -->
+            <div class="media-category" data-category="document">
+                <h3 class="category-title"><i class="fas fa-file-pdf"></i> PDF Slide Decks</h3>
+                <div class="documents-grid">
+                    <!-- Document 1: Greenloop Small Holders -->
+                    <div class="document-card" data-type="document">
+                        <div class="document-preview">
+                            <iframe src="https://drive.google.com/file/d/1YANeD3qvH1Mdl4RHkp9yFoGgF7NbTI-X/preview" title="Greenloop Small Holders" allow="autoplay"></iframe>
+                        </div>
+                        <div class="document-card-info">
+                            <div class="document-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                            <div class="document-details">
+                                <h4>Greenloop Small Holders</h4>
+                                <p>Empowering smallholder farmers through circular economy practices</p>
+                                <div class="document-card-meta">
+                                    <span><i class="fab fa-google-drive"></i> Google Drive PDF</span>
+                                    <a href="https://drive.google.com/file/d/1YANeD3qvH1Mdl4RHkp9yFoGgF7NbTI-X/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Open PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Document 2: Greenloop Digital AI -->
+                    <div class="document-card" data-type="document">
+                        <div class="document-preview">
+                            <iframe src="https://drive.google.com/file/d/1pAeWDCe3gocCHJO75hSkrZMS0X6DnwOR/preview" title="Greenloop Digital AI" allow="autoplay"></iframe>
+                        </div>
+                        <div class="document-card-info">
+                            <div class="document-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                            <div class="document-details">
+                                <h4>Greenloop Digital AI</h4>
+                                <p>AI-powered digital solutions for sustainable agriculture</p>
+                                <div class="document-card-meta">
+                                    <span><i class="fab fa-google-drive"></i> Google Drive PDF</span>
+                                    <a href="https://drive.google.com/file/d/1pAeWDCe3gocCHJO75hSkrZMS0X6DnwOR/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Open PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Document 3: GreenLoop AI -->
+                    <div class="document-card" data-type="document">
+                        <div class="document-preview">
+                            <iframe src="https://drive.google.com/file/d/18IcCuGYHDV65T7BruGhLpfEM4SCKAHI9/preview" title="GreenLoop AI" allow="autoplay"></iframe>
+                        </div>
+                        <div class="document-card-info">
+                            <div class="document-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                            <div class="document-details">
+                                <h4>GreenLoop AI</h4>
+                                <p>Artificial Intelligence applications in the GreenLoop ecosystem</p>
+                                <div class="document-card-meta">
+                                    <span><i class="fab fa-google-drive"></i> Google Drive PDF</span>
+                                    <a href="https://drive.google.com/file/d/18IcCuGYHDV65T7BruGhLpfEM4SCKAHI9/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Open PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Images Gallery -->
+            <div class="media-category" data-category="image">
+                <h3 class="category-title"><i class="fas fa-image"></i> Image Gallery</h3>
+                <div class="images-grid">
+                    <!-- Image 1: Healing Earth -->
+                    <div class="image-card" data-type="image">
+                        <div class="image-preview">
+                            <img src="https://drive.google.com/uc?export=view&id=1CdNAhdIZt4qeMRbPYRQ2tfwr9hxjuU3a" alt="Healing Earth" loading="lazy">
+                            <div class="image-overlay">
+                                <button class="btn btn-primary btn-sm" onclick="openImageModal('https://drive.google.com/uc?export=view&id=1CdNAhdIZt4qeMRbPYRQ2tfwr9hxjuU3a', 'Healing Earth')">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="image-card-info">
+                            <h4>Healing Earth</h4>
+                            <p>Our commitment to healing the planet through sustainable practices</p>
+                            <a href="https://drive.google.com/file/d/1CdNAhdIZt4qeMRbPYRQ2tfwr9hxjuU3a/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fas fa-external-link-alt"></i> Open in Drive
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 2: Waste to Wealth -->
+                    <div class="image-card" data-type="image">
+                        <div class="image-preview">
+                            <img src="https://drive.google.com/uc?export=view&id=10zflwAHSdmJtvjx1nmvzslVwUuQBbF0P" alt="Waste to Wealth" loading="lazy">
+                            <div class="image-overlay">
+                                <button class="btn btn-primary btn-sm" onclick="openImageModal('https://drive.google.com/uc?export=view&id=10zflwAHSdmJtvjx1nmvzslVwUuQBbF0P', 'Waste to Wealth')">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="image-card-info">
+                            <h4>Waste to Wealth</h4>
+                            <p>Transforming agricultural waste into valuable resources</p>
+                            <a href="https://drive.google.com/file/d/10zflwAHSdmJtvjx1nmvzslVwUuQBbF0P/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fas fa-external-link-alt"></i> Open in Drive
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 3: One Innovation Endless Change -->
+                    <div class="image-card" data-type="image">
+                        <div class="image-preview">
+                            <img src="https://drive.google.com/uc?export=view&id=15fyM1Kt4dMTlCPPviTYjnHQKp92bjnQI" alt="One Innovation Endless Change" loading="lazy">
+                            <div class="image-overlay">
+                                <button class="btn btn-primary btn-sm" onclick="openImageModal('https://drive.google.com/uc?export=view&id=15fyM1Kt4dMTlCPPviTYjnHQKp92bjnQI', 'One Innovation Endless Change')">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="image-card-info">
+                            <h4>One Innovation, Endless Change</h4>
+                            <p>Creating countless smiles through sustainable innovation</p>
+                            <a href="https://drive.google.com/file/d/15fyM1Kt4dMTlCPPviTYjnHQKp92bjnQI/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fas fa-external-link-alt"></i> Open in Drive
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Image 4: Efficiency 3.0 -->
+                    <div class="image-card" data-type="image">
+                        <div class="image-preview">
+                            <img src="https://drive.google.com/uc?export=view&id=1Oe3FIS5m5BWzz0APRqFmOKaZATajSyMK" alt="Efficiency 3.0" loading="lazy">
+                            <div class="image-overlay">
+                                <button class="btn btn-primary btn-sm" onclick="openImageModal('https://drive.google.com/uc?export=view&id=1Oe3FIS5m5BWzz0APRqFmOKaZATajSyMK', 'Efficiency 3.0')">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="image-card-info">
+                            <h4>Efficiency 3.0</h4>
+                            <p>Next-generation efficiency solutions for modern agriculture</p>
+                            <a href="https://drive.google.com/file/d/1Oe3FIS5m5BWzz0APRqFmOKaZATajSyMK/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fas fa-external-link-alt"></i> Open in Drive
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeImageModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="">
+            <h3 id="modalTitle"></h3>
+        </div>
+    </div>
+
+    <!-- Proposal Section with Tabs -->
+    <section id="proposal" class="section proposal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-file-alt"></i> Documentation</span>
+                <h2 class="section-title">Project Proposal Documents</h2>
+                <p class="section-subtitle">View and download comprehensive proposal documents</p>
+            </div>
+            
+            <!-- Document Tabs -->
+            <div class="document-tabs">
+                <button class="tab-btn active" onclick="switchTab('docx')">
+                    <i class="fas fa-file-word"></i> Main Proposal (DOCX)
+                </button>
+                <button class="tab-btn" onclick="switchTab('pdf')">
+                    <i class="fas fa-file-pdf"></i> CIRDAP Form (PDF)
+                </button>
+            </div>
+            
+            <!-- DOCX Tab Content -->
+            <div id="docx-tab" class="tab-content active">
+                <div class="document-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-title">
+                            <i class="fas fa-file-word docx-icon"></i>
+                            <div>
+                                <h3>GreenLoop 3.0 - Blockchain-Enabled Circular Agriculture for Rural Empowerment</h3>
+                                <p>Main proposal document (Word format)</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="assets/media/GreenLoop_Proposal.docx" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download DOCX
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- DOCX Viewer - Using Office Online -->
+                    <div class="document-embed">
+                        <iframe id="docxViewer" src="" title="GreenLoop Proposal Document"></iframe>
+                        <div class="viewer-placeholder" id="docxPlaceholder">
+                            <div class="placeholder-content">
+                                <i class="fas fa-file-word"></i>
+                                <h4>View Document</h4>
+                                <p>The document will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                                <div class="placeholder-actions">
+                                    <a href="assets/media/GreenLoop_Proposal.docx" class="btn btn-primary">
+                                        <i class="fas fa-download"></i> Download to View
+                                    </a>
+                                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank" class="btn btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF Tab Content -->
+            <div id="pdf-tab" class="tab-content">
+                <div class="document-viewer-container">
+                    <div class="viewer-header">
+                        <div class="viewer-title">
+                            <i class="fas fa-file-pdf pdf-icon"></i>
+                            <div>
+                                <h3>Decoding the CIRDAP - Competition Form</h3>
+                                <p>Official CIRDAP submission form</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="assets/media/CIRDAP_Proposal.pdf" download class="btn btn-primary btn-sm">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- PDF Viewer -->
+                    <div class="document-embed">
+                        <iframe src="assets/media/CIRDAP_Proposal.pdf" title="CIRDAP Proposal PDF"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Section with Viewer -->
+    <section id="presentation" class="section presentation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-presentation"></i> Slide Deck</span>
+                <h2 class="section-title">Presentation Slides</h2>
+                <p class="section-subtitle">Blockchain & Circular Agriculture presentation for stakeholders</p>
+            </div>
+            
+            <div class="presentation-viewer-container">
+                <div class="viewer-header">
+                    <div class="viewer-title">
+                        <i class="fas fa-file-powerpoint ppt-icon"></i>
+                        <div>
+                            <h3>GreenLoop 3.0: Blockchain & Circular Agriculture</h3>
+                            <p>Comprehensive slide deck covering technology architecture, implementation strategy, and impact metrics</p>
+                        </div>
+                    </div>
+                    <div class="viewer-actions">
+                        <a href="assets/media/GreenLoop_Presentation.pptx" download class="btn btn-primary btn-sm">
+                            <i class="fas fa-download"></i> Download PPTX
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="presentation-features-bar">
+                    <div class="feature-item">
+                        <i class="fas fa-cubes"></i>
+                        <span>Blockchain Architecture</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Impact Metrics</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>Stakeholder Map</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-route"></i>
+                        <span>Implementation Roadmap</span>
+                    </div>
+                </div>
+                
+                <!-- PPTX Viewer -->
+                <div class="document-embed ppt-embed">
+                    <iframe id="pptViewer" src="" title="GreenLoop Presentation"></iframe>
+                    <div class="viewer-placeholder" id="pptPlaceholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <h4>View Presentation</h4>
+                            <p>The presentation will be viewable once deployed to GitHub Pages or Cloudflare Pages</p>
+                            <div class="placeholder-actions">
+                                <a href="assets/media/GreenLoop_Presentation.pptx" class="btn btn-primary">
+                                    <i class="fas fa-download"></i> Download to View
+                                </a>
+                                <a href="assets/media/GreenLoop_Presentation.pptx" target="_blank" class="btn btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Open in New Tab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo App Section -->
+    <section id="demo" class="section demo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-laptop-code"></i> Interactive Demo</span>
+                <h2 class="section-title">Live Demo Application</h2>
+                <p class="section-subtitle">Experience the GreenLoop 3.0 platform in action</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-preview">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i> greenloop-cirdap.pages.dev
+                            </div>
+                        </div>
+                        <div class="browser-content">
+                            <img src="assets/media/greenloop_banner.png" alt="GreenLoop Demo Preview">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-features">
+                    <h3>Platform Features</h3>
+                    <div class="demo-grid">
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h4>Admin Dashboard</h4>
+                            <p>Resource management and file upload system</p>
+                        </div>
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-database"></i></div>
+                            <h4>Blockchain Ledger</h4>
+                            <p>Immutable transaction records with SHA-256</p>
+                        </div>
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-chart-bar"></i></div>
+                            <h4>Analytics Panel</h4>
+                            <p>Real-time monitoring and reporting</p>
+                        </div>
+                        <div class="demo-card">
+                            <div class="demo-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <h4>Mobile Ready</h4>
+                            <p>Responsive design for all devices</p>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-links">
+                        <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="https://cabi.krishiai.live/" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-brain"></i> KrishAI
+                        </a>
+                        <a href="https://krishak-card.vercel.app/" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-id-card"></i> Krishak Card
+                        </a>
+                        <a href="https://web.krishiai.live/" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-globe"></i> Web Portal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section tech-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-cogs"></i> Technology</span>
+                <h2 class="section-title">Solution Architecture</h2>
+                <p class="section-subtitle">A Dual-Layer System: Physical Circularity & Digital Governance</p>
+            </div>
+            
+            <div class="tech-architecture">
+                <!-- Layer A -->
+                <div class="tech-layer">
+                    <div class="layer-header">
+                        <span class="layer-badge green">Layer A</span>
+                        <h3>Physical Circular Farming</h3>
+                    </div>
+                    <div class="tech-cards">
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-microchip"></i></div>
+                            <h4>12-Parameter Soil Sensor</h4>
+                            <p>Handheld device measuring NPK, SOM/SOC, and micronutrients via ML estimation</p>
+                            <div class="tech-impact">
+                                <span><i class="fas fa-arrow-up"></i> 20-32% Yield</span>
+                                <span><i class="fas fa-arrow-down"></i> 30% Fertilizer</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-water"></i></div>
+                            <h4>Arsenic Shield (3F4D+MD)</h4>
+                            <p>Immobilizes arsenic via Iron Oxide re-precipitation in 61 affected districts</p>
+                            <div class="tech-impact">
+                                <span><i class="fas fa-arrow-down"></i> 9-21% Arsenic</span>
+                                <span><i class="fas fa-arrow-down"></i> 57% Water</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-solar-panel"></i></div>
+                            <h4>Solar Cold Chain</h4>
+                            <p>10-ton hybrid mini cold storage with 70% reduced operating costs</p>
+                            <div class="tech-impact">
+                                <span>BCR > 3.0</span>
+                                <span>IRR 14.47%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Layer B -->
+                <div class="tech-layer">
+                    <div class="layer-header">
+                        <span class="layer-badge blue">Layer B</span>
+                        <h3>Blockchain Governance</h3>
+                    </div>
+                    <div class="blockchain-diagram">
+                        <div class="block-item">
+                            <div class="block-icon"><i class="fas fa-database"></i></div>
+                            <strong>Off-Chain (PostgreSQL)</strong>
+                            <span>Source of Truth for Details</span>
+                        </div>
+                        <div class="connector">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>SHA-256</span>
+                        </div>
+                        <div class="block-item">
+                            <div class="block-icon"><i class="fas fa-link"></i></div>
+                            <strong>On-Chain (Hyperledger)</strong>
+                            <span>Source of Truth for Integrity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Section -->
+    <section class="section budget-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-calculator"></i> Financial</span>
+                <h2 class="section-title">Budget Framework</h2>
+                <p class="section-subtitle">Pilot Phase Investment Breakdown</p>
+            </div>
+            
+            <div class="budget-table-container">
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Cost (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-microchip"></i> Hardware</td>
+                            <td>Soil Sensors & IoT Kits (100 Units)</td>
+                            <td>$17,500</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-code"></i> Software</td>
+                            <td>Blockchain & e-Bill System Development</td>
+                            <td>$25,000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-graduation-cap"></i> Training</td>
+                            <td>Digital Facilitators (Youth) & Farmers</td>
+                            <td>$15,000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-chart-pie"></i> MEL System</td>
+                            <td>Resilience Index Monitoring</td>
+                            <td>$15,000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-cog"></i> Operations</td>
+                            <td>Admin, Audit, Contingency</td>
+                            <td>$20,125</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2"><strong>Total Pilot Budget</strong></td>
+                            <td><strong>$92,625</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alignment Section -->
+    <section class="section alignment-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-bullseye"></i> Strategic Alignment</span>
+                <h2 class="section-title">CIRDAP Thematic Priorities</h2>
+                <p class="section-subtitle">How GreenLoop 3.0 aligns with development goals</p>
+            </div>
+            
+            <div class="alignment-grid">
+                <div class="align-card">
+                    <div class="align-icon pink"><i class="fas fa-venus-mars"></i></div>
+                    <h3>Gender-Responsive</h3>
+                    <p>Family Cards empower women with financial decision-making and nutritional security</p>
+                </div>
+                <div class="align-card">
+                    <div class="align-icon green"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Climate Resilience</h3>
+                    <p>3F4D+MD protocols and Solar Cold Chains combat climate risks</p>
+                </div>
+                <div class="align-card">
+                    <div class="align-icon blue"><i class="fas fa-link"></i></div>
+                    <h3>Digital Transformation</h3>
+                    <p>Hyperledger Blockchain ensures immutable data sovereignty</p>
+                </div>
+                <div class="align-card">
+                    <div class="align-icon orange"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Youth Employment</h3>
+                    <p>NEET youth engaged as "Digital Facilitators" in Agro-Service Centres</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-user-tie"></i> Innovator</span>
+                <h2 class="section-title">Project Innovator</h2>
+                <p class="section-subtitle">Meet the visionary behind GreenLoop 3.0</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Abu Md Moniruzjaman</h3>
+                    <p class="team-role">Additional Deputy Director (Horticulture)</p>
+                    <p class="team-org">Department of Agricultural Extension (DAE), Kurigram, Bangladesh</p>
+                    <div class="team-experience">
+                        <i class="fas fa-briefcase"></i>
+                        <span>10+ Years in Agricultural Extension & Digital Innovation</span>
+                    </div>
+                    <div class="team-links">
+                        <a href="https://github.com/moniruzjaman" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/moniruzjaman" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovator Bio Section -->
+    <section class="section innovator-bio-section">
+        <div class="container">
+            <div class="innovator-bio-container">
+                <div class="innovator-image-wrapper">
+                    <div class="innovator-avatar-large">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="innovator-badge">
+                        <i class="fas fa-trophy"></i> CIRDAP Innovator 2026
+                    </div>
+                </div>
+                
+                <div class="innovator-info">
+                    <h2>Abu Md Moniruzjaman</h2>
+                    <p class="innovator-title">Project Lead & Chief Innovator</p>
+                    
+                    <div class="innovator-experience">
+                        <i class="fas fa-award"></i>
+                        <span>10+ Years of Field Experience in Diverse Topographies</span>
+                    </div>
+                    
+                    <p class="innovator-description">
+                        With over a decade of experience in agricultural extension, I have worked across diverse topographies 
+                        including Char lands, Haor basins, and Saline coasts of Bangladesh. My expertise bridges the gap 
+                        between policy and practice, leveraging proven science (57% water saving, 30% profit increase) and 
+                        robust technology (Blockchain, IoT) to deliver sustainable rural development solutions.
+                    </p>
+                    
+                    <div class="innovator-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <strong>Kurigram, Bangladesh</strong>
+                                <span>Field Operations Base</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <strong>DAE Official</strong>
+                                <span>Government Extension Service</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <strong>Agricultural Innovation</strong>
+                                <span>Digital Transformation Focus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Links Section -->
+    <section class="section app-links-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-mobile-alt"></i> Live Applications</span>
+                <h2 class="section-title">GreenLoop 3.0 App Ecosystem</h2>
+                <p class="section-subtitle">Experience our live applications and digital platforms</p>
+            </div>
+            
+            <div class="app-links-grid">
+                <!-- CABI KrishAI -->
+                <a href="https://cabi.krishiai.live/" target="_blank" class="app-link-card">
+                    <div class="app-link-header">
+                        <div class="app-link-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="app-link-title">
+                            <h4>CABI KrishAI</h4>
+                            <span>AI-Powered Platform</span>
+                        </div>
+                    </div>
+                    <div class="app-link-body">
+                        <p>Comprehensive AI platform for agricultural advisory services, providing intelligent recommendations for farmers.</p>
+                        <div class="app-link-url">
+                            <i class="fas fa-link"></i>
+                            <span>cabi.krishiai.live</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Digital Space -->
+                <a href="https://r1q2422g8at0-d.space.z.ai/" target="_blank" class="app-link-card">
+                    <div class="app-link-header" style="background: linear-gradient(135deg, #2563eb, #3b82f6);">
+                        <div class="app-link-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="app-link-title">
+                            <h4>Digital Space</h4>
+                            <span>Cloud Platform</span>
+                        </div>
+                    </div>
+                    <div class="app-link-body">
+                        <p>Cloud-based digital workspace for agricultural data management and collaborative farming solutions.</p>
+                        <div class="app-link-url">
+                            <i class="fas fa-link"></i>
+                            <span>r1q2422g8at0-d.space.z.ai</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Krishak Card -->
+                <a href="https://krishak-card.vercel.app/" target="_blank" class="app-link-card">
+                    <div class="app-link-header" style="background: linear-gradient(135deg, #059669, #10b981);">
+                        <div class="app-link-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="app-link-title">
+                            <h4>Krishak Card</h4>
+                            <span>Farmer Identity System</span>
+                        </div>
+                    </div>
+                    <div class="app-link-body">
+                        <p>Digital farmer identity system enabling access to subsidies, credit, and market information.</p>
+                        <div class="app-link-url">
+                            <i class="fas fa-link"></i>
+                            <span>krishak-card.vercel.app</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Web KrishAI -->
+                <a href="https://web.krishiai.live/" target="_blank" class="app-link-card">
+                    <div class="app-link-header" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6);">
+                        <div class="app-link-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="app-link-title">
+                            <h4>Web KrishAI</h4>
+                            <span>Web Application</span>
+                        </div>
+                    </div>
+                    <div class="app-link-body">
+                        <p>Web-based interface for KrishAI services, accessible from any device with internet connectivity.</p>
+                        <div class="app-link-url">
+                            <i class="fas fa-link"></i>
+                            <span>web.krishiai.live</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Qwen Chat -->
+                <a href="https://chat.qwen.ai/s/deploy/t_fd8b8d3d-1b90-4442-914c-016fe125614a" target="_blank" class="app-link-card">
+                    <div class="app-link-header" style="background: linear-gradient(135deg, #dc2626, #ef4444);">
+                        <div class="app-link-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="app-link-title">
+                            <h4>Qwen AI Chat</h4>
+                            <span>AI Assistant</span>
+                        </div>
+                    </div>
+                    <div class="app-link-body">
+                        <p>AI-powered chat assistant providing agricultural advice and support for farmers and extension workers.</p>
+                        <div class="app-link-url">
+                            <i class="fas fa-link"></i>
+                            <span>chat.qwen.ai</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIRDAP Alignment Banner -->
+    <section class="cirdap-alignment-banner">
+        <div class="container">
+            <h3>Project Alignment with Development Frameworks</h3>
+            <div class="alignment-badges">
+                <div class="alignment-badge">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Vision 2030</span>
+                </div>
+                <div class="alignment-badge">
+                    <i class="fas fa-globe-asia"></i>
+                    <span>SDG 1: No Poverty</span>
+                </div>
+                <div class="alignment-badge">
+                    <i class="fas fa-utensils"></i>
+                    <span>SDG 2: Zero Hunger</span>
+                </div>
+                <div class="alignment-badge">
+                    <i class="fas fa-tint"></i>
+                    <span>SDG 6: Clean Water</span>
+                </div>
+                <div class="alignment-badge">
+                    <i class="fas fa-leaf"></i>
+                    <span>SDG 13: Climate Action</span>
+                </div>
+                <div class="alignment-badge">
+                    <i class="fas fa-laptop-house"></i>
+                    <span>Smart Bangladesh 2041</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIRDAP Submission Compliance Section -->
+    <section class="section compliance-section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-check-circle"></i> Submission Compliance</span>
+                <h2 class="section-title">CIRDAP Innovation Challenge 2026 Requirements</h2>
+                <p class="section-subtitle">Ensuring alignment with all competition guidelines</p>
+            </div>
+            
+            <div class="submission-checklist">
+                <h4 style="margin-bottom: 10px; color: var(--text-dark);"><i class="fas fa-clipboard-check" style="color: var(--primary-green); margin-right: 10px;"></i>Submission Checklist</h4>
+                <p style="color: var(--text-gray); margin-bottom: 20px;">All requirements from the CIRDAP-REEDS Rural Development Innovation Challenge 2026 have been addressed:</p>
+                
+                <div class="checklist-grid">
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Measurable Impact</h5>
+                            <p>Quantified results: 30% profit increase, 57% water saving</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Scalability Potential</h5>
+                            <p>Replicable model across 15 CIRDAP Member Countries</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Gender-Responsive</h5>
+                            <p>50% women participation, voice UI for accessibility</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Climate Resilience</h5>
+                            <p>3F4D+MD irrigation, arsenic mitigation</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Digital Transformation</h5>
+                            <p>Blockchain governance, IoT sensors, mobile apps</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Youth Employment</h5>
+                            <p>NEET youth engagement as Digital Extension Agents</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Low-Cost Solution</h5>
+                            <p>~$155/farmer unit cost with local manufacturing</p>
+                        </div>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                        <div class="checklist-text">
+                            <h5>Participatory Approach</h5>
+                            <p>Community co-design with DAE agents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section resources-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-folder-open"></i> Downloads</span>
+                <h2 class="section-title">All Resources</h2>
+                <p class="section-subtitle">Download all project materials</p>
+            </div>
+            
+            <div class="resources-grid">
+                <a href="assets/media/greenloop_video.mp4" download class="resource-card">
+                    <div class="resource-icon video"><i class="fas fa-video"></i></div>
+                    <div class="resource-info">
+                        <h4>Project Video</h4>
+                        <p>MP4 • Full Presentation</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/GreenLoop_Proposal.docx" download class="resource-card">
+                    <div class="resource-icon docx"><i class="fas fa-file-word"></i></div>
+                    <div class="resource-info">
+                        <h4>Main Proposal</h4>
+                        <p>DOCX • Complete Document</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/CIRDAP_Proposal.pdf" download class="resource-card">
+                    <div class="resource-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                    <div class="resource-info">
+                        <h4>CIRDAP Form</h4>
+                        <p>PDF • Competition Form</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/GreenLoop_Presentation.pptx" download class="resource-card">
+                    <div class="resource-icon ppt"><i class="fas fa-file-powerpoint"></i></div>
+                    <div class="resource-info">
+                        <h4>Presentation Slides</h4>
+                        <p>PPTX • Slide Deck</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+                <a href="assets/media/greenloop_banner.png" download class="resource-card">
+                    <div class="resource-icon image"><i class="fas fa-image"></i></div>
+                    <div class="resource-info">
+                        <h4>Project Banner</h4>
+                        <p>PNG • High Resolution</p>
+                    </div>
+                    <div class="resource-download"><i class="fas fa-download"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🌿</span>
+                        <span class="logo-text">GreenLoop <span class="version">3.0</span></span>
+                    </div>
+                    <p>Healing the Earth, Securing the Smile</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#video">Video</a>
+                    <a href="#proposal">Proposal</a>
+                    <a href="#presentation">Presentation</a>
+                    <a href="#demo">Demo App</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank">GitHub Repository</a>
+                    <a href="assets/media/GreenLoop_Proposal.docx" target="_blank">Main Proposal (DOCX)</a>
+                    <a href="assets/media/GreenLoop_Presentation.pptx" download>Presentation (PPTX)</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Competition</h4>
+                    <p>CIRDAP-REEDS Rural Development Innovation Challenge 2026</p>
+                    <p class="theme-label">Theme: LDC Graduation & Circular Economy</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GreenLoop 3.0 Team. All rights reserved.</p>
+                <p class="credits">Made with 💚 for CIRDAP Innovation Challenge</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Base URL for the deployed site (will be set dynamically)
+        const BASE_URL = window.location.origin + window.location.pathname.replace(/\/$/, '');
+        
+        // Initialize viewers when deployed
+        document.addEventListener('DOMContentLoaded', function() {
+            initDocumentViewers();
+        });
+        
+        function initDocumentViewers() {
+            // Use Office Online viewer for DOCX
+            const docxUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Proposal.docx');
+            const docxViewer = document.getElementById('docxViewer');
+            const docxPlaceholder = document.getElementById('docxPlaceholder');
+            
+            // Use Office Online viewer for PPT
+            const pptUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Presentation.pptx');
+            const pptViewer = document.getElementById('pptViewer');
+            const pptPlaceholder = document.getElementById('pptPlaceholder');
+            
+            // Check if we're on a live site (not local file)
+            if (window.location.protocol !== 'file:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                // Set up Office Online viewers
+                docxViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${docxUrl}`;
+                pptViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${pptUrl}`;
+                
+                // Hide placeholders after load
+                docxViewer.onload = function() {
+                    setTimeout(() => { docxPlaceholder.style.display = 'none'; }, 2000);
+                };
+                pptViewer.onload = function() {
+                    setTimeout(() => { pptPlaceholder.style.display = 'none'; }, 2000);
+                };
+            }
+        }
+        
+        // Tab switching
+        function switchTab(tab) {
+            // Remove active from all tabs and contents
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active to selected
+            document.querySelector(`[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(`${tab}-tab`).classList.add('active');
+        }
+        
+        // Video fullscreen toggle
+        function toggleFullscreen(videoId) {
+            const video = document.getElementById(videoId);
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
