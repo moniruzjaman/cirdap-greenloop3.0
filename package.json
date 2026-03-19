@@ -2,11 +2,10 @@
   "name": "greenloop-cirdap",
   "version": "1.0.0",
   "description": "GreenLoop 3.0 - CIRDAP Rural Development Innovation Challenge 2026. A circular economy solution for Bangladesh's LDC graduation.",
-  "main": "server.js",
+  "main": "docs/index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo 'Static site - serve docs folder'",
+    "dev": "echo 'Development mode'"
   },
   "keywords": [
     "cirdap",
@@ -20,14 +19,6 @@
   ],
   "author": "GreenLoop 3.0 Development Team",
   "license": "ISC",
-  "type": "commonjs",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "express": "^5.2.1",
-    "multer": "^2.1.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/moniruzjaman/cirdap-greenloop3.0.git"
