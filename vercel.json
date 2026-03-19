@@ -1,7 +1,9 @@
 {
   "version": 2,
   "public": true,
-  "outputDirectory": "docs",
-  "trailingSlash": false,
-  "cleanUrls": true
+  "buildCommand": null,
+  "devCommand": null,
+  "installCommand": null,
+  "framework": null,
+  "outputDirectory": "docs"
 }
