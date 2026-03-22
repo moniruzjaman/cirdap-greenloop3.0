@@ -351,6 +351,23 @@
             <div class="media-category" data-category="video">
                 <h3 class="category-title"><i class="fas fa-video"></i> Video Presentations</h3>
                 <div class="videos-grid">
+                    <!-- Video 0: Pitch Deck Video (Latest) -->
+                    <div class="video-card" data-type="video" style="border: 2px solid var(--primary-green);">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/WW7olZ1YALs" title="GreenLoop 3.0 Pitch Deck Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-card-info">
+                            <h4>🎬 GreenLoop 3.0 Pitch Deck Video (Latest)</h4>
+                            <p>Official pitch deck video for CIRDAP-REEDS Innovation Challenge 2026 submission</p>
+                            <div class="video-card-meta">
+                                <span><i class="fab fa-youtube"></i> YouTube</span>
+                                <a href="https://youtu.be/WW7olZ1YALs?si=NCJQ3wO9mr3Hq5G3" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Watch on YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Video 1: Circular Economy -->
                     <div class="video-card" data-type="video">
                         <div class="video-embed-wrapper">
@@ -425,6 +442,23 @@
             <div class="media-category" data-category="presentation">
                 <h3 class="category-title"><i class="fas fa-presentation"></i> Google Slides Presentations</h3>
                 <div class="presentations-grid">
+                    <!-- Presentation 0: Pitch Deck Presentation (Latest) -->
+                    <div class="presentation-card" data-type="presentation" style="border: 2px solid var(--primary-green);">
+                        <div class="presentation-embed-wrapper">
+                            <iframe src="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/embed?start=false&loop=false&delayms=3000" title="GreenLoop 3.0 Pitch Deck Presentation" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                        <div class="presentation-card-info">
+                            <h4>🎬 GreenLoop 3.0 Pitch Deck Presentation (Latest)</h4>
+                            <p>Official pitch deck presentation for CIRDAP-REEDS Innovation Challenge 2026 submission</p>
+                            <div class="presentation-card-meta">
+                                <span><i class="fab fa-google-drive"></i> Google Slides</span>
+                                <a href="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fas fa-external-link-alt"></i> Open in Google Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Presentation 1: Greenloop 3 Ecosystem -->
                     <div class="presentation-card" data-type="presentation">
                         <div class="presentation-embed-wrapper">
@@ -531,6 +565,22 @@
             <div class="media-category" data-category="image">
                 <h3 class="category-title"><i class="fas fa-image"></i> Infographic Gallery</h3>
                 <div class="infographics-grid">
+                    <!-- Impact Dashboard (Latest) -->
+                    <div class="infographic-item vertical" data-type="image" style="border: 2px solid var(--primary-green);">
+                        <div class="infographic-preview">
+                            <img src="assets/media/infographics/impact_dashboard.png" alt="GreenLoop 3.0 Impact Dashboard" loading="lazy">
+                            <div class="infographic-overlay">
+                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/impact_dashboard.png', 'GreenLoop 3.0 Impact Dashboard')">
+                                    <i class="fas fa-expand"></i> View Full Size
+                                </button>
+                            </div>
+                        </div>
+                        <div class="infographic-info">
+                            <h4>🎬 Impact Dashboard (Latest)</h4>
+                            <p>GreenLoop 3.0 impact metrics and key performance indicators dashboard</p>
+                        </div>
+                    </div>
+                    
                     <!-- Vertical Infographics -->
                     <div class="infographic-item vertical" data-type="image">
                         <div class="infographic-preview">
@@ -664,7 +714,10 @@
             
             <!-- Document Tabs -->
             <div class="document-tabs">
-                <button class="tab-btn active" onclick="switchTab('docx')">
+                <button class="tab-btn active" onclick="switchTab('gdoc')">
+                    <i class="fab fa-google-drive"></i> Project Proposal (Latest)
+                </button>
+                <button class="tab-btn" onclick="switchTab('docx')">
                     <i class="fas fa-file-word"></i> Main Proposal (DOCX)
                 </button>
                 <button class="tab-btn" onclick="switchTab('pdf')">
@@ -672,8 +725,33 @@
                 </button>
             </div>
             
+            <!-- Google Doc Tab Content (Latest) -->
+            <div id="gdoc-tab" class="tab-content active">
+                <div class="document-viewer-container">
+                    <div class="viewer-header" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                        <div class="viewer-title">
+                            <i class="fab fa-google-drive" style="color: white;"></i>
+                            <div>
+                                <h3 style="color: white;">🎬 GreenLoop 3.0 Project Proposal (Latest)</h3>
+                                <p style="color: rgba(255,255,255,0.9);">Official project proposal for CIRDAP-REEDS Innovation Challenge 2026</p>
+                            </div>
+                        </div>
+                        <div class="viewer-actions">
+                            <a href="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Open in Google Docs
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Doc Viewer -->
+                    <div class="document-embed">
+                        <iframe src="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/pub?embedded=true" title="GreenLoop 3.0 Project Proposal" style="width:100%; height:600px; border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+            
             <!-- DOCX Tab Content -->
-            <div id="docx-tab" class="tab-content active">
+            <div id="docx-tab" class="tab-content">
                 <div class="document-viewer-container">
                     <div class="viewer-header">
                         <div class="viewer-title">

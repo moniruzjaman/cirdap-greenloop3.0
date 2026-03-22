@@ -129,8 +129,12 @@ Your site will be live at: `https://[username].github.io/cirdap-greenloop3.0`
 
 ## 🎬 Multimedia Resources
 
-| Resource | Description | Format |
-|----------|-------------|--------|
+| Resource | Description | Link |
+|----------|-------------|------|
+| Pitch Deck Video | Project pitch presentation video | [Watch on YouTube](https://youtu.be/WW7olZ1YALs) |
+| Pitch Deck Presentation | Competition slide deck | [View Google Slides](https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk) |
+| Project Proposal | Complete project proposal document | [View Google Doc](https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk) |
+| Impact Dashboard | GreenLoop 3.0 impact infographic | [View Infographic](docs/assets/media/infographics/impact_dashboard.png) |
 | Project Video | Full presentation video | MP4 |
 | Proposal Document | Complete CIRDAP proposal | PDF |
 | Presentation Slides | Blockchain & Circular Agriculture deck | PPTX |
