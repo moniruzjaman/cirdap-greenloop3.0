@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#006a4e">
     <title>GreenLoop 3.0 | CIRDAP-REEDS Innovation Challenge 2026</title>
     <meta name="description" content="GreenLoop 3.0 - Efficiency-by-Design for a Circular Future. CIRDAP-REEDS Rural Development Innovation Challenge 2026 Submission.">
     <meta name="keywords" content="GreenLoop, CIRDAP, REEDS, circular economy, blockchain, agriculture, Bangladesh, LDC graduation, sustainability">
@@ -162,6 +167,58 @@
         .timeline-item.ongoing::before {
             border-color: #f59e0b;
             background: #f59e0b;
+        }
+        
+        /* Responsive Horizontal Scroll Styles */
+        @media (max-width: 1200px) {
+            [style*="min-width: 450px"] { min-width: 380px !important; max-width: 380px !important; }
+            [style*="min-width: 380px"] { min-width: 320px !important; max-width: 320px !important; }
+            [style*="min-width: 340px"] { min-width: 300px !important; max-width: 300px !important; }
+            [style*="min-width: 300px"] { min-width: 260px !important; max-width: 260px !important; }
+        }
+        @media (max-width: 992px) {
+            [style*="min-width: 450px"] { min-width: 340px !important; max-width: 340px !important; }
+            [style*="min-width: 380px"] { min-width: 280px !important; max-width: 280px !important; }
+            [style*="min-width: 340px"] { min-width: 260px !important; max-width: 260px !important; }
+            [style*="min-width: 300px"] { min-width: 240px !important; max-width: 240px !important; }
+            .guideline-section { padding: 60px 0; }
+        }
+        @media (max-width: 768px) {
+            [style*="min-width: 450px"] { min-width: 280px !important; max-width: 280px !important; }
+            [style*="min-width: 380px"] { min-width: 240px !important; max-width: 240px !important; }
+            [style*="min-width: 340px"] { min-width: 220px !important; max-width: 220px !important; }
+            [style*="min-width: 300px"] { min-width: 200px !important; max-width: 200px !important; }
+            .guideline-section { padding: 40px 0; }
+            .guideline-title { font-size: 24px; }
+            .guideline-number { width: 45px; height: 45px; line-height: 45px; font-size: 20px; }
+        }
+        @media (max-width: 480px) {
+            [style*="min-width: 280px"], [style*="min-width: 240px"], [style*="min-width: 220px"], [style*="min-width: 200px"] {
+                min-width: 180px !important; max-width: 180px !important;
+            }
+            .guideline-title { font-size: 20px; }
+        }
+        
+        /* Touch scrolling optimizations */
+        [style*="overflow-x: auto"] {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+        
+        /* Scrollbar styling for horizontal scroll containers */
+        [style*="overflow-x: auto"]::-webkit-scrollbar {
+            height: 8px;
+        }
+        [style*="overflow-x: auto"]::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+            border-radius: 10px;
+        }
+        [style*="overflow-x: auto"]::-webkit-scrollbar-thumb {
+            background: var(--primary-green, #006a4e);
+            border-radius: 10px;
+        }
+        [style*="overflow-x: auto"]::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-green-dark, #004d38);
         }
     </style>
 </head>
@@ -1417,6 +1474,202 @@
                                 <img src="assets/media/infographics/greenloop3.png" alt="GreenLoop 3" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==================== APP PORTFOLIO - HORIZONTAL SCROLL ==================== -->
+            <div style="margin-bottom: 40px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                    <h3 style="color: #1f2937; font-size: 24px; display: flex; align-items: center; gap: 12px; margin: 0;">
+                        <div style="background: linear-gradient(135deg, #10b981, #059669); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-mobile-alt" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <span data-lang="en">App Portfolio</span><span data-lang="bn">অ্যাপ পোর্টফোলিও</span>
+                    </h3>
+                    <span style="background: #ecfdf5; color: #059669; padding: 6px 15px; border-radius: 20px; font-size: 13px; font-weight: 500;"><span data-lang="en">8 Live Apps</span><span data-lang="bn">৮টি লাইভ অ্যাপ</span></span>
+                </div>
+                <div style="background: white; border-radius: 20px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+                        <!-- App 1: Krishi AI -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #a7f3d0;">
+                            <div style="background: linear-gradient(135deg, #059669, #10b981); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">🌾</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">কৃষি AI</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Krishi AI Bangladesh</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Agricultural Technology</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">AI-powered crop disease identification, weather dashboard, market prices</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #dcfce7; color: #059669; padding: 3px 8px; border-radius: 10px; font-size: 10px;">15+ AI Models</span>
+                                    <span style="background: #dcfce7; color: #059669; padding: 3px 8px; border-radius: 10px; font-size: 10px;">64 Districts</span>
+                                </div>
+                                <a href="https://web.krishiai.live/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #059669; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 500;">
+                                    <i class="fas fa-external-link-alt"></i> Visit App
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- App 2: Crop Call Game -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #fcd34d;">
+                            <div style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">🎮</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">ফসল ফতোয়া</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Crop Call Game</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Educational Gaming</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">Gamified rice disease identification training with multiple difficulty levels</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #fef3c7; color: #d97706; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Bengali</span>
+                                    <span style="background: #fef3c7; color: #d97706; padding: 3px 8px; border-radius: 10px; font-size: 10px;">3 Levels</span>
+                                </div>
+                                <a href="https://game.krishiai.live/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #d97706; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 500;">
+                                    <i class="fas fa-external-link-alt"></i> Play Now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- App 3: CABI Diagnosis -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #93c5fd;">
+                            <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">🔬</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">CABI Diagnosis</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Smart Crop Diagnosis</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Agricultural Diagnostics</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">Professional pest & disease identification with CABI Plantwise partnership</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #dbeafe; color: #2563eb; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Voice Input</span>
+                                    <span style="background: #dbeafe; color: #2563eb; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Weather Risk</span>
+                                </div>
+                                <a href="https://cabi.krishiai.live/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #2563eb; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 500;">
+                                    <i class="fas fa-external-link-alt"></i> Diagnose
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- App 4: Farmers Card -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #86efac;">
+                            <div style="background: linear-gradient(135deg, #16a34a, #15803d); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">💳</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">কৃষক কার্ড</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Farmers Card</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Government Services</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">Digital farmer profile, subsidy tracking, DAE integrated system</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #dcfce7; color: #16a34a; padding: 3px 8px; border-radius: 10px; font-size: 10px;">DAE Linked</span>
+                                    <span style="background: #dcfce7; color: #16a34a; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Insurance</span>
+                                </div>
+                                <a href="https://krishak-card.vercel.app/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #16a34a; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 500;">
+                                    <i class="fas fa-external-link-alt"></i> View Card
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- App 5: Fertilizer E-Bill -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #eff6ff, #c7d2fe); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #a5b4fc;">
+                            <div style="background: linear-gradient(135deg, #4f46e5, #4338ca); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">🧾</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">ই-বিল সিস্টেম</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Fertilizer Tracking E-Bill</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">E-Bill Fertilizer Tracking</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">Blockchain-verified fertilizer tracking with India e-Bill & China STFFT</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #c7d2fe; color: #4338ca; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Blockchain</span>
+                                    <span style="background: #c7d2fe; color: #4338ca; padding: 3px 8px; border-radius: 10px; font-size: 10px;">E-Voucher</span>
+                                </div>
+                                <a href="https://f1s852yxm2w0-d.space.z.ai/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #4338ca; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 500;">
+                                    <i class="fas fa-external-link-alt"></i> Login
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- App 6: E-Bill System -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #fef2f2, #fecaca); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #fca5a5;">
+                            <div style="background: linear-gradient(135deg, #dc2626, #b91c1c); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">📄</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">E-Bill System</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Invoice Management</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Business Software</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">Comprehensive invoice & billing management with revenue analytics</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #fecaca; color: #b91c1c; padding: 3px 8px; border-radius: 10px; font-size: 10px;">TypeScript</span>
+                                    <span style="background: #fecaca; color: #b91c1c; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Prisma</span>
+                                </div>
+                                <a href="https://moniruzjaman.github.io/e-bill-system/" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #b91c1c; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 500;">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- App 7: GAP Brinjal -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #f5f3ff, #e9d5ff); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #d8b4fe;">
+                            <div style="background: linear-gradient(135deg, #7c3aed, #6d28d9); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">🍆</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">GAP Brinjal</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Good Agricultural Practices</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Agricultural Standards</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">GAP-compliant brinjal cultivation guidelines and quality assurance</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #e9d5ff; color: #6d28d9; padding: 3px 8px; border-radius: 10px; font-size: 10px;">GAP</span>
+                                    <span style="background: #e9d5ff; color: #6d28d9; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Quality</span>
+                                </div>
+                                <span style="display: inline-flex; align-items: center; gap: 6px; background: #a78bfa; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 500;">
+                                    🔒 Private
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- App 8: Krishi AI Demo -->
+                        <div style="min-width: 280px; max-width: 280px; background: linear-gradient(135deg, #fdf4ff, #fae8ff); border-radius: 16px; overflow: hidden; flex-shrink: 0; scroll-snap-align: start; border: 2px solid #f5d0fe;">
+                            <div style="background: linear-gradient(135deg, #a855f7, #9333ea); padding: 15px; color: white; text-align: center;">
+                                <span style="font-size: 28px;">🧪</span>
+                                <h4 style="margin: 8px 0 5px; font-size: 15px;">Krishi AI Demo</h4>
+                                <p style="margin: 0; font-size: 10px; opacity: 0.9;">Preview Environment</p>
+                            </div>
+                            <div style="padding: 15px;">
+                                <p style="color: #374151; font-size: 12px; font-weight: 500; margin: 0 0 8px;">Development/Preview</p>
+                                <p style="color: #6b7280; font-size: 11px; margin: 0 0 10px; line-height: 1.4;">Experimental AI features testing and new functionality previews</p>
+                                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                                    <span style="background: #fae8ff; color: #9333ea; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Beta</span>
+                                    <span style="background: #fae8ff; color: #9333ea; padding: 3px 8px; border-radius: 10px; font-size: 10px;">Testing</span>
+                                </div>
+                                <span style="display: inline-flex; align-items: center; gap: 6px; background: #c084fc; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 500;">
+                                    🔒 Private
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== APP PORTFOLIO DOCUMENT ==================== -->
+            <div style="margin-bottom: 40px;">
+                <div style="background: linear-gradient(135deg, #1e3a5f, #059669); border-radius: 20px; padding: 35px; color: white; text-align: center;">
+                    <div style="margin-bottom: 15px;">
+                        <span style="font-size: 40px;">📄</span>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 10px;"><span data-lang="en">App Portfolio Document</span><span data-lang="bn">অ্যাপ পোর্টফোলিও ডকুমেন্ট</span></h3>
+                    <p style="font-size: 14px; opacity: 0.9; margin-bottom: 20px;"><span data-lang="en">Download the comprehensive portfolio document with detailed app descriptions</span><span data-lang="bn">বিস্তারিত অ্যাপ বিবরণ সহ সম্পূর্ণ পোর্টফোলিও ডকুমেন্ট ডাউনলোড করুন</span></p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="assets/media/Krishi_AI_App_Portfolio.docx" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                            <i class="fas fa-file-word"></i> <span data-lang="en">Download Portfolio</span><span data-lang="bn">পোর্টফোলিও ডাউনলোড</span>
+                        </a>
+                        <a href="https://github.com/Krishi-AI-Team" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3);">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
             </div>
