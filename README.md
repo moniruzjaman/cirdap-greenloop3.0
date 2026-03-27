@@ -76,6 +76,25 @@ Designed on the 'Efficiency-by-Design' philosophy:
 | **e-Bill System** | Transparency | POS-based transactions, eliminating Ghost Transactions |
 | **Smart Farmer Card** | Inclusion | NID-linked, integrating Soil Health Data and Credit Rating |
 
+### Layer C: Rural Transformation (Institutional Framework)
+
+Layer C focuses on institutional capacity building and participatory governance to ensure sustainable rural development:
+
+| Component | Description | Impact |
+|-----------|-------------|--------|
+| **Agro-Service Center (ASC)** | Village-level hub providing soil testing, advisory services, and market linkages | High-impact, low-cost feasibility model |
+| **Digital Facilitators** | Trained NEET youth (Not in Education, Employment, or Training) serving 50-100 farmers each | Prevents urban migration, creates youth employment |
+| **Participatory MEL** | Monitoring, Evaluation, and Learning framework with community engagement | Real-time feedback and adaptive management |
+| **Smart Farmer Card** | NID-linked digital identity with integrated soil health data and credit rating | Financial inclusion and transparent subsidy distribution |
+
+#### MEL Framework Components
+
+| Program | Description |
+|---------|-------------|
+| **FRRP** (Family Resilience Recognition) | Families scored into Gold, Silver, or Emerging categories based on women's leadership and climate-smart practices |
+| **VRRP** (Village Resilience Recognition) | Village Resilience Index (VRI) based on overall CSA practices and family performance |
+| **4A Learning System** | Access (Bengali voice-driven UI), Action (mandatory feedback), Analysis (Human-in-loop AI), Adaptation (real-time policy updates) |
+
 ---
 
 ## 📊 FAO 'Four Betters' Framework Impact
@@ -161,6 +180,7 @@ Hyperledger Fabric and PoA consensus enable rapid scalability while maintaining 
 | Pitch Deck Presentation | Competition slide deck | [View Google Slides](https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk) |
 | Project Proposal | Complete project proposal document | [View Google Doc](https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk) |
 | Impact Dashboard | GreenLoop 3.0 impact infographic | [View Infographic](docs/assets/media/infographics/impact_dashboard.png) |
+| Rural Transformation PDF | Layer C detailed documentation | [View PDF](docs/assets/media/GreenLoop_3.0_Rural_Transformation.pdf) |
 
 ---
 
