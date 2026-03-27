@@ -176,11 +176,13 @@ Hyperledger Fabric and PoA consensus enable rapid scalability while maintaining 
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| Pitch Deck Video | Project pitch presentation video | [Watch on YouTube](https://youtu.be/WW7olZ1YALs) |
+| **Featured Pitch Video** | Official pitch for CIRDAP-REEDS 2026 | [Watch on YouTube](https://youtu.be/Bbe8QEzr1V0?si=6UXm_fhh_9N9bbhP) |
+| Pitch Presentation Video | Project overview presentation | [Watch on YouTube](https://youtu.be/WW7olZ1YALs) |
 | Pitch Deck Presentation | Competition slide deck | [View Google Slides](https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk) |
 | Project Proposal | Complete project proposal document | [View Google Doc](https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk) |
 | Impact Dashboard | GreenLoop 3.0 impact infographic | [View Infographic](docs/assets/media/infographics/impact_dashboard.png) |
 | Rural Transformation PDF | Layer C detailed documentation | [View PDF](docs/assets/media/GreenLoop_3.0_Rural_Transformation.pdf) |
+| **Complete Resource Folder** | All project files in one place | [Open Google Drive](https://drive.google.com/drive/folders/1Cqp1dZb68e7wq-l_3mMVv_Q5ol1DgjfR) |
 
 ---
 
