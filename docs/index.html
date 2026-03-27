@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenLoop 3.0 | CIRDAP Innovation Challenge 2026</title>
-    <meta name="description" content="GreenLoop 3.0 - Efficiency-by-Design for a Circular Future. CIRDAP-REEDS Rural Development Innovation Challenge 2026 Finalist Project.">
-    <meta name="keywords" content="GreenLoop, CIRDAP, circular economy, blockchain, agriculture, Bangladesh, LDC graduation">
+    <title>GreenLoop 3.0 | CIRDAP-REEDS Innovation Challenge 2026</title>
+    <meta name="description" content="GreenLoop 3.0 - Efficiency-by-Design for a Circular Future. CIRDAP-REEDS Rural Development Innovation Challenge 2026 Submission.">
+    <meta name="keywords" content="GreenLoop, CIRDAP, REEDS, circular economy, blockchain, agriculture, Bangladesh, LDC graduation, sustainability">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="GreenLoop 3.0 - CIRDAP Innovation Challenge 2026">
+    <meta property="og:title" content="GreenLoop 3.0 - CIRDAP-REEDS Innovation Challenge 2026">
     <meta property="og:description" content="Healing the Earth, Securing the Smile - A revolutionary circular economy solution for Bangladesh's LDC graduation.">
     <meta property="og:image" content="assets/media/greenloop_banner.png">
     <meta property="og:type" content="website">
@@ -66,15 +66,117 @@
         html[lang="bn"] [data-lang="en"] {
             display: none;
         }
-        html[lang="bn"] .bn-only {
-            display: block !important;
+        
+        /* Section Navigation Dots */
+        .section-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        html[lang="en"] .en-only {
-            display: block !important;
+        .section-nav a {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            border: 2px solid var(--primary-green);
+            transition: all 0.3s ease;
+        }
+        .section-nav a:hover, .section-nav a.active {
+            background: var(--primary-green);
+            transform: scale(1.3);
+        }
+        @media (max-width: 768px) {
+            .section-nav { display: none; }
+        }
+        
+        /* Guideline Section Headers */
+        .guideline-section {
+            padding: 80px 0;
+            position: relative;
+        }
+        .guideline-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .guideline-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-green), #10b981);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .guideline-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        .guideline-subtitle {
+            font-size: 18px;
+            color: #6b7280;
+        }
+        
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #10b981, #3b82f6, #f59e0b);
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid #10b981;
+        }
+        .timeline-item.completed::before {
+            background: #10b981;
+        }
+        .timeline-item.ongoing::before {
+            border-color: #f59e0b;
+            background: #f59e0b;
         }
     </style>
 </head>
 <body>
+    <!-- Section Navigation -->
+    <div class="section-nav">
+        <a href="#home" title="Home" class="active"></a>
+        <a href="#problem-statement" title="Problem Statement"></a>
+        <a href="#innovation-proposal" title="Innovation Proposal"></a>
+        <a href="#implementation-plan" title="Implementation Plan"></a>
+        <a href="#stakeholder-engagement" title="Stakeholder Engagement"></a>
+        <a href="#sustainability-framework" title="Sustainability Framework"></a>
+        <a href="#resources" title="Resources"></a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -83,12 +185,13 @@
                 <span class="logo-text">GreenLoop <span class="version">3.0</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active"><span data-lang="en">Home</span><span data-lang="bn">হোম</span></a></li>
-                <li><a href="#media-gallery"><span data-lang="en">Media Gallery</span><span data-lang="bn">মিডিয়া গ্যালারি</span></a></li>
-                <li><a href="#proposal"><span data-lang="en">Proposal</span><span data-lang="bn">প্রপোজাল</span></a></li>
-                <li><a href="#presentation"><span data-lang="en">Presentation</span><span data-lang="bn">প্রেজেন্টেশন</span></a></li>
-                <li><a href="#demo"><span data-lang="en">Demo</span><span data-lang="bn">ডেমো</span></a></li>
-                <li><a href="#team"><span data-lang="en">Team</span><span data-lang="bn">টিম</span></a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#problem-statement"><span data-lang="en">Problem</span><span data-lang="bn">সমস্যা</span></a></li>
+                <li><a href="#innovation-proposal"><span data-lang="en">Innovation</span><span data-lang="bn">উদ্ভাবন</span></a></li>
+                <li><a href="#implementation-plan"><span data-lang="en">Implementation</span><span data-lang="bn">বাস্তবায়ন</span></a></li>
+                <li><a href="#stakeholder-engagement"><span data-lang="en">Stakeholders</span><span data-lang="bn">অংশীদার</span></a></li>
+                <li><a href="#sustainability-framework"><span data-lang="en">Sustainability</span><span data-lang="bn">স্থায়িত্ব</span></a></li>
+                <li><a href="#resources"><span data-lang="en">Resources</span><span data-lang="bn">সম্পদ</span></a></li>
             </ul>
             <div style="display: flex; align-items: center;">
                 <div class="lang-toggle">
@@ -109,7 +212,7 @@
         </div>
         <div class="hero-content">
             <div class="badge-container">
-                <span class="badge"><i class="fas fa-trophy"></i> <span data-lang="en">CIRDAP Innovation Challenge 2026 Finalist</span><span data-lang="bn">সিরডাপ উদ্ভাবন চ্যালেঞ্জ ২০২৬ ফাইনালিস্ট</span></span>
+                <span class="badge"><i class="fas fa-trophy"></i> CIRDAP-REEDS Innovation Challenge 2026</span>
             </div>
             <h1 class="hero-title">
                 <span class="title-line">GreenLoop</span>
@@ -125,11 +228,6 @@
                     <div class="stat-label"><span data-lang="en">Scalable Unit Cost/Farmer</span><span data-lang="bn">স্কেলেবল ইউনিট কস্ট/কৃষক</span></div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-leaf"></i></div>
-                    <div class="stat-value">3,500 kg</div>
-                    <div class="stat-label"><span data-lang="en">CO₂ Sequestration/Unit</span><span data-lang="bn">CO₂ সিকুয়েস্ট্রেশন/ইউনিট</span></div>
-                </div>
-                <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
                     <div class="stat-value">14.47%</div>
                     <div class="stat-label"><span data-lang="en">IRR (Return Rate)</span><span data-lang="bn">IRR (রিটার্ন রেট)</span></div>
@@ -139,14 +237,19 @@
                     <div class="stat-value">57%</div>
                     <div class="stat-label"><span data-lang="en">Water Savings</span><span data-lang="bn">পানি সাশ্রয়</span></div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="stat-value">3,500 kg</div>
+                    <div class="stat-label"><span data-lang="en">CO₂ Sequestration/Unit</span><span data-lang="bn">CO₂ সিকুয়েস্ট্রেশন/ইউনিট</span></div>
+                </div>
             </div>
             
             <div class="hero-cta">
                 <a href="https://youtu.be/WW7olZ1YALs" target="_blank" class="btn btn-primary">
                     <i class="fas fa-play-circle"></i> <span data-lang="en">Watch Pitch Video</span><span data-lang="bn">পিচ ভিডিও দেখুন</span>
                 </a>
-                <a href="#proposal" class="btn btn-secondary">
-                    <i class="fas fa-file-alt"></i> <span data-lang="en">View Proposal</span><span data-lang="bn">প্রপোজাল দেখুন</span>
+                <a href="#problem-statement" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i> <span data-lang="en">Explore Proposal</span><span data-lang="bn">প্রপোজাল দেখুন</span>
                 </a>
             </div>
         </div>
@@ -155,7 +258,7 @@
         </div>
     </section>
 
-    <!-- Theme Banner -->
+    <!-- CIRDAP Theme Banner -->
     <section class="theme-banner">
         <div class="container">
             <div class="theme-content">
@@ -171,904 +274,771 @@
         </div>
     </section>
 
-    <!-- Four Pillars Section -->
-    <section class="section pillars-section" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 60px 0;">
+    <!-- ==================== SECTION 1: PROBLEM STATEMENT ==================== -->
+    <section id="problem-statement" class="guideline-section" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-columns"></i> <span data-lang="en">CIRDAP 2026 Vision</span><span data-lang="bn">সিরডাপ ২০২৬ ভিশন</span></span>
-                <h2 class="section-title"><span data-lang="en">Four Strategic Pillars</span><span data-lang="bn">চার কৌশলগত স্তম্ভ</span></h2>
-                <p class="section-subtitle"><span data-lang="en">Foundation aligned with CIRDAP's mission</span><span data-lang="bn">সিরডাপের মিশনের সাথে সংগতিপূর্ণ ভিত্তি</span></p>
+            <div class="guideline-header">
+                <div class="guideline-number">1</div>
+                <h2 class="guideline-title"><span data-lang="en">Problem Statement</span><span data-lang="bn">সমস্যার বিবৃতি</span></h2>
+                <p class="guideline-subtitle"><span data-lang="en">Understanding the Agricultural Crisis & High-Use Paradox</span><span data-lang="bn">কৃষি সংকট ও হাই-ইউজ প্যারাডক্স বোঝা</span></p>
             </div>
-            
-            <div class="alignment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                <div class="align-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-left: 4px solid #ec4899;">
-                    <div class="icon-circle pink"><i class="fas fa-venus-mars"></i></div>
-                    <h3 style="color: #1f2937; margin-bottom: 12px;"><span data-lang="en">Gender-Responsive Development</span><span data-lang="bn">জেন্ডার-রেসপন্সিভ ডেভেলপমেন্ট</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">Digital Family Cards ensuring nutrition for female-headed households and transparent distribution of BDT 12,000 Crore social security fund.</span><span data-lang="bn">ডিজিটাল ফ্যামিলি কার্ডের মাধ্যমে নারী-প্রধান পরিবারগুলোর পুষ্টি নিশ্চিতকরণ এবং ১২,০০০ কোটি টাকার সামাজিক নিরাপত্তা তহবিলের স্বচ্ছ বণ্টন।</span></p>
-                </div>
-                <div class="align-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-left: 4px solid #10b981;">
-                    <div class="icon-circle green"><i class="fas fa-shield-alt"></i></div>
-                    <h3 style="color: #1f2937; margin-bottom: 12px;"><span data-lang="en">Climate Resilience</span><span data-lang="bn">ক্লাইমেট রেজিলিয়েন্স</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">3F4D+MD Protocol and solar-powered infrastructure to combat climate change risks and reduce carbon emissions.</span><span data-lang="bn">৩এফ৪ডি+এমডি প্রোটোকল ও সৌরশক্তিচালিত অবকাঠামোর মাধ্যমে জলবায়ু পরিবর্তনের ঝুঁকি মোকাবিলা এবং কার্বন নিঃসরণ হ্রাস।</span></p>
-                </div>
-                <div class="align-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-left: 4px solid #3b82f6;">
-                    <div class="icon-circle blue"><i class="fas fa-link"></i></div>
-                    <h3 style="color: #1f2937; margin-bottom: 12px;"><span data-lang="en">Digital Transformation</span><span data-lang="bn">ডিজিটাল ট্রান্সফরমেশন</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">Hybrid Blockchain and Hyperledger Fabric ensuring rural data sovereignty and integrity.</span><span data-lang="bn">হাইব্রিড ব্লকচেইন ও হাইপারলেজার ফ্যাব্রিক ব্যবহারের মাধ্যমে গ্রামীণ তথ্যের সার্বভৌমত্ব ও অখণ্ডতা নিশ্চিতকরণ।</span></p>
-                </div>
-                <div class="align-card" style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-left: 4px solid #f59e0b;">
-                    <div class="icon-circle orange"><i class="fas fa-user-graduate"></i></div>
-                    <h3 style="color: #1f2937; margin-bottom: 12px;"><span data-lang="en">Livelihood Diversification</span><span data-lang="bn">লাইভলিহুড ডাইভারসিফিকেশন</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">Agro-Service Centers (ASC) and Digital Facilitators creating modern employment for youth.</span><span data-lang="bn">এগ্রো-সার্ভিস সেন্টার (ASC) ও ডিজিটাল ফ্যাসিলিটেটরদের মাধ্যমে বেকার যুবকদের জন্য আধুনিক কর্মসংস্থান সৃষ্টি।</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- High-Use Paradox Section -->
-    <section class="section story-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-book-open"></i> <span data-lang="en">The Challenge</span><span data-lang="bn">চ্যালেঞ্জ</span></span>
-                <h2 class="section-title"><span data-lang="en">High-Use Paradox: Agricultural Crisis Analysis</span><span data-lang="bn">হাই-ইউজ প্যারাডক্স: কৃষি সংকটের বিশ্লেষণ</span></h2>
-                <p class="section-subtitle"><span data-lang="en">Fertilizer usage increases while Nutrient Use Efficiency (NUE) declines alarmingly</span><span data-lang="bn">সারের ব্যবহার বাড়লেও নিউট্রিয়েন্ট ইউজ এফিশিয়েন্সি (NUE) আশঙ্কাজনকভাবে হ্রাস পাচ্ছে</span></p>
-            </div>
-            
-            <div class="story-timeline">
-                <div class="story-chapter" data-chapter="1">
-                    <div class="chapter-marker">
-                        <span class="chapter-number">01</span>
-                    </div>
-                    <div class="chapter-content">
-                        <h3><span data-lang="en">Problem: NUE Decline Analysis</span><span data-lang="bn">সমস্যা: NUE হ্রাসের বিশ্লেষণ</span></h3>
-                        <p><span data-lang="en">Despite increased fertilizer usage, productivity and Nutrient Use Efficiency (NUE) are declining. This causes soil acidification and water body pollution.</span><span data-lang="bn">সারের ব্যবহার বাড়লেও উৎপাদনশীলতা বা নিউট্রিয়েন্ট ইউজ এফিশিয়েন্সি (NUE) আশঙ্কাজনকভাবে হ্রাস পাচ্ছে। এটি মাটির অম্লকরণ এবং জলাশয়ের পানি দূষণের মূল কারণ।</span></p>
-                        <div class="chapter-stat">
-                            <span class="stat-number">$2.4 B</span>
-                            <span class="stat-label"><span data-lang="en">Bangladesh annual post-harvest loss (4% GDP)</span><span data-lang="bn">বাংলাদেশের বার্ষিক পোস্ট-হারভেস্ট ক্ষতি (GDP ৪%)</span></span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-chapter" data-chapter="2">
-                    <div class="chapter-marker">
-                        <span class="chapter-number">02</span>
-                    </div>
-                    <div class="chapter-content">
-                        <h3><span data-lang="en">Solution: Nano-Urea Technology</span><span data-lang="bn">সমাধান: ন্যানো-ইউরিয়া প্রযুক্তি</span></h3>
-                        <p><span data-lang="en">Nano-Urea technology developed by Jashore University of Science and Technology (JUST) could save approximately BDT 220 billion annually if implemented nationally.</span><span data-lang="bn">যশোর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের (JUST) উদ্ভাবিত ন্যানো-ইউরিয়া প্রযুক্তি জাতীয় পর্যায়ে বাস্তবায়িত হলে বছরে প্রায় ২২০ বিলিয়ন টাকা সাশ্রয় সম্ভব।</span></p>
-                        <div class="chapter-stat">
-                            <span class="stat-number">BDT 220B</span>
-                            <span class="stat-label"><span data-lang="en">Potential annual savings</span><span data-lang="bn">বার্ষিক সাশ্রয়ের সম্ভাবনা</span></span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-chapter" data-chapter="3">
-                    <div class="chapter-marker">
-                        <span class="chapter-number">03</span>
-                    </div>
-                    <div class="chapter-content">
-                        <h3><span data-lang="en">Impact: From Farmer to Agro-Ecologist</span><span data-lang="bn">প্রভাব: কৃষক থেকে কৃষি-বাস্তুবিদ</span></h3>
-                        <p><span data-lang="en">GreenLoop's goal is to transform farmers from 'consumers of advice' to 'Analytical Agro-ecologists' - knowledge producers rather than passive recipients.</span><span data-lang="bn">GreenLoop-এর লক্ষ্য হলো কৃষকদের প্রচলিত 'নির্দেশনামূলক কৃষি' থেকে 'বিশ্লেষণী কৃষি-বাস্তুবিদ' মডেলে রূপান্তর করা।</span></p>
-                        <div class="chapter-stat">
-                            <span class="stat-number">$72/acre</span>
-                            <span class="stat-label"><span data-lang="en">Additional annual income</span><span data-lang="bn">অতিরিক্ত বার্ষিক আয়</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NUE Comparison Table Section -->
-    <section class="section" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 60px 0;">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-chart-bar"></i> <span data-lang="en">NUE Comparative Analysis</span><span data-lang="bn">NUE তুলনামূলক বিশ্লেষণ</span></span>
-                <h2 class="section-title"><span data-lang="en">Regional NUE Decline Overview</span><span data-lang="bn">NUE হ্রাসের আঞ্চলিক চিত্র</span></h2>
-                <p class="section-subtitle"><span data-lang="en">Nutrient Use Efficiency comparison across major agricultural producers in Asia</span><span data-lang="bn">এশিয়ার প্রধান কৃষি উৎপাদক দেশগুলোতে NUE এর তুলনামূলক পরিসংখ্যান</span></p>
-            </div>
-            
-            <div style="overflow-x: auto; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
-                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden;">
-                    <thead>
-                        <tr style="background: linear-gradient(135deg, #059669, #10b981); color: white;">
-                            <th style="padding: 18px 20px; text-align: left; font-size: 16px;"><span data-lang="en">Country</span><span data-lang="bn">দেশ</span></th>
-                            <th style="padding: 18px 20px; text-align: center; font-size: 16px;"><span data-lang="en">Previous NUE (%)</span><span data-lang="bn">পূর্ববর্তী NUE (%)</span></th>
-                            <th style="padding: 18px 20px; text-align: center; font-size: 16px;"><span data-lang="en">Current NUE (%)</span><span data-lang="bn">বর্তমান NUE (%)</span></th>
-                            <th style="padding: 18px 20px; text-align: left; font-size: 16px;"><span data-lang="en">Impact & Annual Cost</span><span data-lang="bn">প্রভাব ও বার্ষিক ব্যয়</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 16px 20px; font-weight: 600;">🇨🇳 <span data-lang="en">China</span><span data-lang="bn">চীন</span></td>
-                            <td style="padding: 16px 20px; text-align: center; color: #059669; font-weight: bold;">61%</td>
-                            <td style="padding: 16px 20px; text-align: center; color: #dc2626; font-weight: bold;">50%</td>
-                            <td style="padding: 16px 20px;"><span data-lang="en">50% fertilizer waste & high carbon emissions</span><span data-lang="bn">৫০% সারের অপচয় ও উচ্চ কার্বন নিঃসরণ</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
-                            <td style="padding: 16px 20px; font-weight: 600;">🇮🇳 <span data-lang="en">India</span><span data-lang="bn">ভারত</span></td>
-                            <td style="padding: 16px 20px; text-align: center; color: #059669; font-weight: bold;">50%</td>
-                            <td style="padding: 16px 20px; text-align: center; color: #dc2626; font-weight: bold;">42%</td>
-                            <td style="padding: 16px 20px;"><span data-lang="en">Annual subsidy leakage exceeding $8 billion</span><span data-lang="bn">বার্ষিক $৮ বিলিয়ন ডলারের অধিক ভর্তুকি লিকেজ</span></td>
-                        </tr>
-                        <tr style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
-                            <td style="padding: 16px 20px; font-weight: 700; color: #059669;">🇧🇩 <span data-lang="en">Bangladesh</span><span data-lang="bn">বাংলাদেশ</span></td>
-                            <td style="padding: 16px 20px; text-align: center; font-weight: bold;">-</td>
-                            <td style="padding: 16px 20px; text-align: center; font-weight: bold;">-</td>
-                            <td style="padding: 16px 20px; color: #dc2626; font-weight: 600;"><span data-lang="en">GDP loss of 4% ($2.4 billion) in post-harvest losses</span><span data-lang="bn">জিডিপির ৪% ($২.৪ বিলিয়ন) পোস্ট-হারভেস্ট ক্ষতি</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div style="margin-top: 30px; background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #f59e0b; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <p style="margin: 0; color: #374151; font-size: 15px; line-height: 1.8;">
-                    <i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i>
-                    <strong><span data-lang="en">Need for Systemic Reform:</span><span data-lang="bn">পদ্ধতিগত সংস্কারের প্রয়োজনীয়তা:</span></strong> <span data-lang="en">Urgent need to stop 'Inorganic Value Leaks' (6-20% loss) in supply chain and industrial diversion of urea fertilizer.</span><span data-lang="bn">সরবরাহ শৃঙ্খলে 'Inorganic Value Leaks' (৬-২০% ক্ষতি) এবং ইউরিয়া সারের শিল্পমুখী ডাইভারশন বন্ধ করা জরুরি।</span>
+            <!-- Core Problem -->
+            <div style="background: white; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #dc2626; margin-bottom: 20px; font-size: 24px;">
+                    <i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+                    <span data-lang="en">The High-Use Paradox</span><span data-lang="bn">হাই-ইউজ প্যারাডক্স</span>
+                </h3>
+                <p style="font-size: 18px; line-height: 1.8; color: #374151;">
+                    <span data-lang="en">Current agricultural systems suffer from a critical paradox: fertilizer usage increases while Nutrient Use Efficiency (NUE) declines alarmingly. This leads to soil acidification, water body pollution, and economic losses. The paradox represents not just an agricultural challenge, but a systemic failure affecting food security, environmental sustainability, and rural livelihoods across Asia-Pacific.</span>
+                    <span data-lang="bn">বর্তমান কৃষি ব্যবস্থা একটি গুরুত্বপূর্ণ প্যারাডক্সের শিকার: সারের ব্যবহার বাড়লেও নিউট্রিয়েন্ট ইউজ এফিশিয়েন্সি (NUE) আশঙ্কাজনকভাবে হ্রাস পাচ্ছে। এর ফলে মাটির অম্লকরণ, জলাশয়ের পানি দূষণ এবং অর্থনৈতিক ক্ষতি হয়। এই প্যারাডক্স কেবল কৃষি চ্যালেঞ্জ নয়, বরং এশিয়া-প্যাসিফিক জুড়ে খাদ্য নিরাপত্তা, পরিবেশগত স্থায়িত্ব এবং গ্রামীণ জীবিকাকে প্রভাবিত করে এমন একটি পদ্ধতিগত ব্যর্থতা।</span>
                 </p>
             </div>
-        </div>
-    </section>
 
-    <!-- Media Gallery Section -->
-    <section id="media-gallery" class="section media-gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-photo-video"></i> <span data-lang="en">Media Gallery</span><span data-lang="bn">মিডিয়া গ্যালারি</span></span>
-                <h2 class="section-title"><span data-lang="en">Multimedia Resources</span><span data-lang="bn">মাল্টিমিডিয়া রিসোর্স</span></h2>
-                <p class="section-subtitle"><span data-lang="en">Explore videos, presentations, documents and images about GreenLoop 3.0</span><span data-lang="bn">GreenLoop 3.0 সম্পর্কে ভিডিও, প্রেজেন্টেশন, ডকুমেন্ট এবং ইমেজ দেখুন</span></p>
-            </div>
-            
-            <!-- Media Filter Tabs -->
-            <div class="media-filter-tabs">
-                <button class="filter-btn active" onclick="filterMedia('all')">
-                    <i class="fas fa-th-large"></i> <span data-lang="en">All</span><span data-lang="bn">সব</span>
-                </button>
-                <button class="filter-btn" onclick="filterMedia('video')">
-                    <i class="fas fa-video"></i> <span data-lang="en">Videos</span><span data-lang="bn">ভিডিও</span>
-                </button>
-                <button class="filter-btn" onclick="filterMedia('presentation')">
-                    <i class="fas fa-presentation"></i> <span data-lang="en">Presentations</span><span data-lang="bn">প্রেজেন্টেশন</span>
-                </button>
-                <button class="filter-btn" onclick="filterMedia('document')">
-                    <i class="fas fa-file-alt"></i> <span data-lang="en">Documents</span><span data-lang="bn">ডকুমেন্ট</span>
-                </button>
-                <button class="filter-btn" onclick="filterMedia('image')">
-                    <i class="fas fa-image"></i> <span data-lang="en">Images</span><span data-lang="bn">ইমেজ</span>
-                </button>
-            </div>
-            
-            <!-- YouTube Videos Grid -->
-            <div class="media-category" data-category="video">
-                <h3 class="category-title"><i class="fas fa-video"></i> <span data-lang="en">Video Presentations</span><span data-lang="bn">ভিডিও প্রেজেন্টেশন</span></h3>
-                <div class="videos-grid">
-                    <!-- Video 0: Pitch Deck Video (Latest) -->
-                    <div class="video-card" data-type="video" style="border: 2px solid var(--primary-green);">
-                        <div class="video-embed-wrapper">
-                            <iframe src="https://www.youtube.com/embed/WW7olZ1YALs" title="GreenLoop 3.0 Pitch Deck Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-card-info">
-                            <h4>🎬 <span data-lang="en">GreenLoop 3.0 Pitch Deck Video (Latest)</span><span data-lang="bn">GreenLoop 3.0 পিচ ডেক ভিডিও (সর্বশেষ)</span></h4>
-                            <p><span data-lang="en">Official pitch deck video for CIRDAP-REEDS Innovation Challenge 2026 submission</span><span data-lang="bn">সিরডাপ-রিডস উদ্ভাবন চ্যালেঞ্জ ২০২৬ জমা দেওয়ার জন্য অফিসিয়াল পিচ ডেক ভিডিও</span></p>
-                            <div class="video-card-meta">
-                                <span><i class="fab fa-youtube"></i> YouTube</span>
-                                <a href="https://youtu.be/WW7olZ1YALs" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Watch on YouTube</span><span data-lang="bn">ইউটিউবে দেখুন</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video 1: Circular Economy -->
-                    <div class="video-card" data-type="video">
-                        <div class="video-embed-wrapper">
-                            <iframe src="https://www.youtube.com/embed/Zwh3vCOz5iU" title="Circular Economy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-card-info">
-                            <h4><span data-lang="en">Circular Economy</span><span data-lang="bn">সার্কুলার ইকোনমি</span></h4>
-                            <p><span data-lang="en">Understanding the circular economy principles that drive GreenLoop 3.0</span><span data-lang="bn">GreenLoop 3.0 চালিত করে এমন সার্কুলার ইকোনমি নীতিগুলো বোঝা</span></p>
-                            <div class="video-card-meta">
-                                <span><i class="fab fa-youtube"></i> YouTube</span>
-                                <a href="https://youtu.be/Zwh3vCOz5iU" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Watch on YouTube</span><span data-lang="bn">ইউটিউবে দেখুন</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video 2: One Innovation Endless Change -->
-                    <div class="video-card" data-type="video">
-                        <div class="video-embed-wrapper">
-                            <iframe src="https://www.youtube.com/embed/x5ychc6UOEA" title="One Innovation Endless Change" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-card-info">
-                            <h4><span data-lang="en">One Innovation, Endless Change</span><span data-lang="bn">এক উদ্ভাবন, অসীম পরিবর্তন</span></h4>
-                            <p><span data-lang="en">The story of how one innovation can transform countless lives</span><span data-lang="bn">একটি উদ্ভাবন কীভাবে অসংখ্য জীবন বদলে দিতে পারে সেই গল্প</span></p>
-                            <div class="video-card-meta">
-                                <span><i class="fab fa-youtube"></i> YouTube</span>
-                                <a href="https://youtu.be/x5ychc6UOEA" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Watch on YouTube</span><span data-lang="bn">ইউটিউবে দেখুন</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video 3: Blockchain Fertilizer -->
-                    <div class="video-card" data-type="video">
-                        <div class="video-embed-wrapper">
-                            <iframe src="https://www.youtube.com/embed/bCl6XNeTWeo" title="Blockchain Fertilizer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-card-info">
-                            <h4><span data-lang="en">Blockchain Fertilizer</span><span data-lang="bn">ব্লকচেইন সার ব্যবস্থা</span></h4>
-                            <p><span data-lang="en">How blockchain technology revolutionizes fertilizer management</span><span data-lang="bn">ব্লকচেইন প্রযুক্তি কীভাবে সার ব্যবস্থাপনায় বিপ্লব ঘটায়</span></p>
-                            <div class="video-card-meta">
-                                <span><i class="fab fa-youtube"></i> YouTube</span>
-                                <a href="https://youtu.be/bCl6XNeTWeo" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Watch on YouTube</span><span data-lang="bn">ইউটিউবে দেখুন</span>
-                                </a>
-                            </div>
-                        </div>
+            <!-- Problem Statistics Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px;">
+                <div style="background: white; border-radius: 16px; padding: 30px; border-left: 5px solid #dc2626; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #dc2626; margin-bottom: 15px;"><i class="fas fa-chart-line" style="margin-right: 10px;"></i><span data-lang="en">NUE Decline Crisis</span><span data-lang="bn">NUE হ্রাস সংকট</span></h4>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; font-size: 14px;">
+                            <tr style="border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 10px 0;">🇨🇳 China</td>
+                                <td style="padding: 10px 0; color: #059669;">61% →</td>
+                                <td style="padding: 10px 0; color: #dc2626; font-weight: bold;">50%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 10px 0;">🇮🇳 India</td>
+                                <td style="padding: 10px 0; color: #059669;">50% →</td>
+                                <td style="padding: 10px 0; color: #dc2626; font-weight: bold;">42%</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0;">🇧🇩 Bangladesh</td>
+                                <td colspan="2" style="padding: 10px 0; color: #dc2626; font-weight: bold;">4% GDP Loss ($2.4B)</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Google Slides Presentations -->
-            <div class="media-category" data-category="presentation">
-                <h3 class="category-title"><i class="fas fa-presentation"></i> <span data-lang="en">Google Slides Presentations</span><span data-lang="bn">গুগল স্লাইডস প্রেজেন্টেশন</span></h3>
-                <div class="presentations-grid">
-                    <!-- Presentation 0: Pitch Deck Presentation (Latest) -->
-                    <div class="presentation-card" data-type="presentation" style="border: 2px solid var(--primary-green);">
-                        <div class="presentation-embed-wrapper">
-                            <iframe src="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/embed?start=false&loop=false&delayms=3000" title="GreenLoop 3.0 Pitch Deck Presentation" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                        </div>
-                        <div class="presentation-card-info">
-                            <h4>🎬 <span data-lang="en">GreenLoop 3.0 Pitch Deck Presentation (Latest)</span><span data-lang="bn">GreenLoop 3.0 পিচ ডেক প্রেজেন্টেশন (সর্বশেষ)</span></h4>
-                            <p><span data-lang="en">Official pitch deck presentation for CIRDAP-REEDS Innovation Challenge 2026 submission</span><span data-lang="bn">সিরডাপ-রিডস উদ্ভাবন চ্যালেঞ্জ ২০২৬ জমা দেওয়ার জন্য অফিসিয়াল পিচ ডেক প্রেজেন্টেশন</span></p>
-                            <div class="presentation-card-meta">
-                                <span><i class="fab fa-google-drive"></i> Google Slides</span>
-                                <a href="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in Google Slides</span><span data-lang="bn">গুগল স্লাইডসে খুলুন</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Presentation 1: Greenloop 3 Ecosystem -->
-                    <div class="presentation-card" data-type="presentation">
-                        <div class="presentation-embed-wrapper">
-                            <iframe src="https://docs.google.com/presentation/d/1ozWnReNMl7zpQbUMpadVsDZORa12Ahpz/embed?start=false&loop=false&delayms=3000" title="Greenloop 3 Ecosystem" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                        </div>
-                        <div class="presentation-card-info">
-                            <h4><span data-lang="en">GreenLoop 3.0 Ecosystem</span><span data-lang="bn">GreenLoop 3.0 ইকোসিস্টেম</span></h4>
-                            <p><span data-lang="en">Comprehensive overview of the GreenLoop 3.0 ecosystem architecture</span><span data-lang="bn">GreenLoop 3.0 ইকোসিস্টেম আর্কিটেকচারের বিস্তারিত ওভারভিউ</span></p>
-                            <div class="presentation-card-meta">
-                                <span><i class="fab fa-google-drive"></i> Google Slides</span>
-                                <a href="https://docs.google.com/presentation/d/1ozWnReNMl7zpQbUMpadVsDZORa12Ahpz/edit?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in Google Slides</span><span data-lang="bn">গুগল স্লাইডসে খুলুন</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Presentation 2: Greenloop Circular Agriculture -->
-                    <div class="presentation-card" data-type="presentation">
-                        <div class="presentation-embed-wrapper">
-                            <iframe src="https://docs.google.com/presentation/d/1zM_-9Lp5Vy2mIIHD0_uMebwUjp1uVnPy/embed?start=false&loop=false&delayms=3000" title="Greenloop Circular Agriculture" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                        </div>
-                        <div class="presentation-card-info">
-                            <h4><span data-lang="en">Circular Agriculture Practices</span><span data-lang="bn">সার্কুলার এগ্রিকালচার প্র্যাকটিস</span></h4>
-                            <p><span data-lang="en">Circular agriculture practices and sustainable farming methods</span><span data-lang="bn">সার্কুলার এগ্রিকালচার প্র্যাকটিস এবং টেকসই চাষাবাদ পদ্ধতি</span></p>
-                            <div class="presentation-card-meta">
-                                <span><i class="fab fa-google-drive"></i> Google Slides</span>
-                                <a href="https://docs.google.com/presentation/d/1zM_-9Lp5Vy2mIIHD0_uMebwUjp1uVnPy/edit?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
-                                    <i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in Google Slides</span><span data-lang="bn">গুগল স্লাইডসে খুলুন</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PDF Documents -->
-            <div class="media-category" data-category="document">
-                <h3 class="category-title"><i class="fas fa-file-pdf"></i> <span data-lang="en">PDF Slide Decks</span><span data-lang="bn">পিডিএফ স্লাইড ডেক</span></h3>
-                <div class="documents-grid">
-                    <!-- Document 1: Greenloop Small Holders -->
-                    <div class="document-card" data-type="document">
-                        <div class="document-preview">
-                            <iframe src="https://drive.google.com/file/d/1YANeD3qvH1Mdl4RHkp9yFoGgF7NbTI-X/preview" title="Greenloop Small Holders" allow="autoplay"></iframe>
-                        </div>
-                        <div class="document-card-info">
-                            <div class="document-icon pdf"><i class="fas fa-file-pdf"></i></div>
-                            <div class="document-details">
-                                <h4><span data-lang="en">Smallholder Farmers</span><span data-lang="bn">ক্ষুদ্র কৃষক</span></h4>
-                                <p><span data-lang="en">Empowering smallholder farmers through circular economy practices</span><span data-lang="bn">সার্কুলার ইকোনমি প্র্যাকটিসের মাধ্যমে ক্ষুদ্র কৃষকদের ক্ষমতায়ন</span></p>
-                                <div class="document-card-meta">
-                                    <span><i class="fab fa-google-drive"></i> Google Drive PDF</span>
-                                    <a href="https://drive.google.com/file/d/1YANeD3qvH1Mdl4RHkp9yFoGgF7NbTI-X/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
-                                        <i class="fas fa-external-link-alt"></i> <span data-lang="en">Open PDF</span><span data-lang="bn">পিডিএফ খুলুন</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Document 2: Greenloop Digital AI -->
-                    <div class="document-card" data-type="document">
-                        <div class="document-preview">
-                            <iframe src="https://drive.google.com/file/d/1pAeWDCe3gocCHJO75hSkrZMS0X6DnwOR/preview" title="Greenloop Digital AI" allow="autoplay"></iframe>
-                        </div>
-                        <div class="document-card-info">
-                            <div class="document-icon pdf"><i class="fas fa-file-pdf"></i></div>
-                            <div class="document-details">
-                                <h4><span data-lang="en">Digital AI Solutions</span><span data-lang="bn">ডিজিটাল এআই সমাধান</span></h4>
-                                <p><span data-lang="en">AI-powered digital solutions for sustainable agriculture</span><span data-lang="bn">টেকসই কৃষির জন্য এআই-চালিত ডিজিটাল সমাধান</span></p>
-                                <div class="document-card-meta">
-                                    <span><i class="fab fa-google-drive"></i> Google Drive PDF</span>
-                                    <a href="https://drive.google.com/file/d/1pAeWDCe3gocCHJO75hSkrZMS0X6DnwOR/view?usp=drivesdk" target="_blank" class="btn btn-sm btn-outline">
-                                        <i class="fas fa-external-link-alt"></i> <span data-lang="en">Open PDF</span><span data-lang="bn">পিডিএফ খুলুন</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Images Gallery -->
-            <div class="media-category" data-category="image">
-                <h3 class="category-title"><i class="fas fa-image"></i> <span data-lang="en">Infographic Gallery</span><span data-lang="bn">ইনফোগ্রাফিক গ্যালারি</span></h3>
-                <div class="infographics-grid">
-                    <!-- Impact Dashboard (Latest) -->
-                    <div class="infographic-item vertical" data-type="image" style="border: 2px solid var(--primary-green);">
-                        <div class="infographic-preview">
-                            <img src="assets/media/infographics/impact_dashboard.png" alt="GreenLoop 3.0 Impact Dashboard" loading="lazy">
-                            <div class="infographic-overlay">
-                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/impact_dashboard.png', 'GreenLoop 3.0 Impact Dashboard')">
-                                    <i class="fas fa-expand"></i> <span data-lang="en">View Full Size</span><span data-lang="bn">পূর্ণ আকারে দেখুন</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="infographic-info">
-                            <h4>🎬 <span data-lang="en">Impact Dashboard (Latest)</span><span data-lang="bn">ইমপ্যাক্ট ড্যাশবোর্ড (সর্বশেষ)</span></h4>
-                            <p><span data-lang="en">GreenLoop 3.0 impact metrics and key performance indicators dashboard</span><span data-lang="bn">GreenLoop 3.0 ইমপ্যাক্ট মেট্রিক্স এবং মূল পারফরম্যান্স ইন্ডিকেটর ড্যাশবোর্ড</span></p>
-                        </div>
-                    </div>
-                    
-                    <!-- Vertical Infographics -->
-                    <div class="infographic-item vertical" data-type="image">
-                        <div class="infographic-preview">
-                            <img src="assets/media/infographics/healing_earth.png" alt="Healing Earth, Securing Smiles" loading="lazy">
-                            <div class="infographic-overlay">
-                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/healing_earth.png', 'Healing Earth, Securing Smiles')">
-                                    <i class="fas fa-expand"></i> <span data-lang="en">View Full Size</span><span data-lang="bn">পূর্ণ আকারে দেখুন</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="infographic-info">
-                            <h4><span data-lang="en">Healing Earth, Securing Smiles</span><span data-lang="bn">পৃথিবীকে সুস্থ করি, হাসি ফিরিয়ে আনি</span></h4>
-                            <p><span data-lang="en">Our commitment to healing the planet through sustainable agricultural practices</span><span data-lang="bn">টেকসই কৃষি পদ্ধতির মাধ্যমে পৃথিবীকে সুস্থ করার আমাদের প্রতিশ্রুতি</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="infographic-item vertical" data-type="image">
-                        <div class="infographic-preview">
-                            <img src="assets/media/infographics/greenloop3.png" alt="GreenLoop 3.0 Ecosystem" loading="lazy">
-                            <div class="infographic-overlay">
-                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/greenloop3.png', 'GreenLoop 3.0 Ecosystem')">
-                                    <i class="fas fa-expand"></i> <span data-lang="en">View Full Size</span><span data-lang="bn">পূর্ণ আকারে দেখুন</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="infographic-info">
-                            <h4><span data-lang="en">GreenLoop 3.0 Ecosystem</span><span data-lang="bn">GreenLoop 3.0 ইকোসিস্টেম</span></h4>
-                            <p><span data-lang="en">Complete ecosystem overview of the GreenLoop 3.0 circular agriculture model</span><span data-lang="bn">GreenLoop 3.0 সার্কুলার এগ্রিকালচার মডেলের সম্পূর্ণ ইকোসিস্টেম ওভারভিউ</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="infographic-item vertical" data-type="image">
-                        <div class="infographic-preview">
-                            <img src="assets/media/infographics/circular_economy.png" alt="Circular Economy" loading="lazy">
-                            <div class="infographic-overlay">
-                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/circular_economy.png', 'Circular Economy Model')">
-                                    <i class="fas fa-expand"></i> <span data-lang="en">View Full Size</span><span data-lang="bn">পূর্ণ আকারে দেখুন</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="infographic-info">
-                            <h4><span data-lang="en">Circular Economy Model</span><span data-lang="bn">সার্কুলার ইকোনমি মডেল</span></h4>
-                            <p><span data-lang="en">Transforming waste into wealth through circular economy principles</span><span data-lang="bn">সার্কুলার ইকোনমি নীতির মাধ্যমে বর্জ্যকে সম্পদে রূপান্তর</span></p>
-                        </div>
-                    </div>
-                    
-                    <!-- Horizontal Infographics -->
-                    <div class="infographic-item horizontal" data-type="image">
-                        <div class="infographic-preview">
-                            <img src="assets/media/infographics/self_dependent_farmer.png" alt="Self-Dependent Farmer" loading="lazy">
-                            <div class="infographic-overlay">
-                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/self_dependent_farmer.png', 'Self-Dependent Farmer')">
-                                    <i class="fas fa-expand"></i> <span data-lang="en">View Full Size</span><span data-lang="bn">পূর্ণ আকারে দেখুন</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="infographic-info">
-                            <h4><span data-lang="en">Self-Dependent Farmer</span><span data-lang="bn">স্বনির্ভর কৃষক</span></h4>
-                            <p><span data-lang="en">Empowering farmers with technology for self-sufficiency and prosperity</span><span data-lang="bn">স্বয়ংসম্পূর্ণতা ও সমৃদ্ধির জন্য প্রযুক্তি দিয়ে কৃষকদের ক্ষমতায়ন</span></p>
-                        </div>
-                    </div>
-                    
-                    <div class="infographic-item horizontal" data-type="image">
-                        <div class="infographic-preview">
-                            <img src="assets/media/infographics/nanourea.png" alt="Nano Urea Technology" loading="lazy">
-                            <div class="infographic-overlay">
-                                <button class="btn btn-primary btn-sm" onclick="openImageModal('assets/media/infographics/nanourea.png', 'Nano Urea Technology')">
-                                    <i class="fas fa-expand"></i> <span data-lang="en">View Full Size</span><span data-lang="bn">পূর্ণ আকারে দেখুন</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="infographic-info">
-                            <h4><span data-lang="en">Nano Urea Technology</span><span data-lang="bn">ন্যানো ইউরিয়া প্রযুক্তি</span></h4>
-                            <p><span data-lang="en">Innovative nano-urea technology for efficient nutrient delivery</span><span data-lang="bn">দক্ষ পুষ্টি সরবরাহের জন্য উদ্ভাবনী ন্যানো-ইউরিয়া প্রযুক্তি</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Image Modal -->
-    <div class="image-modal" id="imageModal" onclick="closeImageModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeImageModal()">
-                <i class="fas fa-times"></i>
-            </button>
-            <img id="modalImage" src="" alt="">
-            <h3 id="modalTitle"></h3>
-        </div>
-    </div>
 
-    <!-- Proposal Section with Tabs -->
-    <section id="proposal" class="section proposal-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-file-alt"></i> <span data-lang="en">Documentation</span><span data-lang="bn">ডকুমেন্টেশন</span></span>
-                <h2 class="section-title"><span data-lang="en">Project Proposal Documents</span><span data-lang="bn">প্রকল্প প্রপোজাল ডকুমেন্ট</span></h2>
-                <p class="section-subtitle"><span data-lang="en">View and download comprehensive proposal documents</span><span data-lang="bn">বিস্তারিত প্রপোজাল ডকুমেন্ট দেখুন এবং ডাউনলোড করুন</span></p>
+                <div style="background: white; border-radius: 16px; padding: 30px; border-left: 5px solid #f59e0b; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #f59e0b; margin-bottom: 15px;"><i class="fas fa-coins" style="margin-right: 10px;"></i><span data-lang="en">Economic Impact</span><span data-lang="bn">অর্থনৈতিক প্রভাব</span></h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+                        <li><span data-lang="en">• India: $8+ billion annual subsidy leakage</span><span data-lang="bn">• ভারত: বার্ষিক $৮+ বিলিয়ন ভর্তুকি লিকেজ</span></li>
+                        <li><span data-lang="en">• China: 50% fertilizer waste</span><span data-lang="bn">• চীন: ৫০% সারের অপচয়</span></li>
+                        <li><span data-lang="en">• Bangladesh: 6-20% supply chain losses</span><span data-lang="bn">• বাংলাদেশ: ৬-২০% সাপ্লাই চেইন ক্ষতি</span></li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: 16px; padding: 30px; border-left: 5px solid #3b82f6; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #3b82f6; margin-bottom: 15px;"><i class="fas fa-globe" style="margin-right: 10px;"></i><span data-lang="en">Environmental Impact</span><span data-lang="bn">পরিবেশগত প্রভাব</span></h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+                        <li><span data-lang="en">• Soil acidification</span><span data-lang="bn">• মাটির অম্লকরণ</span></li>
+                        <li><span data-lang="en">• Water body pollution (Laguna Lake effect)</span><span data-lang="bn">• জলাশয়ের পানি দূষণ</span></li>
+                        <li><span data-lang="en">• High carbon emissions</span><span data-lang="bn">• উচ্চ কার্বন নিঃসরণ</span></li>
+                        <li><span data-lang="en">• 61 arsenic-affected districts in Bangladesh</span><span data-lang="bn">• বাংলাদেশে ৬১টি আর্সেনিক-প্রভাবিত জেলা</span></li>
+                    </ul>
+                </div>
             </div>
-            
-            <!-- Document Tabs -->
-            <div class="document-tabs">
-                <button class="tab-btn active" onclick="switchTab('gdoc')">
-                    <i class="fab fa-google-drive"></i> <span data-lang="en">Project Proposal (Latest)</span><span data-lang="bn">প্রকল্প প্রপোজাল (সর্বশেষ)</span>
-                </button>
-                <button class="tab-btn" onclick="switchTab('docx')">
-                    <i class="fas fa-file-word"></i> <span data-lang="en">Main Proposal (DOCX)</span><span data-lang="bn">মূল প্রপোজাল (DOCX)</span>
-                </button>
-                <button class="tab-btn" onclick="switchTab('pdf')">
-                    <i class="fas fa-file-pdf"></i> <span data-lang="en">CIRDAP Form (PDF)</span><span data-lang="bn">সিরডাপ ফর্ম (PDF)</span>
-                </button>
-            </div>
-            
-            <!-- Google Doc Tab Content (Latest) -->
-            <div id="gdoc-tab" class="tab-content active">
-                <div class="document-viewer-container">
-                    <div class="viewer-header" style="background: linear-gradient(135deg, #4285f4, #34a853);">
-                        <div class="viewer-title">
-                            <i class="fab fa-google-drive" style="color: white;"></i>
-                            <div>
-                                <h3 style="color: white;">🎬 <span data-lang="en">GreenLoop 3.0 Project Proposal (Latest)</span><span data-lang="bn">GreenLoop 3.0 প্রকল্প প্রপোজাল (সর্বশেষ)</span></h3>
-                                <p style="color: rgba(255,255,255,0.9);"><span data-lang="en">Official project proposal for CIRDAP-REEDS Innovation Challenge 2026</span><span data-lang="bn">সিরডাপ-রিডস উদ্ভাবন চ্যালেঞ্জ ২০২৬ এর জন্য অফিসিয়াল প্রকল্প প্রপোজাল</span></p>
-                            </div>
-                        </div>
-                        <div class="viewer-actions">
-                            <a href="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in Google Docs</span><span data-lang="bn">গুগল ডক্সে খুলুন</span>
-                            </a>
-                        </div>
+
+            <!-- Root Causes -->
+            <div style="background: linear-gradient(135deg, #1e3a5f 0%, #374151 100%); border-radius: 20px; padding: 40px; color: white;">
+                <h3 style="margin-bottom: 25px; font-size: 22px;"><i class="fas fa-search" style="margin-right: 10px;"></i><span data-lang="en">Root Causes Identified</span><span data-lang="bn">মূল কারণসমূহ</span></h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #fbbf24; margin-bottom: 10px;"><span data-lang="en">Inorganic Value Leaks</span><span data-lang="bn">অজৈব মূল্য লিক</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">6-20% losses in supply chain due to poor governance and tracking</span><span data-lang="bn">দুর্বল শাসন ও ট্র্যাকিংয়ের কারণে সাপ্লাই চেইনে ৬-২০% ক্ষতি</span></p>
                     </div>
-                    
-                    <!-- Google Doc Viewer -->
-                    <div class="document-embed">
-                        <iframe src="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/pub?embedded=true" title="GreenLoop 3.0 Project Proposal" style="width:100%; height:600px; border:none;"></iframe>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #fbbf24; margin-bottom: 10px;"><span data-lang="en">Industrial Urea Diversion</span><span data-lang="bn">শিল্পখাতে ইউরিয়া ডাইভারশন</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Subsidized fertilizer diverted to non-agricultural uses</span><span data-lang="bn">ভর্তুকিযুক্ত সার অ-কৃষি ব্যবহারে ডাইভার্ট হচ্ছে</span></p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #fbbf24; margin-bottom: 10px;"><span data-lang="en">Ghost Transactions</span><span data-lang="bn">ঘোস্ট ট্রানজেকশন</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Fraudulent transactions exploiting subsidy systems</span><span data-lang="bn">ভর্তুকি সিস্টেমের সুযোগ নিয়ে প্রতারণামূলক লেনদেন</span></p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px;">
+                        <h4 style="color: #fbbf24; margin-bottom: 10px;"><span data-lang="en">Directive Agriculture Model</span><span data-lang="bn">নির্দেশনামূলক কৃষি মডেল</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Farmers as passive recipients rather than knowledge producers</span><span data-lang="bn">কৃষকরা জ্ঞান উৎপাদক নয়, নিষ্ক্রিয় গ্রহণকারী হিসেবে</span></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- DOCX Tab Content -->
-            <div id="docx-tab" class="tab-content">
-                <div class="document-viewer-container">
-                    <div class="viewer-header">
-                        <div class="viewer-title">
-                            <i class="fas fa-file-word docx-icon"></i>
-                            <div>
-                                <h3><span data-lang="en">GreenLoop 3.0 - Blockchain-Enabled Circular Agriculture</span><span data-lang="bn">GreenLoop 3.0 - ব্লকচেইন-সক্ষম সার্কুলার এগ্রিকালচার</span></h3>
-                                <p><span data-lang="en">Main proposal document (Word format)</span><span data-lang="bn">মূল প্রপোজাল ডকুমেন্ট (ওয়ার্ড ফরম্যাট)</span></p>
-                            </div>
-                        </div>
-                        <div class="viewer-actions">
-                            <a href="assets/media/GreenLoop_Proposal.docx" download class="btn btn-primary btn-sm">
-                                <i class="fas fa-download"></i> <span data-lang="en">Download DOCX</span><span data-lang="bn">DOCX ডাউনলোড করুন</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- DOCX Viewer - Using Office Online -->
-                    <div class="document-embed">
-                        <iframe id="docxViewer" src="" title="GreenLoop Proposal Document"></iframe>
-                        <div class="viewer-placeholder" id="docxPlaceholder">
-                            <div class="placeholder-content">
-                                <i class="fas fa-file-word"></i>
-                                <h4><span data-lang="en">View Document</span><span data-lang="bn">ডকুমেন্ট দেখুন</span></h4>
-                                <p><span data-lang="en">The document will be viewable once deployed to GitHub Pages or Cloudflare Pages</span><span data-lang="bn">GitHub Pages বা Cloudflare Pages-এ ডিপ্লয় হলে ডকুমেন্ট দেখা যাবে</span></p>
-                                <div class="placeholder-actions">
-                                    <a href="assets/media/GreenLoop_Proposal.docx" class="btn btn-primary">
-                                        <i class="fas fa-download"></i> <span data-lang="en">Download to View</span><span data-lang="bn">দেখতে ডাউনলোড করুন</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PDF Tab Content -->
-            <div id="pdf-tab" class="tab-content">
-                <div class="document-viewer-container">
-                    <div class="viewer-header">
-                        <div class="viewer-title">
-                            <i class="fas fa-file-pdf pdf-icon"></i>
-                            <div>
-                                <h3><span data-lang="en">CIRDAP Competition Form</span><span data-lang="bn">সিরডাপ প্রতিযোগিতা ফর্ম</span></h3>
-                                <p><span data-lang="en">Official CIRDAP submission form</span><span data-lang="bn">অফিসিয়াল সিরডাপ জমা দেওয়ার ফর্ম</span></p>
-                            </div>
-                        </div>
-                        <div class="viewer-actions">
-                            <a href="assets/media/CIRDAP_Proposal.pdf" download class="btn btn-primary btn-sm">
-                                <i class="fas fa-download"></i> <span data-lang="en">Download PDF</span><span data-lang="bn">PDF ডাউনলোড করুন</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- PDF Viewer -->
-                    <div class="document-embed">
-                        <iframe src="assets/media/CIRDAP_Proposal.pdf" title="CIRDAP Proposal PDF"></iframe>
-                    </div>
-                </div>
+
+            <!-- Potential Solution Highlight -->
+            <div style="margin-top: 30px; background: linear-gradient(135deg, #059669, #10b981); border-radius: 16px; padding: 30px; color: white; text-align: center;">
+                <h4 style="margin-bottom: 10px;"><i class="fas fa-lightbulb" style="margin-right: 10px;"></i><span data-lang="en">Potential Solution Identified</span><span data-lang="bn">সম্ভাব্য সমাধান চিহ্নিত</span></h4>
+                <p style="font-size: 18px; margin: 0;"><span data-lang="en">Nano-Urea Technology by JUST could save <strong>BDT 220 billion annually</strong> if implemented nationally</span><span data-lang="bn">যশোর বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের ন্যানো-ইউরিয়া প্রযুক্তি জাতীয়ভাবে বাস্তবায়িত হলে বার্ষিক <strong>২২০ বিলিয়ন টাকা</strong> সাশ্রয় সম্ভব</span></p>
             </div>
         </div>
     </section>
 
-    <!-- Budget Section -->
-    <section class="section budget-section">
+    <!-- ==================== SECTION 2: INNOVATION PROPOSAL ==================== -->
+    <section id="innovation-proposal" class="guideline-section" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-calculator"></i> <span data-lang="en">Financial Framework</span><span data-lang="bn">আর্থিক কাঠামো</span></span>
-                <h2 class="section-title"><span data-lang="en">Budget Structure & Investment Proposal</span><span data-lang="bn">বাজেট কাঠামো ও বিনিয়োগ প্রস্তাবনা</span></h2>
-                <p class="section-subtitle"><span data-lang="en">500 Farmer Pilot - Scalable Unit Cost: $185/farmer</span><span data-lang="bn">৫০০ কৃষক পাইলট - স্কেলেবল ইউনিট কস্ট: $১৮৫/কৃষক</span></p>
+            <div class="guideline-header">
+                <div class="guideline-number">2</div>
+                <h2 class="guideline-title"><span data-lang="en">Innovation Proposal</span><span data-lang="bn">উদ্ভাবন প্রস্তাব</span></h2>
+                <p class="guideline-subtitle"><span data-lang="en">GreenLoop 3.0: A Dual-Layer Systemic Solution</span><span data-lang="bn">GreenLoop 3.0: একটি দ্বি-স্তরীয় পদ্ধতিগত সমাধান</span></p>
             </div>
-            
-            <div class="budget-table-container">
-                <table class="budget-table">
-                    <thead>
-                        <tr>
-                            <th><span data-lang="en">Category</span><span data-lang="bn">ক্যাটাগরি</span></th>
-                            <th><span data-lang="en">Description</span><span data-lang="bn">বিবরণ</span></th>
-                            <th><span data-lang="en">Cost (USD)</span><span data-lang="bn">ব্যয় (USD)</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-microchip"></i> Hardware</td>
-                            <td><span data-lang="en">Soil Sensors & IoT Kits (100 Units)</span><span data-lang="bn">সয়েল সেন্সর ও IoT কিট (১০০ ইউনিট)</span></td>
-                            <td>$17,500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-code"></i> Software</td>
-                            <td><span data-lang="en">Blockchain & e-Bill System Development</span><span data-lang="bn">ব্লকচেইন ও e-Bill সিস্টেম ডেভেলপমেন্ট</span></td>
-                            <td>$25,000</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-graduation-cap"></i> Training</td>
-                            <td><span data-lang="en">Digital Facilitators & Farmers Training</span><span data-lang="bn">ডিজিটাল ফ্যাসিলিটেটর ও কৃষক প্রশিক্ষণ</span></td>
-                            <td>$15,000</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-chart-pie"></i> MEL System</td>
-                            <td><span data-lang="en">Resilience Index Monitoring</span><span data-lang="bn">রেজিলিয়েন্স ইনডেক্স মনিটরিং</span></td>
-                            <td>$15,000</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-cog"></i> Operations</td>
-                            <td><span data-lang="en">Admin, Audit, Contingency</span><span data-lang="bn">অ্যাডমিন, অডিট, কন্টিনজেন্সি</span></td>
-                            <td>$20,125</td>
-                        </tr>
-                        <tr class="total-row">
-                            <td colspan="2"><strong><span data-lang="en">Total Pilot Budget (500 Farmers)</span><span data-lang="bn">মোট পাইলট বাজেট (৫০০ কৃষক)</span></strong></td>
-                            <td><strong>$92,625</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <!-- Return Profile Section -->
-            <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div style="background: linear-gradient(135deg, #059669, #10b981); padding: 25px; border-radius: 12px; text-align: center; color: white;">
-                    <div style="font-size: 32px; font-weight: bold; margin-bottom: 5px;">14.47%</div>
-                    <div style="font-size: 14px; opacity: 0.9;"><span data-lang="en">IRR (Internal Rate of Return)</span><span data-lang="bn">IRR (অভ্যন্তরীণ রিটার্ন রেট)</span></div>
-                </div>
-                <div style="background: linear-gradient(135deg, #3b82f6, #60a5fa); padding: 25px; border-radius: 12px; text-align: center; color: white;">
-                    <div style="font-size: 32px; font-weight: bold; margin-bottom: 5px;">BCR > 3.0</div>
-                    <div style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Benefit-Cost Ratio</span><span data-lang="bn">বেনিফিট-কস্ট রেশিও</span></div>
-                </div>
-                <div style="background: linear-gradient(135deg, #f59e0b, #fbbf24); padding: 25px; border-radius: 12px; text-align: center; color: white;">
-                    <div style="font-size: 32px; font-weight: bold; margin-bottom: 5px;">70%</div>
-                    <div style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Operating Cost Reduction</span><span data-lang="bn">অপারেটিং কস্ট হ্রাস</span></div>
-                </div>
-                <div style="background: linear-gradient(135deg, #8b5cf6, #a78bfa); padding: 25px; border-radius: 12px; text-align: center; color: white;">
-                    <div style="font-size: 32px; font-weight: bold; margin-bottom: 5px;">$72/acre</div>
-                    <div style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Additional Annual Income</span><span data-lang="bn">অতিরিক্ত বার্ষিক আয়</span></div>
-                </div>
-            </div>
-            
-            <!-- Additional Income Breakdown -->
-            <div style="margin-top: 30px; background: white; padding: 25px; border-radius: 12px; border-left: 4px solid #059669; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <h4 style="color: #059669; margin-bottom: 15px;"><i class="fas fa-coins"></i> <span data-lang="en">Additional Income Sources ($72/acre):</span><span data-lang="bn">অতিরিক্ত আয়ের উৎস ($৭২/একর):</span></h4>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
-                    <div style="padding: 12px; background: #f0fdf4; border-radius: 8px;">
-                        <strong style="color: #059669;">$20</strong> - <span data-lang="en">Subsidy Leakage Prevention</span><span data-lang="bn">ভর্তুকি লিকেজ রোধ</span>
-                    </div>
-                    <div style="padding: 12px; background: #f0fdf4; border-radius: 8px;">
-                        <strong style="color: #059669;">$30</strong> - <span data-lang="en">Premium Market Access</span><span data-lang="bn">প্রিমিয়াম বাজার অ্যাক্সেস</span>
-                    </div>
-                    <div style="padding: 12px; background: #f0fdf4; border-radius: 8px;">
-                        <strong style="color: #059669;">$16</strong> - <span data-lang="en">Financial Inclusion</span><span data-lang="bn">আর্থিক অন্তর্ভুক্তি</span>
-                    </div>
-                    <div style="padding: 12px; background: #f0fdf4; border-radius: 8px;">
-                        <strong style="color: #059669;">$6</strong> - <span data-lang="en">Carbon/Data Credits</span><span data-lang="bn">কার্বন/ডাটা ক্রেডিট</span>
-                    </div>
-                </div>
-                <p style="margin-top: 15px; color: #6b7280; font-size: 14px;">
-                    <i class="fas fa-info-circle" style="color: #3b82f6;"></i> 
-                    <span data-lang="en">Ideal for ESG Financing and Green Bonds</span><span data-lang="bn">ESG ফিন্যান্সিং এবং গ্রিন বন্ডের জন্য আদর্শ</span>
+
+            <!-- Innovation Overview -->
+            <div style="background: white; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #059669; margin-bottom: 20px; font-size: 24px;">
+                    <i class="fas fa-lightbulb" style="margin-right: 10px;"></i>
+                    <span data-lang="en">Our Innovation Approach</span><span data-lang="bn">আমাদের উদ্ভাবন পদ্ধতি</span>
+                </h3>
+                <p style="font-size: 18px; line-height: 1.8; color: #374151; margin-bottom: 20px;">
+                    <span data-lang="en">GreenLoop 3.0 is not just an agricultural technology project, but a Strategic Platform and Systemic Restructuring approach designed to fundamentally transform regional agricultural systems. Our innovation introduces the 'Efficiency-by-Design' philosophy that addresses root causes rather than symptoms.</span>
+                    <span data-lang="bn">GreenLoop 3.0 কেবল একটি কৃষি প্রযুক্তি প্রকল্প নয়, বরং একটি কৌশলগত প্ল্যাটফর্ম এবং পদ্ধতিগত পুনর্গঠন পদ্ধতি যা আঞ্চলিক কৃষি ব্যবস্থাকে মৌলিকভাবে রূপান্তর করতে ডিজাইন করা হয়েছে। আমাদের উদ্ভাবন 'এফিশিয়েন্সি-বাই-ডিজাইন' দর্শন প্রবর্তন করে যা লক্ষণের পরিবর্তে মূল কারণগুলি সমাধান করে।</span>
                 </p>
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; border-left: 4px solid #059669;">
+                    <strong style="color: #059669;"><span data-lang="en">Core Philosophy:</span><span data-lang="bn">মূল দর্শন:</span></strong> 
+                    <span data-lang="en">Transform farmers from 'consumers of advice' to 'Analytical Agro-ecologists' - knowledge producers rather than passive recipients.</span>
+                    <span data-lang="bn">কৃষকদের 'পরামর্শের ভোক্তা' থেকে 'বিশ্লেষণী কৃষি-বাস্তুবিদ'-এ রূপান্তর করা - নিষ্ক্রিয় গ্রহণকারীর পরিবর্তে জ্ঞান উৎপাদক।</span>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FAO Four Betters Section -->
-    <section class="section" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 60px 0;">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-globe"></i> FAO Framework</span>
-                <h2 class="section-title"><span data-lang="en">Project Impact: FAO 'Four Betters' Framework</span><span data-lang="bn">FAO 'ফোর বেটার্স' ফ্রেমওয়ার্কে প্রকল্পের প্রভাব</span></h2>
-                <p class="section-subtitle"><span data-lang="en">GreenLoop 3.0's contribution to FAO's four strategic objectives</span><span data-lang="bn">FAO-এর চারটি কৌশলগত লক্ষ্যমাত্রায় GreenLoop 3.0 এর অবদান</span></p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
-                <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #059669;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #059669, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fas fa-seedling" style="color: white; font-size: 24px;"></i>
+            <!-- Dual Layer Architecture -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                <!-- Layer A: Physical Circularity -->
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #059669, #10b981); padding: 25px; color: white;">
+                        <h3 style="margin: 0; font-size: 22px;"><i class="fas fa-seedling" style="margin-right: 10px;"></i> Layer A: Physical Circularity</h3>
+                        <p style="margin: 10px 0 0; opacity: 0.9;"><span data-lang="en">Hardware & Infrastructure Solutions</span><span data-lang="bn">হার্ডওয়্যার ও অবকাঠামোগত সমাধান</span></p>
                     </div>
-                    <h3 style="color: #059669; margin-bottom: 15px;"><span data-lang="en">Better Production</span><span data-lang="bn">উন্নত উৎপাদন</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">NUE recovery through 12-parameter sensor and 20-32% yield increase. Transforming farmers into 'Analytical Agro-ecologists'.</span><span data-lang="bn">১২-প্যারামিটার সেন্সরের মাধ্যমে NUE পুনরুদ্ধার ও ২০-৩২% ফলন বৃদ্ধি। কৃষকদের 'বিশ্লেষণী কৃষি-বাস্তুবিদ' মডেলে রূপান্তর।</span></p>
-                </div>
-                
-                <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #f59e0b;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #f59e0b, #fbbf24); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fas fa-utensils" style="color: white; font-size: 24px;"></i>
+                    <div style="padding: 25px;">
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb;">
+                            <h4 style="color: #059669; margin-bottom: 10px;">1. <span data-lang="en">12-Parameter Soil Sensor</span><span data-lang="bn">১২-প্যারামিটার সয়েল সেন্সর</span></h4>
+                            <p style="color: #6b7280; font-size: 14px; margin-bottom: 10px;"><span data-lang="en">ML Estimation technology analyzing pH, EC, NPK, Ca, Mg, S, Fe, Zn, Mn, B, SOM, and Redox Potential</span><span data-lang="bn">ML এস্টিমেশন প্রযুক্তির মাধ্যমে pH, EC, NPK, Ca, Mg, S, Fe, Zn, Mn, B, SOM এবং Redox Potential বিশ্লেষণ</span></p>
+                            <div style="display: flex; gap: 15px;">
+                                <span style="background: #dcfce7; color: #059669; padding: 5px 12px; border-radius: 20px; font-size: 12px;"><strong>+30%</strong> <span data-lang="en">Profit</span><span data-lang="bn">মুনাফা</span></span>
+                                <span style="background: #dcfce7; color: #059669; padding: 5px 12px; border-radius: 20px; font-size: 12px;"><strong>+20-32%</strong> <span data-lang="en">Yield</span><span data-lang="bn">ফলন</span></span>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb;">
+                            <h4 style="color: #059669; margin-bottom: 10px;">2. <span data-lang="en">3F4D+MD Protocol</span><span data-lang="bn">৩এফ৪ডি+এমডি প্রোটোকল</span></h4>
+                            <p style="color: #6b7280; font-size: 14px; margin-bottom: 10px;"><span data-lang="en">Arsenic Immobilization and Iron Oxide Re-precipitation mechanism</span><span data-lang="bn">আর্সেনিক ইমোবিলাইজেশন এবং আয়রন অক্সাইড রি-প্রেসিপিটেশন মেকানিজম</span></p>
+                            <div style="display: flex; gap: 15px;">
+                                <span style="background: #fef3c7; color: #d97706; padding: 5px 12px; border-radius: 20px; font-size: 12px;"><strong>-9-21%</strong> <span data-lang="en">Arsenic</span><span data-lang="bn">আর্সেনিক</span></span>
+                                <span style="background: #dbeafe; color: #2563eb; padding: 5px 12px; border-radius: 20px; font-size: 12px;"><strong>-57%</strong> <span data-lang="en">Water</span><span data-lang="bn">পানি</span></span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="color: #059669; margin-bottom: 10px;">3. <span data-lang="en">Solar Cold Chain</span><span data-lang="bn">সোলার কোল্ড চেইন</span></h4>
+                            <p style="color: #6b7280; font-size: 14px; margin-bottom: 10px;"><span data-lang="en">10-ton solar-powered hybrid mini unit for post-harvest preservation</span><span data-lang="bn">পোস্ট-হারভেস্ট সংরক্ষণের জন্য ১০-টন সৌরশক্তিচালিত হাইব্রিড মিনি ইউনিট</span></p>
+                            <div style="display: flex; gap: 15px;">
+                                <span style="background: #f3e8ff; color: #7c3aed; padding: 5px 12px; border-radius: 20px; font-size: 12px;"><strong>-70%</strong> <span data-lang="en">Op. Cost</span><span data-lang="bn">অপারেটিং খরচ</span></span>
+                                <span style="background: #fce7f3; color: #db2777; padding: 5px 12px; border-radius: 20px; font-size: 12px;"><strong>3,500kg</strong> CO₂<span data-lang="en">/unit</span><span data-lang="bn">/ইউনিট</span></span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 style="color: #f59e0b; margin-bottom: 15px;"><span data-lang="en">Better Nutrition</span><span data-lang="bn">উন্নত পুষ্টি</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">Arsenic mitigation (9-21% reduction) and food security through Digital Family Cards.</span><span data-lang="bn">আর্সেনিক প্রশমন (৯-২১% হ্রাস) এবং ডিজিটাল ফ্যামিলি কার্ডের মাধ্যমে খাদ্য নিরাপত্তা।</span></p>
                 </div>
-                
-                <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #3b82f6;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #60a5fa); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fas fa-leaf" style="color: white; font-size: 24px;"></i>
-                    </div>
-                    <h3 style="color: #3b82f6; margin-bottom: 15px;"><span data-lang="en">Better Environment</span><span data-lang="bn">উন্নত পরিবেশ</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">57% water savings and 3,500 kg CO₂ reduction per unit. Carbon sequestration via Solar Cold Chain.</span><span data-lang="bn">৫৭% পানি সাশ্রয় ও ইউনিট প্রতি ৩,৫০০ কেজি CO₂ নিঃসরণ হ্রাস। সোলার কোল্ড চেইন দ্বারা কার্বন সিকুয়েস্ট্রেশন।</span></p>
-                </div>
-                
-                <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #8b5cf6;">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6, #a78bfa); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="fas fa-users" style="color: white; font-size: 24px;"></i>
-                    </div>
-                    <h3 style="color: #8b5cf6; margin-bottom: 15px;"><span data-lang="en">Better Life</span><span data-lang="bn">উন্নত জীবন</span></h3>
-                    <p style="color: #6b7280; line-height: 1.7;"><span data-lang="en">$72/acre additional income annually and NEET youth employment. Preventing urban migration.</span><span data-lang="bn">একর প্রতি বছরে অতিরিক্ত $৭২ আয় এবং NEET যুব কর্মসংস্থান। শহরমুখী অভিবাসন রোধ।</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- MEL Framework Section -->
-    <section class="section" style="background: white; padding: 60px 0;">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-chart-line"></i> MEL Framework</span>
-                <h2 class="section-title"><span data-lang="en">Participatory MEL Framework</span><span data-lang="bn">অংশগ্রহণমূলক MEL ফ্রেমওয়ার্ক</span></h2>
-                <p class="section-subtitle"><span data-lang="en">FRRP, VRRP & 4A Learning System - Community-driven project sustainability monitoring</span><span data-lang="bn">FRRP, VRRP ও 4A লার্নিং সিস্টেম - কমিউনিটি-চালিত পদ্ধতিতে প্রকল্পের স্থায়িত্ব পর্যবেক্ষণ</span></p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-                <!-- FRRP Card -->
-                <div style="background: linear-gradient(135deg, #fdf2f8, #fce7f3); border-radius: 16px; padding: 30px; border-left: 4px solid #ec4899;">
-                    <h3 style="color: #ec4899; margin-bottom: 15px;"><i class="fas fa-home"></i> <span data-lang="en">FRRP (Family Resilience Recognition)</span><span data-lang="bn">FRRP (ফ্যামিলি রেজিলিয়েন্স রিকগনিশন)</span></h3>
-                    <p style="color: #6b7280; margin-bottom: 20px; line-height: 1.7;"><span data-lang="en">Scoring families based on women's leadership and climate-smart practices:</span><span data-lang="bn">নারী নেতৃত্ব এবং জলবায়ু-স্মার্ট অনুশীলনের ভিত্তিতে পরিবারগুলোকে স্কোরিং করা হবে:</span></p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600;">🥇 Gold</span>
-                        <span style="background: linear-gradient(135deg, #9ca3af, #6b7280); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600;">🥈 Silver</span>
-                        <span style="background: linear-gradient(135deg, #78716c, #a8a29e); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600;">🌱 Emerging</span>
+                <!-- Layer B: Digital Governance -->
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #3b82f6, #60a5fa); padding: 25px; color: white;">
+                        <h3 style="margin: 0; font-size: 22px;"><i class="fas fa-link" style="margin-right: 10px;"></i> Layer B: Digital Governance</h3>
+                        <p style="margin: 10px 0 0; opacity: 0.9;"><span data-lang="en">Blockchain & Data Integrity Solutions</span><span data-lang="bn">ব্লকচেইন ও ডাটা ইন্টিগ্রিটি সমাধান</span></p>
+                    </div>
+                    <div style="padding: 25px;">
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb;">
+                            <h4 style="color: #3b82f6; margin-bottom: 10px;">1. <span data-lang="en">Hybrid Blockchain Architecture</span><span data-lang="bn">হাইব্রিড ব্লকচেইন আর্কিটেকচার</span></h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="background: #f0f9ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-database" style="color: #3b82f6;"></i>
+                                    <span style="font-size: 13px;"><strong>PostgreSQL (Off-chain):</strong> <span data-lang="en">Source of Truth for Details</span><span data-lang="bn">বিস্তারিতের জন্য সত্যের উৎস</span></span>
+                                </div>
+                                <div style="background: #f0f9ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-link" style="color: #3b82f6;"></i>
+                                    <span style="font-size: 13px;"><strong>Hyperledger Fabric (On-chain):</strong> <span data-lang="en">Source of Truth for Integrity</span><span data-lang="bn">অখণ্ডতার জন্য সত্যের উৎস</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb;">
+                            <h4 style="color: #3b82f6; margin-bottom: 10px;">2. <span data-lang="en">SHA-256 Hash-Linking</span><span data-lang="bn">SHA-256 হ্যাশ-লিংকিং</span></h4>
+                            <p style="color: #6b7280; font-size: 14px;"><span data-lang="en">Digital signatures preventing data manipulation and ensuring audit trails</span><span data-lang="bn">ডিজিটাল সিগনেচার ডাটা ম্যানিপুলেশন রোধ করে এবং অডিট ট্রেইল নিশ্চিত করে</span></p>
+                        </div>
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e5e7eb;">
+                            <h4 style="color: #3b82f6; margin-bottom: 10px;">3. <span data-lang="en">e-Bill System</span><span data-lang="bn">ই-বিল সিস্টেম</span></h4>
+                            <p style="color: #6b7280; font-size: 14px;"><span data-lang="en">POS-based transactions eliminating Ghost Transactions and urea diversion</span><span data-lang="bn">POS-ভিত্তিক লেনদেন ঘোস্ট ট্রানজেকশন এবং ইউরিয়া ডাইভারশন দূর করে</span></p>
+                        </div>
+                        <div>
+                            <h4 style="color: #3b82f6; margin-bottom: 10px;">4. <span data-lang="en">Smart Farmer Card</span><span data-lang="bn">স্মার্ট ফার্মার কার্ড</span></h4>
+                            <p style="color: #6b7280; font-size: 14px;"><span data-lang="en">NID-linked card integrating Soil Health Data and Credit Rating for financial inclusion</span><span data-lang="bn">NID-লিঙ্কড কার্ড সয়েল হেলথ ডাটা এবং ক্রেডিট রেটিং একীভূত করে আর্থিক অন্তর্ভুক্তির জন্য</span></p>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- VRRP Card -->
-                <div style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 16px; padding: 30px; border-left: 4px solid #059669;">
-                    <h3 style="color: #059669; margin-bottom: 15px;"><i class="fas fa-village"></i> <span data-lang="en">VRRP (Village Resilience Recognition)</span><span data-lang="bn">VRRP (ভিলেজ রেজিলিয়েন্স রিকগনিশন)</span></h3>
-                    <p style="color: #6b7280; margin-bottom: 20px; line-height: 1.7;"><span data-lang="en">Based on overall CSA practices and family performance:</span><span data-lang="bn">গ্রামের সামগ্রিক CSA প্র্যাকটিস এবং ফ্যামিলি পারফরম্যান্সের ওপর ভিত্তি করে:</span></p>
-                    <div style="background: white; padding: 15px; border-radius: 10px; text-align: center;">
-                        <div style="font-size: 24px; font-weight: bold; color: #059669;">Village Resilience Index (VRI)</div>
-                        <p style="color: #6b7280; font-size: 13px; margin-top: 5px;"><span data-lang="en">Village-level overall resilience score</span><span data-lang="bn">গ্রাম পর্যায়ের সামগ্রিক রেজিলিয়েন্স স্কোর</span></p>
+            </div>
+
+            <!-- CIRDAP Four Pillars Alignment -->
+            <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #1f2937; margin-bottom: 25px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-columns" style="margin-right: 10px; color: #059669;"></i>
+                    <span data-lang="en">Alignment with CIRDAP 2026 Four Pillars</span><span data-lang="bn">সিরডাপ ২০২৬ চার স্তম্ভের সাথে সংগতি</span>
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                    <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #fdf2f8, #fce7f3); border-radius: 16px;">
+                        <div style="width: 60px; height: 60px; background: #ec4899; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-venus-mars" style="color: white; font-size: 24px;"></i>
+                        </div>
+                        <h4 style="color: #ec4899; margin-bottom: 10px;"><span data-lang="en">Gender-Responsive</span><span data-lang="bn">জেন্ডার-রেসপন্সিভ</span></h4>
+                        <p style="font-size: 13px; color: #6b7280;"><span data-lang="en">Digital Family Cards for women's nutrition and BDT 12,000 Cr transparent fund distribution</span><span data-lang="bn">নারীদের পুষ্টি এবং ১২,০০০ কোটি টাকার স্বচ্ছ তহবিল বিতরণের জন্য ডিজিটাল ফ্যামিলি কার্ড</span></p>
+                    </div>
+                    <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 16px;">
+                        <div style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-shield-alt" style="color: white; font-size: 24px;"></i>
+                        </div>
+                        <h4 style="color: #10b981; margin-bottom: 10px;"><span data-lang="en">Climate Resilience</span><span data-lang="bn">ক্লাইমেট রেজিলিয়েন্স</span></h4>
+                        <p style="font-size: 13px; color: #6b7280;"><span data-lang="en">3F4D+MD Protocol & solar infrastructure for climate risk mitigation</span><span data-lang="bn">জলবায়ু ঝুঁকি মোকাবেলায় ৩এফ৪ডি+এমডি প্রোটোকল ও সৌর অবকাঠামো</span></p>
+                    </div>
+                    <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 16px;">
+                        <div style="width: 60px; height: 60px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-laptop-code" style="color: white; font-size: 24px;"></i>
+                        </div>
+                        <h4 style="color: #3b82f6; margin-bottom: 10px;"><span data-lang="en">Digital Transformation</span><span data-lang="bn">ডিজিটাল ট্রান্সফরমেশন</span></h4>
+                        <p style="font-size: 13px; color: #6b7280;"><span data-lang="en">Hybrid Blockchain ensuring rural data sovereignty and integrity</span><span data-lang="bn">গ্রামীণ ডাটা সার্বভৌমত্ব ও অখণ্ডতা নিশ্চিতকারী হাইব্রিড ব্লকচেইন</span></p>
+                    </div>
+                    <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #fffbeb, #fef3c7); border-radius: 16px;">
+                        <div style="width: 60px; height: 60px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-user-graduate" style="color: white; font-size: 24px;"></i>
+                        </div>
+                        <h4 style="color: #f59e0b; margin-bottom: 10px;"><span data-lang="en">Livelihood Diversification</span><span data-lang="bn">লাইভলিহুড ডাইভারসিফিকেশন</span></h4>
+                        <p style="font-size: 13px; color: #6b7280;"><span data-lang="en">ASCs & Digital Facilitators creating youth employment opportunities</span><span data-lang="bn">ASC ও ডিজিটাল ফ্যাসিলিটেটর যুব কর্মসংস্থান সৃষ্টি করছে</span></p>
                     </div>
                 </div>
             </div>
-            
-            <!-- 4A Learning System -->
-            <div style="margin-top: 40px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 16px; padding: 30px;">
-                <h3 style="color: #1d4ed8; margin-bottom: 25px; text-align: center;"><i class="fas fa-graduation-cap"></i> 4A <span data-lang="en">Learning System</span><span data-lang="bn">লার্নিং সিস্টেম</span></h3>
+
+            <!-- FAO Four Betters Impact -->
+            <div style="margin-top: 30px; background: linear-gradient(135deg, #1e3a5f, #2563eb); border-radius: 20px; padding: 40px; color: white;">
+                <h3 style="margin-bottom: 25px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-globe" style="margin-right: 10px;"></i>
+                    <span data-lang="en">FAO 'Four Betters' Framework Impact</span><span data-lang="bn">FAO 'ফোর বেটার্স' ফ্রেমওয়ার্ক প্রভাব</span>
+                </h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                    <div style="background: white; padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="width: 50px; height: 50px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                            <i class="fas fa-universal-access" style="color: white; font-size: 20px;"></i>
-                        </div>
-                        <h4 style="color: #3b82f6;">Access</h4>
-                        <p style="color: #6b7280; font-size: 13px;"><span data-lang="en">Bengali voice-driven icon-based interface</span><span data-lang="bn">বাংলা ভয়েস-চালিত আইকন-ভিত্তিক ইন্টারফেস</span></p>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-seedling" style="font-size: 32px; margin-bottom: 10px;"></i>
+                        <h4 style="color: #10b981;"><span data-lang="en">Better Production</span><span data-lang="bn">উন্নত উৎপাদন</span></h4>
+                        <p style="font-size: 13px; opacity: 0.9;"><span data-lang="en">NUE recovery & 20-32% yield increase</span><span data-lang="bn">NUE পুনরুদ্ধার ও ২০-৩২% ফলন বৃদ্ধি</span></p>
                     </div>
-                    <div style="background: white; padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="width: 50px; height: 50px; background: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                            <i class="fas fa-bolt" style="color: white; font-size: 20px;"></i>
-                        </div>
-                        <h4 style="color: #059669;">Action</h4>
-                        <p style="color: #6b7280; font-size: 13px;"><span data-lang="en">Mandatory feedback after each recommendation</span><span data-lang="bn">প্রতিটি পরামর্শের পর বাধ্যতামূলক ফিডব্যাক</span></p>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-utensils" style="font-size: 32px; margin-bottom: 10px;"></i>
+                        <h4 style="color: #fbbf24;"><span data-lang="en">Better Nutrition</span><span data-lang="bn">উন্নত পুষ্টি</span></h4>
+                        <p style="font-size: 13px; opacity: 0.9;"><span data-lang="en">9-21% arsenic reduction & food security</span><span data-lang="bn">৯-২১% আর্সেনিক হ্রাস ও খাদ্য নিরাপত্তা</span></p>
                     </div>
-                    <div style="background: white; padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="width: 50px; height: 50px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                            <i class="fas fa-brain" style="color: white; font-size: 20px;"></i>
-                        </div>
-                        <h4 style="color: #f59e0b;">Analysis</h4>
-                        <p style="color: #6b7280; font-size: 13px;"><span data-lang="en">Human-in-the-loop AI for data accuracy</span><span data-lang="bn">Human-in-the-loop AI পদ্ধতিতে তথ্যের নির্ভুলতা</span></p>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-leaf" style="font-size: 32px; margin-bottom: 10px;"></i>
+                        <h4 style="color: #60a5fa;"><span data-lang="en">Better Environment</span><span data-lang="bn">উন্নত পরিবেশ</span></h4>
+                        <p style="font-size: 13px; opacity: 0.9;"><span data-lang="en">57% water savings & CO₂ reduction</span><span data-lang="bn">৫৭% পানি সাশ্রয় ও CO₂ হ্রাস</span></p>
                     </div>
-                    <div style="background: white; padding: 20px; border-radius: 12px; text-align: center;">
-                        <div style="width: 50px; height: 50px; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
-                            <i class="fas fa-sync-alt" style="color: white; font-size: 20px;"></i>
-                        </div>
-                        <h4 style="color: #8b5cf6;">Adaptation</h4>
-                        <p style="color: #6b7280; font-size: 13px;"><span data-lang="en">Real-time data-driven policy changes</span><span data-lang="bn">রিয়েল-টাইম তথ্যের ভিত্তিতে দ্রুত নীতি পরিবর্তন</span></p>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-users" style="font-size: 32px; margin-bottom: 10px;"></i>
+                        <h4 style="color: #a78bfa;"><span data-lang="en">Better Life</span><span data-lang="bn">উন্নত জীবন</span></h4>
+                        <p style="font-size: 13px; opacity: 0.9;"><span data-lang="en">$72/acre income & youth jobs</span><span data-lang="bn">$৭২/একর আয় ও যুব কর্মসংস্থান</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2030 Roadmap Section -->
-    <section class="section" style="background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); padding: 60px 0; color: white;">
+    <!-- ==================== SECTION 3: IMPLEMENTATION PLAN ==================== -->
+    <section id="implementation-plan" class="guideline-section" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+        <div class="container">
+            <div class="guideline-header">
+                <div class="guideline-number">3</div>
+                <h2 class="guideline-title"><span data-lang="en">Implementation Plan</span><span data-lang="bn">বাস্তবায়ন পরিকল্পনা</span></h2>
+                <p class="guideline-subtitle"><span data-lang="en">Timeline, Milestones & Resource Allocation</span><span data-lang="bn">সময়রেখা, মাইলফল ও সম্পদ বরাদ্দ</span></p>
+            </div>
+
+            <!-- Budget Overview -->
+            <div style="background: white; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #1f2937; margin-bottom: 25px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-calculator" style="margin-right: 10px; color: #059669;"></i>
+                    <span data-lang="en">Pilot Phase Budget (500 Farmers)</span><span data-lang="bn">পাইলট ফেজ বাজেট (৫০০ কৃষক)</span>
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                    <div>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, #059669, #10b981); color: white;">
+                                    <th style="padding: 15px; text-align: left; border-radius: 12px 0 0 0;"><span data-lang="en">Category</span><span data-lang="bn">ক্যাটাগরি</span></th>
+                                    <th style="padding: 15px; text-align: left;"><span data-lang="en">Description</span><span data-lang="bn">বিবরণ</span></th>
+                                    <th style="padding: 15px; text-align: right; border-radius: 0 12px 0 0;"><span data-lang="en">Cost (USD)</span><span data-lang="bn">ব্যয় (USD)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #e5e7eb;">
+                                    <td style="padding: 15px;"><i class="fas fa-microchip" style="color: #3b82f6; margin-right: 8px;"></i>Hardware</td>
+                                    <td style="padding: 15px;"><span data-lang="en">Soil Sensors & IoT Kits (100 Units)</span><span data-lang="bn">সয়েল সেন্সর ও IoT কিট (১০০ ইউনিট)</span></td>
+                                    <td style="padding: 15px; text-align: right; font-weight: 600;">$17,500</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
+                                    <td style="padding: 15px;"><i class="fas fa-code" style="color: #8b5cf6; margin-right: 8px;"></i>Software</td>
+                                    <td style="padding: 15px;"><span data-lang="en">Blockchain & e-Bill Development</span><span data-lang="bn">ব্লকচেইন ও e-Bill ডেভেলপমেন্ট</span></td>
+                                    <td style="padding: 15px; text-align: right; font-weight: 600;">$25,000</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e5e7eb;">
+                                    <td style="padding: 15px;"><i class="fas fa-graduation-cap" style="color: #f59e0b; margin-right: 8px;"></i>Training</td>
+                                    <td style="padding: 15px;"><span data-lang="en">Digital Facilitators & Farmers</span><span data-lang="bn">ডিজিটাল ফ্যাসিলিটেটর ও কৃষক</span></td>
+                                    <td style="padding: 15px; text-align: right; font-weight: 600;">$15,000</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e5e7eb; background: #f9fafb;">
+                                    <td style="padding: 15px;"><i class="fas fa-chart-pie" style="color: #ec4899; margin-right: 8px;"></i>MEL System</td>
+                                    <td style="padding: 15px;"><span data-lang="en">Resilience Index Monitoring</span><span data-lang="bn">রেজিলিয়েন্স ইনডেক্স মনিটরিং</span></td>
+                                    <td style="padding: 15px; text-align: right; font-weight: 600;">$15,000</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e5e7eb;">
+                                    <td style="padding: 15px;"><i class="fas fa-cog" style="color: #6b7280; margin-right: 8px;"></i>Operations</td>
+                                    <td style="padding: 15px;"><span data-lang="en">Admin, Audit, Contingency</span><span data-lang="bn">অ্যাডমিন, অডিট, কন্টিনজেন্সি</span></td>
+                                    <td style="padding: 15px; text-align: right; font-weight: 600;">$20,125</td>
+                                </tr>
+                                <tr style="background: linear-gradient(135deg, #059669, #10b981); color: white;">
+                                    <td colspan="2" style="padding: 15px; border-radius: 0 0 0 12px;"><strong><span data-lang="en">Total Pilot Budget</span><span data-lang="bn">মোট পাইলট বাজেট</span></strong></td>
+                                    <td style="padding: 15px; text-align: right; font-weight: bold; border-radius: 0 0 12px 0;">$92,625</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h4 style="color: #059669; margin-bottom: 20px;"><span data-lang="en">Key Financial Metrics</span><span data-lang="bn">মূল আর্থিক মেট্রিক্স</span></h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div style="background: linear-gradient(135deg, #059669, #10b981); padding: 20px; border-radius: 12px; text-align: center; color: white;">
+                                <div style="font-size: 28px; font-weight: bold;">$185</div>
+                                <div style="font-size: 12px; opacity: 0.9;"><span data-lang="en">Scalable Unit Cost/Farmer</span><span data-lang="bn">স্কেলেবল ইউনিট কস্ট/কৃষক</span></div>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #3b82f6, #60a5fa); padding: 20px; border-radius: 12px; text-align: center; color: white;">
+                                <div style="font-size: 28px; font-weight: bold;">14.47%</div>
+                                <div style="font-size: 12px; opacity: 0.9;"><span data-lang="en">IRR (Return Rate)</span><span data-lang="bn">IRR (রিটার্ন রেট)</span></div>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #f59e0b, #fbbf24); padding: 20px; border-radius: 12px; text-align: center; color: white;">
+                                <div style="font-size: 28px; font-weight: bold;">BCR > 3.0</div>
+                                <div style="font-size: 12px; opacity: 0.9;"><span data-lang="en">Benefit-Cost Ratio</span><span data-lang="bn">বেনিফিট-কস্ট রেশিও</span></div>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #8b5cf6, #a78bfa); padding: 20px; border-radius: 12px; text-align: center; color: white;">
+                                <div style="font-size: 28px; font-weight: bold;">70%</div>
+                                <div style="font-size: 12px; opacity: 0.9;"><span data-lang="en">Op. Cost Reduction</span><span data-lang="bn">অপারেটিং খরচ হ্রাস</span></div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding: 20px; background: #f0fdf4; border-radius: 12px; border-left: 4px solid #059669;">
+                            <h5 style="color: #059669; margin-bottom: 10px;"><span data-lang="en">Additional Income: $72/acre/year</span><span data-lang="bn">অতিরিক্ত আয়: $৭২/একর/বছর</span></h5>
+                            <div style="font-size: 13px; color: #6b7280;">
+                                <span data-lang="en">$20 - Subsidy leakage prevention | $30 - Premium market access | $16 - Financial inclusion | $6 - Carbon/data credits</span>
+                                <span data-lang="bn">$২০ - ভর্তুকি লিকেজ রোধ | $৩০ - প্রিমিয়াম বাজার অ্যাক্সেস | $১৬ - আর্থিক অন্তর্ভুক্তি | $৬ - কার্বন/ডাটা ক্রেডিট</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Timeline -->
+            <div style="background: white; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #1f2937; margin-bottom: 30px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-clock" style="margin-right: 10px; color: #3b82f6;"></i>
+                    <span data-lang="en">2030 Roadmap & Scaling Timeline</span><span data-lang="bn">২০৩০ রোডম্যাপ ও স্কেলিং টাইমলাইন</span>
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item completed">
+                        <h4 style="color: #10b981; margin-bottom: 10px;"><span data-lang="en">Year 1 (2026) - Pilot Phase</span><span data-lang="bn">১ম বছর (২০২৬) - পাইলট ফেজ</span></h4>
+                        <ul style="color: #6b7280; margin: 0; padding-left: 20px;">
+                            <li><span data-lang="en">Pilot ASC establishment in Kurigram</span><span data-lang="bn">কুড়িগ্রামে পাইলট ASC স্থাপন</span></li>
+                            <li><span data-lang="en">500 farmer enrollment</span><span data-lang="bn">৫০০ কৃষক এনরোলমেন্ট</span></li>
+                            <li><span data-lang="en">Blockchain network initialization</span><span data-lang="bn">ব্লকচেইন নেটওয়ার্ক ইনিশিয়ালাইজেশন</span></li>
+                            <li><span data-lang="en">Digital Facilitator training program</span><span data-lang="bn">ডিজিটাল ফ্যাসিলিটেটর প্রশিক্ষণ কর্মসূচি</span></li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item ongoing">
+                        <h4 style="color: #f59e0b; margin-bottom: 10px;"><span data-lang="en">Year 3 (2028) - National Scale-up</span><span data-lang="bn">৩য় বছর (২০২৮) - ন্যাশনাল স্কেলআপ</span></h4>
+                        <ul style="color: #6b7280; margin: 0; padding-left: 20px;">
+                            <li><span data-lang="en">5,000+ farmers nationally</span><span data-lang="bn">জাতীয় পর্যায়ে ৫,০০০+ কৃষক</span></li>
+                            <li><span data-lang="en">Regional blockchain node activation</span><span data-lang="bn">আঞ্চলিক ব্লকচেইন নোড অ্যাক্টিভেশন</span></li>
+                            <li><span data-lang="en">ASC network expansion to multiple districts</span><span data-lang="bn">একাধিক জেলায় ASC নেটওয়ার্ক এক্সপ্যানশন</span></li>
+                            <li><span data-lang="en">Government partnership formalization</span><span data-lang="bn">সরকারি অংশীদারিত্ব আনুষ্ঠানিকীকরণ</span></li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 style="color: #ec4899; margin-bottom: 10px;"><span data-lang="en">Year 5 (2030) - Regional Expansion</span><span data-lang="bn">৫ম বছর (২০৩০) - রিজিওনাল এক্সপ্যানশন</span></h4>
+                        <ul style="color: #6b7280; margin: 0; padding-left: 20px;">
+                            <li><strong><span data-lang="en">15 CIRDAP member countries</span><span data-lang="bn">১৫টি CIRDAP সদস্য দেশে</span></strong></li>
+                            <li><strong><span data-lang="en">500,000 farmer target</span><span data-lang="bn">৫ লক্ষ কৃষক লক্ষ্যমাত্রা</span></strong></li>
+                            <li><span data-lang="en">Cross-country data integration</span><span data-lang="bn">আন্তঃদেশীয় ডাটা ইন্টিগ্রেশন</span></li>
+                            <li><span data-lang="en">ESG financing & Green Bond certification</span><span data-lang="bn">ESG ফাইন্যান্সিং ও গ্রিন বন্ড সার্টিফিকেশন</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASC Institutional Model -->
+            <div style="background: linear-gradient(135deg, #1e3a5f, #374151); border-radius: 20px; padding: 40px; color: white;">
+                <h3 style="margin-bottom: 25px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-building" style="margin-right: 10px;"></i>
+                    <span data-lang="en">Institutional Model: Agro-Service Center (ASC)</span><span data-lang="bn">প্রাতিষ্ঠানিক মডেল: এগ্রো-সার্ভিস সেন্টার (ASC)</span>
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
+                        <h4 style="color: #10b981; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i><span data-lang="en">Village-Level Hub</span><span data-lang="bn">গ্রাম-পর্যায়ের হাব</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">ASC operates as a service delivery point providing soil testing, advisory services, and market linkages to farmers.</span><span data-lang="bn">ASC সার্ভিস ডেলিভারি পয়েন্ট হিসেবে কাজ করে যা কৃষকদের মাটি পরীক্ষা, উপদেশনা সেবা এবং বাজার সংযোগ প্রদান করে।</span></p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
+                        <h4 style="color: #fbbf24; margin-bottom: 15px;"><i class="fas fa-user-graduate" style="margin-right: 10px;"></i><span data-lang="en">Digital Facilitators</span><span data-lang="bn">ডিজিটাল ফ্যাসিলিটেটর</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">NEET youth trained and employed to prevent urban migration. Each facilitator serves 50-100 farmers.</span><span data-lang="bn">শহরমুখী অভিবাসন রোধে NEET যুবকদের প্রশিক্ষণ ও কর্মসংস্থান। প্রতিটি ফ্যাসিলিটেটর ৫০-১০০ কৃষককে সেবা দেয়।</span></p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
+                        <h4 style="color: #60a5fa; margin-bottom: 15px;"><i class="fas fa-user-tie" style="margin-right: 10px;"></i><span data-lang="en">Administrative Leadership</span><span data-lang="bn">প্রশাসনিক নেতৃত্ব</span></h4>
+                        <p style="font-size: 14px; opacity: 0.9;"><span data-lang="en">Model designed based on 31st BCS Cadre experience across diverse terrains - Rangamati hills, Sunamganj haors, Kurigram plains.</span><span data-lang="bn">বিভিন্ন ভূখণ্ডে ৩১তম বিসিএস ক্যাডার অভিজ্ঞতার ভিত্তিতে তৈরি মডেল - রাঙামাটি পাহাড়, সুনামগঞ্জ হাওর, কুড়িগ্রাম সমতল।</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4: STAKEHOLDER ENGAGEMENT ==================== -->
+    <section id="stakeholder-engagement" class="guideline-section" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+        <div class="container">
+            <div class="guideline-header">
+                <div class="guideline-number">4</div>
+                <h2 class="guideline-title"><span data-lang="en">Stakeholder Engagement</span><span data-lang="bn">অংশীদারদের অংশগ্রহণ</span></h2>
+                <p class="guideline-subtitle"><span data-lang="en">Partners, Beneficiaries & Collaborative Framework</span><span data-lang="bn">অংশীদার, উপকারভোগী ও সহযোগিতামূলক কাঠামো</span></p>
+            </div>
+
+            <!-- Stakeholder Matrix -->
+            <div style="background: white; border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #1f2937; margin-bottom: 30px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-users" style="margin-right: 10px; color: #f59e0b;"></i>
+                    <span data-lang="en">Key Stakeholder Groups</span><span data-lang="bn">মূল অংশীদার গোষ্ঠী</span>
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    <!-- Primary Beneficiaries -->
+                    <div style="border: 2px solid #10b981; border-radius: 16px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #10b981, #059669); padding: 20px; color: white;">
+                            <h4 style="margin: 0;"><i class="fas fa-user-friends" style="margin-right: 10px;"></i><span data-lang="en">Primary Beneficiaries</span><span data-lang="bn">প্রাথমিক উপকারভোগী</span></h4>
+                        </div>
+                        <div style="padding: 25px;">
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #059669;"><span data-lang="en">Smallholder Farmers</span><span data-lang="bn">ক্ষুদ্র কৃষক</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Direct access to precision agriculture, subsidies, and market linkages</span><span data-lang="bn">প্রিসিশন এগ্রিকালচার, ভর্তুকি এবং বাজার সংযোগে সরাসরি অ্যাক্সেস</span></p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #059669;"><span data-lang="en">Women-Headed Households</span><span data-lang="bn">নারী-প্রধান পরিবার</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Digital Family Cards for nutrition security and financial inclusion</span><span data-lang="bn">পুষ্টি নিরাপত্তা ও আর্থিক অন্তর্ভুক্তির জন্য ডিজিটাল ফ্যামিলি কার্ড</span></p>
+                            </div>
+                            <div>
+                                <strong style="color: #059669;"><span data-lang="en">NEET Youth</span><span data-lang="bn">NEET যুবক</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Employment as Digital Facilitators with sustainable income</span><span data-lang="bn">টেকসই আয়ের সাথে ডিজিটাল ফ্যাসিলিটেটর হিসেবে কর্মসংস্থান</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Government Partners -->
+                    <div style="border: 2px solid #3b82f6; border-radius: 16px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); padding: 20px; color: white;">
+                            <h4 style="margin: 0;"><i class="fas fa-landmark" style="margin-right: 10px;"></i><span data-lang="en">Government Partners</span><span data-lang="bn">সরকারি অংশীদার</span></h4>
+                        </div>
+                        <div style="padding: 25px;">
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #2563eb;"><span data-lang="en">DAE (Department of Agricultural Extension)</span><span data-lang="bn">কৃষি সম্প্রসারণ অধিদপ্তর</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Extension network, farmer training, field implementation</span><span data-lang="bn">এক্সটেনশন নেটওয়ার্ক, কৃষক প্রশিক্ষণ, মাঠ পর্যায়ে বাস্তবায়ন</span></p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #2563eb;"><span data-lang="en">Ministry of Agriculture</span><span data-lang="bn">কৃষি মন্ত্রণালয়</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Policy support, subsidy integration, national scaling</span><span data-lang="bn">নীতি সমর্থন, ভর্তুকি একীকরণ, জাতীয় স্কেলিং</span></p>
+                            </div>
+                            <div>
+                                <strong style="color: #2563eb;"><span data-lang="en">Local Government</span><span data-lang="bn">স্থানীয় সরকার</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Village-level coordination, community mobilization</span><span data-lang="bn">গ্রাম-পর্যায়ের সমন্বয়, কমিউনিটি মোবিলাইজেশন</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Partners -->
+                    <div style="border: 2px solid #8b5cf6; border-radius: 16px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); padding: 20px; color: white;">
+                            <h4 style="margin: 0;"><i class="fas fa-flask" style="margin-right: 10px;"></i><span data-lang="en">Technical Partners</span><span data-lang="bn">প্রযুক্তিগত অংশীদার</span></h4>
+                        </div>
+                        <div style="padding: 25px;">
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #7c3aed;"><span data-lang="en">JUST (Jashore University)</span><span data-lang="bn">যশোর বিশ্ববিদ্যালয়</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Nano-Urea technology, research collaboration</span><span data-lang="bn">ন্যানো-ইউরিয়া প্রযুক্তি, গবেষণা সহযোগিতা</span></p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #7c3aed;"><span data-lang="en">Blockchain Developers</span><span data-lang="bn">ব্লকচেইন ডেভেলপার</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Hyperledger Fabric implementation, system integration</span><span data-lang="bn">হাইপারলেজার ফ্যাব্রিক বাস্তবায়ন, সিস্টেম ইন্টিগ্রেশন</span></p>
+                            </div>
+                            <div>
+                                <strong style="color: #7c3aed;"><span data-lang="en">IoT Providers</span><span data-lang="bn">IoT সরবরাহকারী</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Soil sensor hardware, maintenance support</span><span data-lang="bn">সয়েল সেন্সর হার্ডওয়্যার, রক্ষণাবেক্ষণ সমর্থন</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Funding Partners -->
+                    <div style="border: 2px solid #f59e0b; border-radius: 16px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 20px; color: white;">
+                            <h4 style="margin: 0;"><i class="fas fa-hand-holding-usd" style="margin-right: 10px;"></i><span data-lang="en">Funding & Support</span><span data-lang="bn">তহবিল ও সমর্থন</span></h4>
+                        </div>
+                        <div style="padding: 25px;">
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #d97706;"><span data-lang="en">CIRDAP-REEDS</span><span data-lang="bn">সিরডাপ-রিডস</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Initial pilot funding, regional scaling support</span><span data-lang="bn">প্রাথমিক পাইলট তহবিল, আঞ্চলিক স্কেলিং সমর্থন</span></p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="color: #d97706;"><span data-lang="en">ESG Investors</span><span data-lang="bn">ESG বিনিয়োগকারী</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Green Bond financing, impact investment</span><span data-lang="bn">গ্রিন বন্ড ফাইন্যান্সিং, ইমপ্যাক্ট ইনভেস্টমেন্ট</span></p>
+                            </div>
+                            <div>
+                                <strong style="color: #d97706;"><span data-lang="en">International Donors</span><span data-lang="bn">আন্তর্জাতিক দাতা</span></strong>
+                                <p style="font-size: 13px; color: #6b7280; margin: 5px 0;"><span data-lang="en">IFAD, World Bank, ADB for regional expansion</span><span data-lang="bn">আঞ্চলিক সম্প্রসারণের জন্য IFAD, বিশ্বব্যাংক, ADB</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engagement Framework -->
+            <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #1f2937; margin-bottom: 25px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-project-diagram" style="margin-right: 10px; color: #059669;"></i>
+                    <span data-lang="en">Participatory MEL Framework</span><span data-lang="bn">অংশগ্রহণমূলক MEL ফ্রেমওয়ার্ক</span>
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    <div style="background: linear-gradient(135deg, #fdf2f8, #fce7f3); padding: 25px; border-radius: 16px; border-left: 4px solid #ec4899;">
+                        <h4 style="color: #ec4899; margin-bottom: 15px;"><i class="fas fa-home" style="margin-right: 10px;"></i>FRRP</h4>
+                        <p style="font-size: 14px; color: #374151; margin-bottom: 15px;"><strong><span data-lang="en">Family Resilience Recognition Program</span><span data-lang="bn">ফ্যামিলি রেজিলিয়েন্স রিকগনিশন প্রোগ্রাম</span></strong></p>
+                        <p style="font-size: 13px; color: #6b7280;"><span data-lang="en">Scoring families into Gold, Silver, or Emerging categories based on women's leadership and climate-smart practices.</span><span data-lang="bn">নারী নেতৃত্ব এবং জলবায়ু-স্মার্ট অনুশীলনের ভিত্তিতে পরিবারগুলোকে Gold, Silver বা Emerging ক্যাটাগরিতে স্কোরিং।</span></p>
+                        <div style="display: flex; gap: 8px; margin-top: 15px;">
+                            <span style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: white; padding: 5px 12px; border-radius: 15px; font-size: 11px;">🥇 Gold</span>
+                            <span style="background: linear-gradient(135deg, #9ca3af, #6b7280); color: white; padding: 5px 12px; border-radius: 15px; font-size: 11px;">🥈 Silver</span>
+                            <span style="background: linear-gradient(135deg, #78716c, #a8a29e); color: white; padding: 5px 12px; border-radius: 15px; font-size: 11px;">🌱 Emerging</span>
+                        </div>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); padding: 25px; border-radius: 16px; border-left: 4px solid #10b981;">
+                        <h4 style="color: #10b981; margin-bottom: 15px;"><i class="fas fa-village" style="margin-right: 10px;"></i>VRRP</h4>
+                        <p style="font-size: 14px; color: #374151; margin-bottom: 15px;"><strong><span data-lang="en">Village Resilience Recognition Program</span><span data-lang="bn">ভিলেজ রেজিলিয়েন্স রিকগনিশন প্রোগ্রাম</span></strong></p>
+                        <p style="font-size: 13px; color: #6b7280;"><span data-lang="en">Village Resilience Index (VRI) based on overall CSA practices and family performance.</span><span data-lang="bn">সামগ্রিক CSA প্র্যাকটিস এবং ফ্যামিলি পারফরম্যান্সের ওপর ভিত্তি করে ভিলেজ রেজিলিয়েন্স ইনডেক্স (VRI)।</span></p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #eff6ff, #dbeafe); padding: 25px; border-radius: 16px; border-left: 4px solid #3b82f6;">
+                        <h4 style="color: #3b82f6; margin-bottom: 15px;"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i>4A Learning System</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <strong style="color: #3b82f6;">Access</strong>
+                                <p style="font-size: 11px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Voice-driven UI</span><span data-lang="bn">ভয়েস-চালিত UI</span></p>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <strong style="color: #10b981;">Action</strong>
+                                <p style="font-size: 11px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Mandatory feedback</span><span data-lang="bn">বাধ্যতামূলক ফিডব্যাক</span></p>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <strong style="color: #f59e0b;">Analysis</strong>
+                                <p style="font-size: 11px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Human-in-loop AI</span><span data-lang="bn">Human-in-loop AI</span></p>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 8px; text-align: center;">
+                                <strong style="color: #8b5cf6;">Adaptation</strong>
+                                <p style="font-size: 11px; color: #6b7280; margin: 5px 0;"><span data-lang="en">Real-time policy</span><span data-lang="bn">রিয়েল-টাইম নীতি</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 5: SUSTAINABILITY FRAMEWORK ==================== -->
+    <section id="sustainability-framework" class="guideline-section" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);">
+        <div class="container">
+            <div class="guideline-header">
+                <div class="guideline-number">5</div>
+                <h2 class="guideline-title"><span data-lang="en">Sustainability Framework</span><span data-lang="bn">স্থায়িত্ব কাঠামো</span></h2>
+                <p class="guideline-subtitle"><span data-lang="en">Long-term Viability, Environmental & Social Sustainability</span><span data-lang="bn">দীর্ঘমেয়াদী কার্যকারিতা, পরিবেশগত ও সামাজিক স্থায়িত্ব</span></p>
+            </div>
+
+            <!-- Three Pillars of Sustainability -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                <!-- Financial Sustainability -->
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #059669, #10b981); padding: 25px; color: white;">
+                        <h3 style="margin: 0;"><i class="fas fa-dollar-sign" style="margin-right: 10px;"></i><span data-lang="en">Financial Sustainability</span><span data-lang="bn">আর্থিক স্থায়িত্ব</span></h3>
+                    </div>
+                    <div style="padding: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: #059669; font-size: 16px; margin-bottom: 10px;"><span data-lang="en">Revenue Streams</span><span data-lang="bn">রাজস্ব প্রবাহ</span></h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #6b7280;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i><span data-lang="en">Service fees from ASC operations</span><span data-lang="bn">ASC অপারেশন থেকে সার্ভিস ফি</span></li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i><span data-lang="en">Data monetization (agricultural insights)</span><span data-lang="bn">ডাটা মনিটাইজেশন (কৃষি ইনসাইটস)</span></li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i><span data-lang="en">Carbon credit sales</span><span data-lang="bn">কার্বন ক্রেডিট বিক্রয়</span></li>
+                                <li style="padding: 8px 0;"><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i><span data-lang="en">Premium market access fees</span><span data-lang="bn">প্রিমিয়াম বাজার অ্যাক্সেস ফি</span></li>
+                            </ul>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 15px; border-radius: 10px;">
+                            <p style="margin: 0; font-size: 13px; color: #059669;"><strong><span data-lang="en">De-Risked Investment:</span><span data-lang="bn">ডি-রিস্কড বিনিয়োগ:</span></strong> <span data-lang="en">IRR 14.47%, BCR > 3.0 - Ideal for ESG financing and Green Bonds</span><span data-lang="bn">IRR ১৪.৪৭%, BCR > ৩.০ - ESG ফাইন্যান্সিং এবং গ্রিন বন্ডের জন্য আদর্শ</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environmental Sustainability -->
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #3b82f6, #60a5fa); padding: 25px; color: white;">
+                        <h3 style="margin: 0;"><i class="fas fa-leaf" style="margin-right: 10px;"></i><span data-lang="en">Environmental Sustainability</span><span data-lang="bn">পরিবেশগত স্থায়িত্ব</span></h3>
+                    </div>
+                    <div style="padding: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: #3b82f6; font-size: 16px; margin-bottom: 10px;"><span data-lang="en">Climate Impact</span><span data-lang="bn">জলবায়ু প্রভাব</span></h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #6b7280;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-tint" style="color: #3b82f6; margin-right: 8px;"></i><strong>57%</strong> <span data-lang="en">water savings through 3F4D+MD</span><span data-lang="bn">৩এফ৪ডি+এমডির মাধ্যমে পানি সাশ্রয়</span></li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-cloud" style="color: #3b82f6; margin-right: 8px;"></i><strong>3,500 kg</strong> CO₂ <span data-lang="en">sequestration per unit/year</span><span data-lang="bn">প্রতি ইউনিট/বছরে সিকুয়েস্ট্রেশন</span></li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-sun" style="color: #3b82f6; margin-right: 8px;"></i><span data-lang="en">Solar-powered infrastructure</span><span data-lang="bn">সৌরশক্তিচালিত অবকাঠামো</span></li>
+                                <li style="padding: 8px 0;"><i class="fas fa-recycle" style="color: #3b82f6; margin-right: 8px;"></i><span data-lang="en">100% circular bio-ecosystem</span><span data-lang="bn">১০০% সার্কুলার বায়ো-ইকোসিস্টেম</span></li>
+                            </ul>
+                        </div>
+                        <div style="background: #eff6ff; padding: 15px; border-radius: 10px;">
+                            <p style="margin: 0; font-size: 13px; color: #2563eb;"><strong><span data-lang="en">Arsenic Mitigation:</span><span data-lang="bn">আর্সেনিক প্রশমন:</span></strong> <span data-lang="en">9-21% reduction in rice arsenic levels across 61 affected districts</span><span data-lang="bn">৬১টি প্রভাবিত জেলায় ধানে আর্সেনিকের মাত্রা ৯-২১% হ্রাস</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Sustainability -->
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #8b5cf6, #a78bfa); padding: 25px; color: white;">
+                        <h3 style="margin: 0;"><i class="fas fa-users" style="margin-right: 10px;"></i><span data-lang="en">Social Sustainability</span><span data-lang="bn">সামাজিক স্থায়িত্ব</span></h3>
+                    </div>
+                    <div style="padding: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: #8b5cf6; font-size: 16px; margin-bottom: 10px;"><span data-lang="en">Community Impact</span><span data-lang="bn">কমিউনিটি প্রভাব</span></h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #6b7280;">
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-user-graduate" style="color: #8b5cf6; margin-right: 8px;"></i><span data-lang="en">Youth employment preventing migration</span><span data-lang="bn">অভিবাসন রোধে যুব কর্মসংস্থান</span></li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-venus-mars" style="color: #8b5cf6; margin-right: 8px;"></i><span data-lang="en">Women empowerment through Family Cards</span><span data-lang="bn">ফ্যামিলি কার্ডের মাধ্যমে নারী ক্ষমতায়ন</span></li>
+                                <li style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><i class="fas fa-hand-holding-heart" style="color: #8b5cf6; margin-right: 8px;"></i><span data-lang="en">$72/acre additional income</span><span data-lang="bn">$৭২/একর অতিরিক্ত আয়</span></li>
+                                <li style="padding: 8px 0;"><i class="fas fa-graduation-cap" style="color: #8b5cf6; margin-right: 8px;"></i><span data-lang="en">Knowledge transfer to farmers</span><span data-lang="bn">কৃষকদের কাছে জ্ঞান হস্তান্তর</span></li>
+                            </ul>
+                        </div>
+                        <div style="background: #f5f3ff; padding: 15px; border-radius: 10px;">
+                            <p style="margin: 0; font-size: 13px; color: #7c3aed;"><strong><span data-lang="en">Gender Target:</span><span data-lang="bn">লিঙ্গ লক্ষ্য:</span></strong> <span data-lang="en">50% women participation with voice UI for accessibility</span><span data-lang="bn">অ্যাক্সেসিবিলিটির জন্য ভয়েস UI সহ ৫০% নারী অংশগ্রহণ</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SDG Alignment -->
+            <div style="background: linear-gradient(135deg, #1e3a5f, #2563eb); border-radius: 20px; padding: 40px; color: white; margin-bottom: 30px;">
+                <h3 style="margin-bottom: 30px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-globe-asia" style="margin-right: 10px;"></i>
+                    <span data-lang="en">SDG & National Framework Alignment</span><span data-lang="bn">SDG ও জাতীয় কাঠামোর সাথে সংগতি</span>
+                </h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-bullseye" style="color: #fbbf24;"></i>
+                        <span>Vision 2030</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-ban" style="color: #ef4444;"></i>
+                        <span data-lang="en">SDG 1: No Poverty</span><span data-lang="bn">SDG 1: দারিদ্র্য বিমোচন</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-utensils" style="color: #f59e0b;"></i>
+                        <span data-lang="en">SDG 2: Zero Hunger</span><span data-lang="bn">SDG 2: ক্ষুধামুক্ত বিশ্ব</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-venus-mars" style="color: #ec4899;"></i>
+                        <span data-lang="en">SDG 5: Gender Equality</span><span data-lang="bn">SDG 5: লিঙ্গ সমতা</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-tint" style="color: #3b82f6;"></i>
+                        <span data-lang="en">SDG 6: Clean Water</span><span data-lang="bn">SDG 6: বিশুদ্ধ পানি</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-leaf" style="color: #10b981;"></i>
+                        <span data-lang="en">SDG 13: Climate Action</span><span data-lang="bn">SDG 13: জলবায়ু কার্যক্রম</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-laptop-house" style="color: #8b5cf6;"></i>
+                        <span data-lang="en">Smart Bangladesh 2041</span><span data-lang="bn">স্মার্ট বাংলাদেশ ২০৪১</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Long-term Vision -->
+            <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #1f2937; margin-bottom: 25px; font-size: 22px; text-align: center;">
+                    <i class="fas fa-eye" style="margin-right: 10px; color: #059669;"></i>
+                    <span data-lang="en">Long-term Vision Statement</span><span data-lang="bn">দীর্ঘমেয়াদী ভিশন স্টেটমেন্ট</span>
+                </h3>
+                <div style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); padding: 30px; border-radius: 16px; border-left: 5px solid #059669;">
+                    <p style="font-size: 18px; line-height: 1.8; color: #1f2937; margin: 0; font-style: italic;">
+                        <span data-lang="en">"GreenLoop 3.0 is not just agricultural technology - it is a tool for building a democratic, prosperous, and equitable rural society. By transforming farmers from 'consumers of advice' to 'producers of knowledge', this project will directly contribute to 'Smart Bangladesh 2041' and global SDG targets. The synergy between technology and human values will mark a new chapter in Asia-Pacific agricultural history."</span>
+                        <span data-lang="bn">"GreenLoop 3.0 কেবল কৃষি প্রযুক্তি নয় - এটি একটি গণতান্ত্রিক, সমৃদ্ধ এবং সমতাভিত্তিক গ্রামীণ সমাজ গঠনের হাতিয়ার। কৃষকদের পরামর্শের 'ভোক্তা' থেকে 'জ্ঞানের উৎপাদক'-এ রূপান্তর করার মাধ্যমে এই প্রকল্পটি 'স্মার্ট বাংলাদেশ ২০৪১' এবং বৈশ্বিক SDG লক্ষ্যমাত্রায় সরাসরি অবদান রাখবে। প্রযুক্তি ও মানবিক মূল্যবোধের সমন্বয় এশিয়া-প্যাসিফিক কৃষি ইতিহাসে এক নতুন অধ্যায়ের সূচনা করবে।"</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 6: RESOURCES & MEDIA ==================== -->
+    <section id="resources" class="section" style="background: #f9fafb; padding: 80px 0;">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;"><i class="fas fa-road"></i> <span data-lang="en">2030 Roadmap</span><span data-lang="bn">২০৩০ রোডম্যাপ</span></span>
-                <h2 class="section-title" style="color: white;"><span data-lang="en">Scaling Plan & Expansion</span><span data-lang="bn">স্কেলিং পরিকল্পনা ও বিস্তার</span></h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);"><span data-lang="en">Five-year plan for regional expansion across 15 CIRDAP member countries</span><span data-lang="bn">১৫টি CIRDAP সদস্য দেশে আঞ্চলিক বিস্তারের পঞ্চবার্ষিক পরিকল্পনা</span></p>
+                <span class="section-badge"><i class="fas fa-photo-video"></i> <span data-lang="en">Resources & Media</span><span data-lang="bn">রিসোর্স ও মিডিয়া</span></span>
+                <h2 class="section-title"><span data-lang="en">Project Documentation</span><span data-lang="bn">প্রকল্প ডকুমেন্টেশন</span></h2>
+                <p class="section-subtitle"><span data-lang="en">Access all project materials, videos, and documents</span><span data-lang="bn">সব প্রকল্প উপকরণ, ভিডিও এবং ডকুমেন্ট অ্যাক্সেস করুন</span></p>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px;">
-                <!-- Year 1 -->
-                <div style="background: rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; border-left: 4px solid #10b981;">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <span style="font-weight: bold; font-size: 18px;">1</span>
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; color: #10b981;"><span data-lang="en">Year 1 (2026)</span><span data-lang="bn">১ম বছর (২০২৬)</span></h4>
-                            <span style="font-size: 12px; opacity: 0.8;"><span data-lang="en">Pilot Phase</span><span data-lang="bn">পাইলট ফেজ</span></span>
-                        </div>
-                    </div>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-                        <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> <span data-lang="en">Pilot ASC establishment</span><span data-lang="bn">পাইলট ASC স্থাপন</span></li>
-                        <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> <span data-lang="en">500 farmer enrollment</span><span data-lang="bn">৫০০ কৃষক এনরোলমেন্ট</span></li>
-                        <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> <span data-lang="en">Blockchain network initialization</span><span data-lang="bn">ব্লকচেইন নেটওয়ার্ক ইনিশিয়ালাইজেশন</span></li>
-                    </ul>
-                </div>
-                
-                <!-- Year 3 -->
-                <div style="background: rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; border-left: 4px solid #f59e0b;">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 50px; height: 50px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <span style="font-weight: bold; font-size: 18px;">3</span>
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; color: #f59e0b;"><span data-lang="en">Year 3 (2028)</span><span data-lang="bn">৩য় বছর (২০২৮)</span></h4>
-                            <span style="font-size: 12px; opacity: 0.8;"><span data-lang="en">National Scale-up</span><span data-lang="bn">ন্যাশনাল স্কেলআপ</span></span>
-                        </div>
-                    </div>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-                        <li><i class="fas fa-check-circle" style="color: #f59e0b; margin-right: 8px;"></i> <span data-lang="en">5,000+ farmers nationally</span><span data-lang="bn">জাতীয় পর্যায়ে ৫,০০০+ কৃষক</span></li>
-                        <li><i class="fas fa-check-circle" style="color: #f59e0b; margin-right: 8px;"></i> <span data-lang="en">Regional blockchain node activation</span><span data-lang="bn">আঞ্চলিক ব্লকচেইন নোড অ্যাক্টিভেশন</span></li>
-                        <li><i class="fas fa-check-circle" style="color: #f59e0b; margin-right: 8px;"></i> <span data-lang="en">ASC network expansion</span><span data-lang="bn">ASC নেটওয়ার্ক এক্সপ্যানশন</span></li>
-                    </ul>
-                </div>
-                
-                <!-- Year 5 -->
-                <div style="background: rgba(255,255,255,0.15); border-radius: 16px; padding: 30px; border-left: 4px solid #ec4899;">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 50px; height: 50px; background: #ec4899; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <span style="font-weight: bold; font-size: 18px;">5</span>
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; color: #ec4899;"><span data-lang="en">Year 5 (2030)</span><span data-lang="bn">৫ম বছর (২০৩০)</span></h4>
-                            <span style="font-size: 12px; opacity: 0.8;"><span data-lang="en">Regional Expansion</span><span data-lang="bn">রিজিওনাল এক্সপ্যানশন</span></span>
-                        </div>
-                    </div>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-                        <li><i class="fas fa-check-circle" style="color: #ec4899; margin-right: 8px;"></i> <strong><span data-lang="en">15 CIRDAP member countries</span><span data-lang="bn">১৫টি CIRDAP সদস্য দেশে</span></strong></li>
-                        <li><i class="fas fa-check-circle" style="color: #ec4899; margin-right: 8px;"></i> <strong><span data-lang="en">500,000 farmer target</span><span data-lang="bn">৫ লক্ষ কৃষক লক্ষ্যমাত্রা</span></strong></li>
-                        <li><i class="fas fa-check-circle" style="color: #ec4899; margin-right: 8px;"></i> <span data-lang="en">Cross-country data integration</span><span data-lang="bn">আন্তঃদেশীয় ডাটা ইন্টিগ্রেশন</span></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Scaling Frontier -->
-            <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; text-align: center;">
-                <h4 style="margin-bottom: 15px;"><i class="fas fa-rocket"></i> <span data-lang="en">Scaling Frontier</span><span data-lang="bn">স্কেলিং ফ্রন্টিয়ার</span></h4>
-                <p style="margin: 0; opacity: 0.9;"><span data-lang="en">Hyperledger Fabric and PoA consensus enable rapid scalability while maintaining cross-border data integrity.</span><span data-lang="bn">হাইপারলেজার ফ্যাব্রিক ও PoA কনসেনসাসের মাধ্যমে আন্তঃদেশীয় তথ্যের অখণ্ডতা বজায় রেখে এই মডেলটি দ্রুত স্কেলযোগ্য।</span></p>
-            </div>
-        </div>
-    </section>
 
-    <!-- SDG Alignment Banner -->
-    <section class="cirdap-alignment-banner">
-        <div class="container">
-            <h3><span data-lang="en">Alignment with SDGs & National Development Frameworks</span><span data-lang="bn">SDG ও জাতীয় উন্নয়ন কাঠামোর সাথে সংগতি</span></h3>
-            <div class="alignment-badges">
-                <div class="alignment-badge">
-                    <i class="fas fa-bullseye"></i>
-                    <span>Vision 2030</span>
+            <!-- Featured Resources -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px;">
+                <!-- Pitch Video -->
+                <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px solid #10b981;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/WW7olZ1YALs" title="GreenLoop 3.0 Pitch Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h4 style="color: #10b981; margin-bottom: 10px;">🎬 <span data-lang="en">Pitch Deck Video (Latest)</span><span data-lang="bn">পিচ ডেক ভিডিও (সর্বশেষ)</span></h4>
+                        <p style="color: #6b7280; font-size: 14px; margin-bottom: 15px;"><span data-lang="en">Official pitch presentation for CIRDAP-REEDS Innovation Challenge 2026</span><span data-lang="bn">সিরডাপ-রিডস উদ্ভাবন চ্যালেঞ্জ ২০২৬ এর জন্য অফিসিয়াল পিচ প্রেজেন্টেশন</span></p>
+                        <a href="https://youtu.be/WW7olZ1YALs" target="_blank" class="btn btn-sm" style="background: #10b981; color: white;"><i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in YouTube</span><span data-lang="bn">ইউটিউবে খুলুন</span></a>
+                    </div>
                 </div>
-                <div class="alignment-badge">
-                    <i class="fas fa-globe-asia"></i>
-                    <span data-lang="en">SDG 1: No Poverty</span><span data-lang="bn">SDG 1: দারিদ্র্য বিমোচন</span>
+
+                <!-- Pitch Presentation -->
+                <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px solid #3b82f6;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/embed?start=false&loop=false&delayms=3000" title="Pitch Deck Presentation" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h4 style="color: #3b82f6; margin-bottom: 10px;">📊 <span data-lang="en">Pitch Deck Presentation (Latest)</span><span data-lang="bn">পিচ ডেক প্রেজেন্টেশন (সর্বশেষ)</span></h4>
+                        <p style="color: #6b7280; font-size: 14px; margin-bottom: 15px;"><span data-lang="en">Comprehensive slide deck for competition submission</span><span data-lang="bn">প্রতিযোগিতায় জমা দেওয়ার জন্য বিস্তারিত স্লাইড ডেক</span></p>
+                        <a href="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk" target="_blank" class="btn btn-sm" style="background: #3b82f6; color: white;"><i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in Google Slides</span><span data-lang="bn">গুগল স্লাইডসে খুলুন</span></a>
+                    </div>
                 </div>
-                <div class="alignment-badge">
-                    <i class="fas fa-utensils"></i>
-                    <span data-lang="en">SDG 2: Zero Hunger</span><span data-lang="bn">SDG 2: ক্ষুধামুক্ত বিশ্ব</span>
+            </div>
+
+            <!-- Project Proposal -->
+            <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; border: 2px solid #8b5cf6;">
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6, #a78bfa); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-google-drive" style="color: white; font-size: 28px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="color: #8b5cf6; margin: 0;">📄 <span data-lang="en">Project Proposal Document (Latest)</span><span data-lang="bn">প্রকল্প প্রপোজাল ডকুমেন্ট (সর্বশেষ)</span></h4>
+                        <p style="color: #6b7280; font-size: 14px; margin: 5px 0 0;"><span data-lang="en">Complete project proposal for CIRDAP-REEDS Innovation Challenge 2026</span><span data-lang="bn">সিরডাপ-রিডস উদ্ভাবন চ্যালেঞ্জ ২০২৬ এর জন্য সম্পূর্ণ প্রকল্প প্রপোজাল</span></p>
+                    </div>
                 </div>
-                <div class="alignment-badge">
-                    <i class="fas fa-venus-mars"></i>
-                    <span data-lang="en">SDG 5: Gender Equality</span><span data-lang="bn">SDG 5: লিঙ্গ সমতা</span>
+                <div style="background: #f5f3ff; padding: 3px; border-radius: 10px;">
+                    <iframe src="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/pub?embedded=true" style="width: 100%; height: 500px; border: none; border-radius: 8px;"></iframe>
                 </div>
-                <div class="alignment-badge">
-                    <i class="fas fa-tint"></i>
-                    <span data-lang="en">SDG 6: Clean Water</span><span data-lang="bn">SDG 6: বিশুদ্ধ পানি</span>
+                <div style="margin-top: 15px; text-align: center;">
+                    <a href="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk" target="_blank" class="btn" style="background: #8b5cf6; color: white;"><i class="fas fa-external-link-alt"></i> <span data-lang="en">Open in Google Docs</span><span data-lang="bn">গুগল ডক্সে খুলুন</span></a>
                 </div>
-                <div class="alignment-badge">
-                    <i class="fas fa-leaf"></i>
-                    <span data-lang="en">SDG 13: Climate Action</span><span data-lang="bn">SDG 13: জলবায়ু কার্যক্রম</span>
-                </div>
-                <div class="alignment-badge">
-                    <i class="fas fa-laptop-house"></i>
-                    <span data-lang="en">Smart Bangladesh 2041</span><span data-lang="bn">স্মার্ট বাংলাদেশ ২০৪১</span>
+            </div>
+
+            <!-- Impact Dashboard -->
+            <div style="background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px solid #f59e0b;">
+                <h4 style="color: #f59e0b; margin-bottom: 20px;">📈 <span data-lang="en">Impact Dashboard Infographic</span><span data-lang="bn">ইমপ্যাক্ট ড্যাশবোর্ড ইনফোগ্রাফিক</span></h4>
+                <div style="text-align: center;">
+                    <img src="assets/media/infographics/impact_dashboard.png" alt="Impact Dashboard" style="max-width: 100%; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="section team-section">
+    <section id="team" class="section team-section" style="background: white;">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="fas fa-user-tie"></i> <span data-lang="en">Innovator</span><span data-lang="bn">উদ্ভাবক</span></span>
-                <h2 class="section-title"><span data-lang="en">Project Innovator</span><span data-lang="bn">প্রকল্প উদ্ভাবক</span></h2>
-                <p class="section-subtitle"><span data-lang="en">Meet the visionary behind GreenLoop 3.0</span><span data-lang="bn">GreenLoop 3.0 এর স্রষ্টার সাথে পরিচিত হোন</span></p>
+                <span class="section-badge"><i class="fas fa-user-tie"></i> <span data-lang="en">Project Innovator</span><span data-lang="bn">প্রকল্প উদ্ভাবক</span></span>
+                <h2 class="section-title"><span data-lang="en">Meet the Team</span><span data-lang="bn">টিমের সাথে পরিচিত হোন</span></h2>
             </div>
-            
             <div class="team-grid">
                 <div class="team-card">
                     <div class="team-avatar">
@@ -1076,10 +1046,10 @@
                     </div>
                     <h3>Abu Md Moniruzjaman</h3>
                     <p class="team-role"><span data-lang="en">Additional Deputy Director (Horticulture)</span><span data-lang="bn">উপ-পরিচালক (উদ্যান শাখা)</span></p>
-                    <p class="team-org"><span data-lang="en">Department of Agricultural Extension (DAE), Kurigram, Bangladesh</span><span data-lang="bn">কৃষি সম্প্রসারণ অধিদপ্তর, কুড়িগ্রাম, বাংলাদেশ</span></p>
+                    <p class="team-org"><span data-lang="en">Department of Agricultural Extension, Kurigram, Bangladesh</span><span data-lang="bn">কৃষি সম্প্রসারণ অধিদপ্তর, কুড়িগ্রাম, বাংলাদেশ</span></p>
                     <div class="team-experience">
                         <i class="fas fa-briefcase"></i>
-                        <span><span data-lang="en">31st BCS Cadre | 10+ Years in Agricultural Extension & Digital Innovation</span><span data-lang="bn">৩১তম বিসিএস ক্যাডার | কৃষি সম্প্রসারণ ও ডিজিটাল উদ্ভাবনে ১০+ বছর</span></span>
+                        <span><span data-lang="en">31st BCS Cadre | 10+ Years in Agricultural Extension</span><span data-lang="bn">৩১তম বিসিএস ক্যাডার | কৃষি সম্প্রসারণে ১০+ বছর</span></span>
                     </div>
                     <div class="team-links">
                         <a href="https://github.com/moniruzjaman" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -1087,99 +1057,6 @@
                         <a href="https://www.facebook.com/moniruzjaman2021" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Apps Section -->
-    <section class="section app-links-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="fas fa-mobile-alt"></i> <span data-lang="en">Live Applications</span><span data-lang="bn">লাইভ অ্যাপ্লিকেশন</span></span>
-                <h2 class="section-title"><span data-lang="en">GreenLoop 3.0 App Ecosystem</span><span data-lang="bn">GreenLoop 3.0 অ্যাপ ইকোসিস্টেম</span></h2>
-                <p class="section-subtitle"><span data-lang="en">Experience our live applications and digital platforms</span><span data-lang="bn">আমাদের লাইভ অ্যাপ্লিকেশন এবং ডিজিটাল প্ল্যাটফর্ম অভিজ্ঞতা নিন</span></p>
-            </div>
-            
-            <div class="app-links-grid">
-                <!-- CABI KrishAI -->
-                <a href="https://cabi.krishiai.live/" target="_blank" class="app-link-card">
-                    <div class="app-link-header">
-                        <div class="app-link-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="app-link-title">
-                            <h4>CABI KrishAI</h4>
-                            <span><span data-lang="en">AI-Powered Platform</span><span data-lang="bn">এআই-চালিত প্ল্যাটফর্ম</span></span>
-                        </div>
-                    </div>
-                    <div class="app-link-body">
-                        <p><span data-lang="en">Comprehensive AI platform for agricultural advisory services, providing intelligent recommendations for farmers.</span><span data-lang="bn">কৃষি উপদেশনা সেবার জন্য বিস্তৃত এআই প্ল্যাটফর্ম, কৃষকদের জন্য বুদ্ধিমান সুপারিশ প্রদান করে।</span></p>
-                        <div class="app-link-url">
-                            <i class="fas fa-link"></i>
-                            <span>cabi.krishiai.live</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <!-- Krishak Card -->
-                <a href="https://krishak-card.vercel.app/" target="_blank" class="app-link-card">
-                    <div class="app-link-header" style="background: linear-gradient(135deg, #059669, #10b981);">
-                        <div class="app-link-icon">
-                            <i class="fas fa-id-card"></i>
-                        </div>
-                        <div class="app-link-title">
-                            <h4>Krishak Card</h4>
-                            <span><span data-lang="en">Farmer Identity System</span><span data-lang="bn">কৃষক পরিচয় পদ্ধতি</span></span>
-                        </div>
-                    </div>
-                    <div class="app-link-body">
-                        <p><span data-lang="en">Digital farmer identity system enabling access to subsidies, credit, and market information.</span><span data-lang="bn">ডিজিটাল কৃষক পরিচয় পদ্ধতি যা ভর্তুকি, ঋণ এবং বাজার তথ্যে অ্যাক্সেস সক্ষম করে।</span></p>
-                        <div class="app-link-url">
-                            <i class="fas fa-link"></i>
-                            <span>krishak-card.vercel.app</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <!-- Web KrishAI -->
-                <a href="https://web.krishiai.live/" target="_blank" class="app-link-card">
-                    <div class="app-link-header" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6);">
-                        <div class="app-link-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="app-link-title">
-                            <h4>Web KrishAI</h4>
-                            <span><span data-lang="en">Web Application</span><span data-lang="bn">ওয়েব অ্যাপ্লিকেশন</span></span>
-                        </div>
-                    </div>
-                    <div class="app-link-body">
-                        <p><span data-lang="en">Web-based interface for KrishAI services, accessible from any device with internet connectivity.</span><span data-lang="bn">KrishAI সেবার জন্য ওয়েব-ভিত্তিক ইন্টারফেস, ইন্টারনেট সংযোগ সহ যেকোনো ডিভাইস থেকে অ্যাক্সেসযোগ্য।</span></p>
-                        <div class="app-link-url">
-                            <i class="fas fa-link"></i>
-                            <span>web.krishiai.live</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <!-- GitHub Repository -->
-                <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank" class="app-link-card">
-                    <div class="app-link-header" style="background: linear-gradient(135deg, #374151, #6b7280);">
-                        <div class="app-link-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="app-link-title">
-                            <h4>GitHub Repository</h4>
-                            <span><span data-lang="en">Source Code</span><span data-lang="bn">সোর্স কোড</span></span>
-                        </div>
-                    </div>
-                    <div class="app-link-body">
-                        <p><span data-lang="en">Complete source code and documentation for the GreenLoop 3.0 project platform.</span><span data-lang="bn">GreenLoop 3.0 প্রকল্প প্ল্যাটফর্মের সম্পূর্ণ সোর্স কোড এবং ডকুমেন্টেশন।</span></p>
-                        <div class="app-link-url">
-                            <i class="fas fa-link"></i>
-                            <span>github.com/moniruzjaman</span>
-                        </div>
-                    </div>
-                </a>
             </div>
         </div>
     </section>
@@ -1197,20 +1074,20 @@
                 </div>
                 <div class="footer-links">
                     <h4><span data-lang="en">Quick Links</span><span data-lang="bn">দ্রুত লিংক</span></h4>
-                    <a href="https://youtu.be/WW7olZ1YALs" target="_blank"><span data-lang="en">Pitch Video</span><span data-lang="bn">পিচ ভিডিও</span></a>
-                    <a href="#proposal"><span data-lang="en">Proposal</span><span data-lang="bn">প্রপোজাল</span></a>
-                    <a href="#presentation"><span data-lang="en">Presentation</span><span data-lang="bn">প্রেজেন্টেশন</span></a>
-                    <a href="#demo"><span data-lang="en">Demo App</span><span data-lang="bn">ডেমো অ্যাপ</span></a>
+                    <a href="#problem-statement"><span data-lang="en">Problem Statement</span><span data-lang="bn">সমস্যা বিবৃতি</span></a>
+                    <a href="#innovation-proposal"><span data-lang="en">Innovation Proposal</span><span data-lang="bn">উদ্ভাবন প্রস্তাব</span></a>
+                    <a href="#implementation-plan"><span data-lang="en">Implementation Plan</span><span data-lang="bn">বাস্তবায়ন পরিকল্পনা</span></a>
+                    <a href="#sustainability-framework"><span data-lang="en">Sustainability</span><span data-lang="bn">স্থায়িত্ব</span></a>
                 </div>
                 <div class="footer-links">
                     <h4><span data-lang="en">Resources</span><span data-lang="bn">রিসোর্স</span></h4>
                     <a href="https://github.com/moniruzjaman/cirdap-greenloop3.0" target="_blank">GitHub Repository</a>
-                    <a href="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk" target="_blank">Google Doc Proposal</a>
-                    <a href="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk" target="_blank">Google Slides Deck</a>
+                    <a href="https://docs.google.com/document/d/1aOiAIWKlLRiYNp6SJb0rVbw_-jH7HF8ZGZqq64jZAhc/edit?usp=drivesdk" target="_blank">Project Proposal</a>
+                    <a href="https://docs.google.com/presentation/d/1KYnBlrVh4hUIsM7PrFlxj4voWwbNPoTN/edit?usp=drivesdk" target="_blank">Pitch Deck</a>
                 </div>
                 <div class="footer-links">
                     <h4><span data-lang="en">Competition</span><span data-lang="bn">প্রতিযোগিতা</span></h4>
-                    <p><span data-lang="en">CIRDAP-REEDS Rural Development Innovation Challenge 2026</span><span data-lang="bn">সিরডাপ-রিডস গ্রামীণ উন্নয়ন উদ্ভাবন চ্যালেঞ্জ ২০২৬</span></p>
+                    <p>CIRDAP-REEDS Rural Development Innovation Challenge 2026</p>
                     <p class="theme-label"><span data-lang="en">Theme: LDC Graduation & Circular Economy</span><span data-lang="bn">থিম: এলডিসি গ্র্যাজুয়েশন ও সার্কুলার ইকোনমি</span></p>
                 </div>
             </div>
@@ -1224,103 +1101,39 @@
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script>
-        // Language Toggle Function
+        // Language Toggle
         function setLanguage(lang) {
             document.documentElement.setAttribute('lang', lang);
-            
-            // Update toggle buttons
             document.getElementById('langEn').classList.toggle('active', lang === 'en');
             document.getElementById('langBn').classList.toggle('active', lang === 'bn');
-            
-            // Store preference
             localStorage.setItem('greenloop-lang', lang);
         }
         
-        // Initialize language from storage
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('greenloop-lang') || 'en';
             setLanguage(savedLang);
-        });
-        
-        // Base URL for the deployed site
-        const BASE_URL = window.location.origin + window.location.pathname.replace(/\/$/, '');
-        
-        // Initialize viewers when deployed
-        document.addEventListener('DOMContentLoaded', function() {
-            initDocumentViewers();
-        });
-        
-        function initDocumentViewers() {
-            // Use Office Online viewer for DOCX
-            const docxUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Proposal.docx');
-            const docxViewer = document.getElementById('docxViewer');
-            const docxPlaceholder = document.getElementById('docxPlaceholder');
             
-            // Use Office Online viewer for PPT
-            const pptUrl = encodeURIComponent(BASE_URL + '/assets/media/GreenLoop_Presentation.pptx');
-            const pptViewer = document.getElementById('pptViewer');
-            const pptPlaceholder = document.getElementById('pptPlaceholder');
+            // Section navigation highlighting
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.section-nav a');
             
-            // Check if we're on a live site (not local file)
-            if (window.location.protocol !== 'file:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-                // Set up Office Online viewers
-                if (docxViewer) {
-                    docxViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${docxUrl}`;
-                    docxViewer.onload = function() {
-                        setTimeout(() => { 
-                            if (docxPlaceholder) docxPlaceholder.style.display = 'none'; 
-                        }, 2000);
-                    };
-                }
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
                 
-                if (pptViewer) {
-                    pptViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${pptUrl}`;
-                    pptViewer.onload = function() {
-                        setTimeout(() => { 
-                            if (pptPlaceholder) pptPlaceholder.style.display = 'none'; 
-                        }, 2000);
-                    };
-                }
-            }
-        }
-        
-        // Tab switching
-        function switchTab(tab) {
-            // Remove active from all tabs and contents
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            // Add active to selected
-            document.querySelector(`[onclick="switchTab('${tab}')"]`).classList.add('active');
-            document.getElementById(`${tab}-tab`).classList.add('active');
-        }
-        
-        // Media filter
-        function filterMedia(type) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.closest('.filter-btn').classList.add('active');
-            
-            // Filter implementation
-            const categories = document.querySelectorAll('.media-category');
-            categories.forEach(cat => {
-                if (type === 'all') {
-                    cat.style.display = 'block';
-                } else {
-                    cat.style.display = cat.dataset.category === type ? 'block' : 'none';
-                }
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
             });
-        }
-        
-        // Image Modal
-        function openImageModal(src, title) {
-            document.getElementById('modalImage').src = src;
-            document.getElementById('modalTitle').textContent = title;
-            document.getElementById('imageModal').style.display = 'flex';
-        }
-        
-        function closeImageModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
+        });
     </script>
 </body>
 </html>
