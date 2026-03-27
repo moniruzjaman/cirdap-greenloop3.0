@@ -1390,6 +1390,69 @@
                 </div>
             </div>
 
+            <!-- ==================== INLINE DOCUMENT VIEWER - PROPOSALS & RESEARCH ==================== -->
+            <div style="margin-bottom: 40px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                    <h3 style="color: #1f2937; font-size: 24px; display: flex; align-items: center; gap: 12px; margin: 0;">
+                        <div style="background: linear-gradient(135deg, #0ea5e9, #0284c7); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-eye" style="color: white; font-size: 20px;"></i>
+                        </div>
+                        <span data-lang="en">Inline Document Viewer</span><span data-lang="bn">ইনলাইন ডকুমেন্ট ভিউয়ার</span>
+                    </h3>
+                    <span style="background: #e0f2fe; color: #0369a1; padding: 6px 15px; border-radius: 20px; font-size: 13px; font-weight: 500;"><span data-lang="en">View In-Page</span><span data-lang="bn">পেজে দেখুন</span></span>
+                </div>
+                <div style="background: white; border-radius: 20px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <!-- Document Viewer Tabs -->
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <button onclick="showDocViewer('proposal-en')" id="tab-proposal-en" class="doc-tab active" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-word" style="margin-right: 8px;"></i>Proposal (English)
+                        </button>
+                        <button onclick="showDocViewer('proposal-bn')" id="tab-proposal-bn" class="doc-tab" style="background: #e5e7eb; color: #374151; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-word" style="margin-right: 8px;"></i>প্রপোজাল (বাংলা)
+                        </button>
+                        <button onclick="showDocViewer('research')" id="tab-research" class="doc-tab" style="background: #e5e7eb; color: #374151; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-file-pdf" style="margin-right: 8px;"></i>Research Paper
+                        </button>
+                        <button onclick="showDocViewer('portfolio')" id="tab-portfolio" class="doc-tab" style="background: #e5e7eb; color: #374151; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 500;">
+                            <i class="fas fa-mobile-alt" style="margin-right: 8px;"></i>App Portfolio
+                        </button>
+                    </div>
+                    
+                    <!-- Document Viewer Container -->
+                    <div id="doc-viewer-container" style="background: #f8fafc; border-radius: 16px; overflow: hidden; border: 2px solid #e2e8f0;">
+                        <!-- Proposal English Viewer -->
+                        <div id="viewer-proposal-en" class="doc-viewer" style="height: 600px;">
+                            <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/moniruzjaman/cirdap-greenloop3.0/main/docs/assets/media/proposals/GreenLoop_3.0_Proposal_English.docx" style="width: 100%; height: 100%; border: none;" title="GreenLoop 3.0 Proposal English"></iframe>
+                        </div>
+                        <!-- Proposal Bangla Viewer -->
+                        <div id="viewer-proposal-bn" class="doc-viewer" style="display: none; height: 600px;">
+                            <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/moniruzjaman/cirdap-greenloop3.0/main/docs/assets/media/proposals/GreenLoop_3.0_Proposal_Bangla.docx" style="width: 100%; height: 100%; border: none;" title="GreenLoop 3.0 Proposal Bangla"></iframe>
+                        </div>
+                        <!-- Research Paper Viewer -->
+                        <div id="viewer-research" class="doc-viewer" style="display: none; height: 600px;">
+                            <iframe src="assets/media/research/Decoding_the_CIRDAP_Research.pdf" style="width: 100%; height: 100%; border: none;" title="Decoding the CIRDAP Research"></iframe>
+                        </div>
+                        <!-- App Portfolio Viewer -->
+                        <div id="viewer-portfolio" class="doc-viewer" style="display: none; height: 600px;">
+                            <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/moniruzjaman/cirdap-greenloop3.0/main/docs/assets/media/Krishi_AI_App_Portfolio.docx" style="width: 100%; height: 100%; border: none;" title="Krishi AI App Portfolio"></iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Download Links -->
+                    <div style="margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                        <a href="assets/media/proposals/GreenLoop_3.0_Proposal_English.docx" download style="display: inline-flex; align-items: center; gap: 8px; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 13px;">
+                            <i class="fas fa-download"></i> English Proposal (DOCX)
+                        </a>
+                        <a href="assets/media/proposals/GreenLoop_3.0_Proposal_Bangla.docx" download style="display: inline-flex; align-items: center; gap: 8px; background: #a855f7; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 13px;">
+                            <i class="fas fa-download"></i> বাংলা প্রপোজাল (DOCX)
+                        </a>
+                        <a href="assets/media/research/Decoding_the_CIRDAP_Research.pdf" download style="display: inline-flex; align-items: center; gap: 8px; background: #dc2626; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 13px;">
+                            <i class="fas fa-download"></i> Research Paper (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- ==================== INFOGRAPHICS - HORIZONTAL SCROLL ==================== -->
             <div style="margin-bottom: 40px;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
@@ -1789,6 +1852,39 @@
                 });
             });
         });
+        
+        // Document Viewer Tab Switching
+        function showDocViewer(viewerId) {
+            // Hide all viewers
+            document.querySelectorAll('.doc-viewer').forEach(viewer => {
+                viewer.style.display = 'none';
+            });
+            
+            // Reset all tab styles
+            document.querySelectorAll('.doc-tab').forEach(tab => {
+                tab.style.background = '#e5e7eb';
+                tab.style.color = '#374151';
+            });
+            
+            // Show selected viewer
+            document.getElementById('viewer-' + viewerId).style.display = 'block';
+            
+            // Highlight active tab
+            const activeTab = document.getElementById('tab-' + viewerId);
+            if (viewerId === 'proposal-en') {
+                activeTab.style.background = 'linear-gradient(135deg, #3b82f6, #2563eb)';
+                activeTab.style.color = 'white';
+            } else if (viewerId === 'proposal-bn') {
+                activeTab.style.background = 'linear-gradient(135deg, #a855f7, #9333ea)';
+                activeTab.style.color = 'white';
+            } else if (viewerId === 'research') {
+                activeTab.style.background = 'linear-gradient(135deg, #dc2626, #b91c1c)';
+                activeTab.style.color = 'white';
+            } else if (viewerId === 'portfolio') {
+                activeTab.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                activeTab.style.color = 'white';
+            }
+        }
     </script>
 </body>
 </html>

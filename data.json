@@ -1,1 +1,214 @@
-{"project":{"title":"GreenLoop 3.0: Healing the Earth, Securing the Smile","tagline":"One Innovation. Endless Change. Countless Smiles.","theme":"LDC Graduation & Circular Economy"},"resources":[{"id":1,"type":"pdf","title":"GreenLoop 3.0 Proposal (English)","category":"Core Proposal"},{"id":2,"type":"image","title":"Circular Bio-Digital Ecosystem","filename":"greenloop_info.png","category":"Infographic"}]}
+{
+  "project": {
+    "title": "GreenLoop 3.0: Healing the Earth, Securing the Smile",
+    "tagline": "One Innovation. Endless Change. Countless Smiles.",
+    "theme": "LDC Graduation & Circular Economy"
+  },
+  "resources": [
+    {
+      "id": 1,
+      "type": "pdf",
+      "title": "GreenLoop 3.0 Proposal (English)",
+      "filename": "GreenLoop_3.0_Proposal_English.pdf",
+      "category": "Core Proposal",
+      "url": "assets/media/proposals/GreenLoop_3.0_Proposal_English.pdf"
+    },
+    {
+      "id": 2,
+      "type": "pdf",
+      "title": "GreenLoop 3.0 Proposal (Bangla)",
+      "filename": "GreenLoop_3.0_Proposal_Bangla.pdf",
+      "category": "Core Proposal",
+      "url": "assets/media/proposals/GreenLoop_3.0_Proposal_Bangla.pdf"
+    },
+    {
+      "id": 3,
+      "type": "docx",
+      "title": "GreenLoop 3.0 Proposal (English) - Editable",
+      "filename": "GreenLoop_3.0_Proposal_English.docx",
+      "category": "Core Proposal",
+      "url": "assets/media/proposals/GreenLoop_3.0_Proposal_English.docx"
+    },
+    {
+      "id": 4,
+      "type": "docx",
+      "title": "GreenLoop 3.0 Proposal (Bangla) - Editable",
+      "filename": "GreenLoop_3.0_Proposal_Bangla.docx",
+      "category": "Core Proposal",
+      "url": "assets/media/proposals/GreenLoop_3.0_Proposal_Bangla.docx"
+    },
+    {
+      "id": 5,
+      "type": "pdf",
+      "title": "Decoding the CIRDAP - Research Paper",
+      "filename": "Decoding_the_CIRDAP_Research.pdf",
+      "category": "Research",
+      "url": "assets/media/research/Decoding_the_CIRDAP_Research.pdf"
+    },
+    {
+      "id": 6,
+      "type": "pdf",
+      "title": "GreenLoop 3.0 Rural Transformation",
+      "filename": "GreenLoop_3.0_Rural_Transformation.pdf",
+      "category": "Technical Documentation",
+      "url": "assets/media/GreenLoop_3.0_Rural_Transformation.pdf"
+    },
+    {
+      "id": 7,
+      "type": "pdf",
+      "title": "CIRDAP Proposal Template",
+      "filename": "CIRDAP_Proposal.pdf",
+      "category": "Template",
+      "url": "assets/media/CIRDAP_Proposal.pdf"
+    },
+    {
+      "id": 8,
+      "type": "ppt",
+      "title": "GreenLoop 3.0 Presentation (English)",
+      "filename": "GreenLoop_3.0_Presentation_English.pptx",
+      "category": "Presentation",
+      "url": "assets/media/presentations/GreenLoop_3.0_Presentation_English.pptx"
+    },
+    {
+      "id": 9,
+      "type": "pdf",
+      "title": "GreenLoop 3.0 Presentation (English PDF)",
+      "filename": "GreenLoop_3.0_Presentation_English.pdf",
+      "category": "Presentation",
+      "url": "assets/media/presentations/GreenLoop_3.0_Presentation_English.pdf"
+    },
+    {
+      "id": 10,
+      "type": "ppt",
+      "title": "GreenLoop 3.0 Presentation (Bangla)",
+      "filename": "GreenLoop_3.0_Presentation_Bangla.pptx",
+      "category": "Presentation",
+      "url": "assets/media/presentations/GreenLoop_3.0_Presentation_Bangla.pptx"
+    },
+    {
+      "id": 11,
+      "type": "pdf",
+      "title": "GreenLoop 3.0 Presentation (Bangla PDF)",
+      "filename": "GreenLoop_3.0_Presentation_Bangla.pdf",
+      "category": "Presentation",
+      "url": "assets/media/presentations/GreenLoop_3.0_Presentation_Bangla.pdf"
+    },
+    {
+      "id": 12,
+      "type": "video",
+      "title": "GreenLoop 3.0 Pitch Video",
+      "filename": "greenloop_video.mp4",
+      "category": "Video",
+      "url": "assets/media/greenloop_video.mp4"
+    },
+    {
+      "id": 13,
+      "type": "image",
+      "title": "GreenLoop Banner",
+      "filename": "greenloop_banner.png",
+      "category": "Branding",
+      "url": "assets/media/greenloop_banner.png"
+    },
+    {
+      "id": 14,
+      "type": "image",
+      "title": "Circular Economy Infographic",
+      "filename": "circular_economy.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/circular_economy.png"
+    },
+    {
+      "id": 15,
+      "type": "image",
+      "title": "GreenLoop Process Diagram",
+      "filename": "greenloop3.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/greenloop3.png"
+    },
+    {
+      "id": 16,
+      "type": "image",
+      "title": "Efficiency Initiative",
+      "filename": "efficiency_init.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/efficiency_init.png"
+    },
+    {
+      "id": 17,
+      "type": "image",
+      "title": "Nano Urea Technology",
+      "filename": "nanourea.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/nanourea.png"
+    },
+    {
+      "id": 18,
+      "type": "image",
+      "title": "Self-Dependent Farmer Model",
+      "filename": "self_dependent_farmer.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/self_dependent_farmer.png"
+    },
+    {
+      "id": 19,
+      "type": "image",
+      "title": "Impact Dashboard",
+      "filename": "impact_dashboard.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/impact_dashboard.png"
+    },
+    {
+      "id": 20,
+      "type": "image",
+      "title": "Healing the Earth",
+      "filename": "healing_earth.png",
+      "category": "Infographic",
+      "url": "assets/media/infographics/healing_earth.png"
+    },
+    {
+      "id": 21,
+      "type": "docx",
+      "title": "Krishi AI App Portfolio",
+      "filename": "Krishi_AI_App_Portfolio.docx",
+      "category": "Platform Showcase",
+      "url": "assets/media/Krishi_AI_App_Portfolio.docx"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Core Proposal",
+      "description": "Main project proposals in English and Bangla",
+      "icon": "fas fa-file-alt"
+    },
+    {
+      "name": "Research",
+      "description": "Research papers and academic documentation",
+      "icon": "fas fa-book"
+    },
+    {
+      "name": "Technical Documentation",
+      "description": "Technical specifications and implementation details",
+      "icon": "fas fa-cogs"
+    },
+    {
+      "name": "Presentation",
+      "description": "Slide decks for presentations",
+      "icon": "fas fa-presentation"
+    },
+    {
+      "name": "Video",
+      "description": "Pitch videos and demonstrations",
+      "icon": "fas fa-video"
+    },
+    {
+      "name": "Infographic",
+      "description": "Visual representations of data and processes",
+      "icon": "fas fa-chart-pie"
+    },
+    {
+      "name": "Platform Showcase",
+      "description": "Platform capabilities and app portfolio",
+      "icon": "fas fa-mobile-alt"
+    }
+  ]
+}
