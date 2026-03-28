@@ -631,3 +631,195 @@ document.addEventListener('DOMContentLoaded', function() {
     
     animateMediaCards();
 });
+
+// =============================================
+// Visitor Counter
+// =============================================
+function initVisitorCounter() {
+    const STORAGE_KEY = 'greenloop_visitor_data';
+    const VISITOR_ID_KEY = 'greenloop_visitor_id';
+    
+    // Get or create visitor ID
+    let visitorId = localStorage.getItem(VISITOR_ID_KEY);
+    if (!visitorId) {
+        visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem(VISITOR_ID_KEY, visitorId);
+    }
+    
+    // Get visitor data
+    let visitorData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+        totalVisitors: 1258,
+        pageViews: 0,
+        lastVisit: null
+    };
+    
+    // Increment visitor count for new sessions
+    const sessionKey = 'greenloop_session_active';
+    if (!sessionStorage.getItem(sessionKey)) {
+        sessionStorage.setItem(sessionKey, 'true');
+        visitorData.totalVisitors++;
+    }
+    
+    // Increment page views
+    visitorData.pageViews++;
+    visitorData.lastVisit = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(visitorData));
+    
+    // Animate counter display
+    updateCounterDisplay(visitorData.totalVisitors, visitorData.pageViews);
+    
+    // Track time on page
+    let timeOnPage = 0;
+    const timeDisplay = document.getElementById('visitTime');
+    if (timeDisplay) {
+        setInterval(() => {
+            timeOnPage++;
+            timeDisplay.textContent = timeOnPage;
+        }, 1000);
+    }
+}
+
+function updateCounterDisplay(totalVisitors, pageViews) {
+    const counterDigits = document.getElementById('visitorCount');
+    const pageViewsDisplay = document.getElementById('pageViews');
+    
+    if (counterDigits) {
+        const digits = counterDigits.querySelectorAll('.digit');
+        const visitorStr = String(totalVisitors).padStart(6, '0');
+        
+        digits.forEach((digit, index) => {
+            const targetValue = visitorStr[index];
+            setTimeout(() => {
+                digit.textContent = targetValue;
+                digit.style.animation = 'digitFlip 0.5s ease-out';
+            }, index * 100);
+        });
+    }
+    
+    if (pageViewsDisplay) {
+        animateNumber(pageViewsDisplay, pageViews);
+    }
+}
+
+function animateNumber(element, target) {
+    let current = 0;
+    const increment = Math.ceil(target / 30);
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = current;
+    }, 30);
+}
+
+// =============================================
+// Back to Top Button
+// =============================================
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    if (!backToTopBtn) return;
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    // Scroll to top on click
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// =============================================
+// Dark Mode Toggle
+// =============================================
+function initDarkMode() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    
+    if (!darkModeToggle) return;
+    
+    // Check for saved preference
+    const savedMode = localStorage.getItem('greenloop_dark_mode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedMode === 'dark' || (!savedMode && prefersDark)) {
+        document.documentElement.classList.add('dark-mode');
+        if (darkModeIcon) {
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+        }
+    }
+    
+    // Toggle dark mode on click
+    darkModeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark-mode');
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        
+        if (darkModeIcon) {
+            darkModeIcon.classList.toggle('fa-moon', !isDark);
+            darkModeIcon.classList.toggle('fa-sun', isDark);
+        }
+        
+        localStorage.setItem('greenloop_dark_mode', isDark ? 'dark' : 'light');
+    });
+}
+
+// =============================================
+// Loading Overlay
+// =============================================
+function initLoadingOverlay() {
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    
+    if (!loadingOverlay) return;
+    
+    // Hide loading overlay after page loads
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingOverlay.classList.add('hidden');
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 500);
+        }, 800);
+    });
+}
+
+// =============================================
+// Scroll Progress Indicator
+// =============================================
+function initScrollProgress() {
+    // Create scroll progress element
+    const scrollProgress = document.createElement('div');
+    scrollProgress.className = 'scroll-progress';
+    scrollProgress.id = 'scrollProgress';
+    document.body.appendChild(scrollProgress);
+    
+    // Update progress on scroll
+    window.addEventListener('scroll', () => {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight - windowHeight;
+        const scrolled = window.scrollY;
+        const progress = (scrolled / documentHeight) * 100;
+        
+        scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+    });
+}
+
+// Initialize all new features
+document.addEventListener('DOMContentLoaded', function() {
+    initVisitorCounter();
+    initBackToTop();
+    initDarkMode();
+    initLoadingOverlay();
+    initScrollProgress();
+});

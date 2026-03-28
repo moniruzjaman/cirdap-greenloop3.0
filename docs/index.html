@@ -2112,6 +2112,46 @@
         </div>
     </section>
 
+    <!-- Visitor Counter Section -->
+    <section class="visitor-counter-section">
+        <div class="container">
+            <div class="visitor-counter-content">
+                <div class="visitor-counter-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="visitor-counter-info">
+                    <h3><span data-lang="en">Visitors Count</span><span data-lang="bn">ভিজিটর সংখ্যা</span></h3>
+                    <div class="visitor-counter-display">
+                        <div class="counter-digit" id="visitorCount">
+                            <span class="digit">0</span>
+                            <span class="digit">0</span>
+                            <span class="digit">0</span>
+                            <span class="digit">0</span>
+                            <span class="digit">0</span>
+                            <span class="digit">0</span>
+                        </div>
+                        <div class="counter-label">
+                            <i class="fas fa-globe"></i>
+                            <span data-lang="en">Global Visitors</span><span data-lang="bn">বিশ্বব্যাপী ভিজিটর</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="visitor-stats">
+                    <div class="visitor-stat-item">
+                        <i class="fas fa-eye"></i>
+                        <span class="stat-number" id="pageViews">0</span>
+                        <span class="stat-text"><span data-lang="en">Page Views</span><span data-lang="bn">পেজ ভিউ</span></span>
+                    </div>
+                    <div class="visitor-stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span class="stat-number" id="visitTime">0</span>
+                        <span class="stat-text"><span data-lang="en">Sec on Page</span><span data-lang="bn">সেকেন্ড পেজে</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -2219,5 +2259,24 @@
             }
         }
     </script>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="darkModeIcon"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p data-lang="en">Loading GreenLoop 3.0...</p>
+            <p data-lang="bn">GreenLoop 3.0 লোড হচ্ছে...</p>
+        </div>
+    </div>
 </body>
 </html>
