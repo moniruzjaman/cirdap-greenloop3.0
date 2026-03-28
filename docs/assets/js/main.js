@@ -776,21 +776,34 @@ function initDarkMode() {
 }
 
 // =============================================
-// Loading Overlay
+// Loading Overlay - Only shows on first visit
 // =============================================
 function initLoadingOverlay() {
     const loadingOverlay = document.getElementById('loadingOverlay');
+    const FIRST_VISIT_KEY = 'greenloop_first_visit';
     
     if (!loadingOverlay) return;
     
-    // Hide loading overlay after page loads
+    // Check if this is a returning visitor
+    const hasVisitedBefore = localStorage.getItem(FIRST_VISIT_KEY);
+    
+    if (hasVisitedBefore) {
+        // Returning visitor - hide overlay immediately
+        loadingOverlay.style.display = 'none';
+        return;
+    }
+    
+    // First-time visitor - mark as visited and show loading animation
+    localStorage.setItem(FIRST_VISIT_KEY, 'true');
+    
+    // Hide loading overlay after page loads (shorter delay for better UX)
     window.addEventListener('load', () => {
         setTimeout(() => {
             loadingOverlay.classList.add('hidden');
             setTimeout(() => {
                 loadingOverlay.style.display = 'none';
-            }, 500);
-        }, 800);
+            }, 400);
+        }, 500); // Reduced from 800ms to 500ms
     });
 }
 
